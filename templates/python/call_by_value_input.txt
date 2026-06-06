@@ -1,0 +1,10 @@
+﻿def update_value(number):
+    number *= 2
+
+    print("Inside Function =", number)
+
+number = int(input("Enter Number: "))
+
+update_value(number)
+
+print("Outside Function =", number)

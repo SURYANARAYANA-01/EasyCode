@@ -1,0 +1,36 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Array Size: ");
+
+        int size = scanner.nextInt();
+
+        int[] numbers = new int[size];
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print("Enter Element " + (index + 1) + ": ");
+
+            numbers[index] = scanner.nextInt();
+        }
+
+        int largestElement = numbers[0];
+
+        for (int index = 1; index < size; index++) {
+
+            if (numbers[index] > largestElement) {
+
+                largestElement = numbers[index];
+            }
+        }
+
+        System.out.println("Largest Element = " + largestElement);
+
+        scanner.close();
+    }
+}

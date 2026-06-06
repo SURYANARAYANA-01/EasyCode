@@ -1,0 +1,8 @@
+﻿first_number = 5
+second_number = 3
+
+print("Bitwise AND =", first_number & second_number)
+print("Bitwise OR =", first_number | second_number)
+print("Bitwise XOR =", first_number ^ second_number)
+print("Left Shift =", first_number << 1)
+print("Right Shift =", first_number >> 1)

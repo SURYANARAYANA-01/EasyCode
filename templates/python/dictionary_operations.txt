@@ -1,0 +1,9 @@
+﻿student = {
+    "name": "Lazy",
+    "age": 20
+}
+
+print("Dictionary:")
+
+for key, value in student.items():
+    print(key, ":", value)

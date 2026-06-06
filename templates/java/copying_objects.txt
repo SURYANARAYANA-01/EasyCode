@@ -1,0 +1,21 @@
+﻿class Student {
+
+    String name;
+    int age;
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student1 = new Student();
+
+        student1.name = "Lazy";
+        student1.age = 20;
+
+        Student student2 = student1;
+
+        System.out.println("Name: " + student2.name);
+        System.out.println("Age: " + student2.age);
+    }
+}

@@ -1,0 +1,18 @@
+﻿class Student:
+
+    def __init__(self):
+        self.__name = ""
+
+    def set_name(self, name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name
+
+student = Student()
+
+name = input("Enter Name: ")
+
+student.set_name(name)
+
+print("Name:", student.get_name())

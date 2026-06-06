@@ -1,0 +1,20 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    static void displayMessage(String name) {
+        System.out.println("Welcome " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Name: ");
+        String name = scanner.next();
+
+        displayMessage(name);
+
+        scanner.close();
+    }
+}

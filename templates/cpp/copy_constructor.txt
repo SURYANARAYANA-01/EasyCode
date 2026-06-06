@@ -1,0 +1,28 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+        string name;
+
+        Student(string studentName) {
+            name = studentName;
+        }
+
+        Student(const Student &student) {
+            name = student.name;
+        }
+
+        void displayDetails() {
+            cout << "Name: " << name << endl;
+        }
+};
+
+int main() {
+    Student student1("Lazy");
+    Student student2(student1);
+
+    student2.displayDetails();
+
+    return 0;
+}

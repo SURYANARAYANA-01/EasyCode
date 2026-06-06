@@ -1,0 +1,18 @@
+﻿#include <iostream>
+using namespace std;
+
+void updateValue(int number) {
+    number = 100;
+
+    cout << "Inside Function = " << number << endl;
+}
+
+int main() {
+    int number = 50;
+
+    updateValue(number);
+
+    cout << "Outside Function = " << number << endl;
+
+    return 0;
+}

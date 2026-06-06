@@ -1,0 +1,14 @@
+﻿class Student {
+
+    Student() {
+        System.out.println("Default Constructor Called");
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student = new Student();
+    }
+}

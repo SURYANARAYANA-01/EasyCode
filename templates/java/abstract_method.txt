@@ -1,0 +1,20 @@
+﻿abstract class Student {
+
+    abstract void display();
+}
+
+class CollegeStudent extends Student {
+
+    void display() {
+        System.out.println("Abstract Method Example");
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+        Student student = new CollegeStudent();
+
+        student.display();
+    }
+}

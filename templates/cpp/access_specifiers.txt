@@ -1,0 +1,27 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+        string name = "Lazy";
+
+        void displayDetails() {
+            cout << "Age: " << age << endl;
+            cout << "Department: " << department << endl;
+        }
+
+    private:
+        int age = 20;
+
+    protected:
+        string department = "CSE";
+};
+
+int main() {
+    Student student;
+
+    cout << "Name: " << student.name << endl;
+    student.displayDetails();
+
+    return 0;
+}

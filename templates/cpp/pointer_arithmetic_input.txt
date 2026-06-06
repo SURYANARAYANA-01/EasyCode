@@ -1,0 +1,20 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    int *pointer = numbers;
+
+    cout << "Current Value = " << *pointer << endl;
+
+    pointer++;
+
+    cout << "After Increment = " << *pointer << endl;
+
+    pointer++;
+
+    cout << "After Second Increment = " << *pointer << endl;
+
+    return 0;
+}

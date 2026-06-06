@@ -1,0 +1,21 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    bool hasLicense;
+
+    cout << "Enter Age: ";
+    cin >> age;
+
+    cout << "Has License (1/0): ";
+    cin >> hasLicense;
+
+    cout << "AND Result = " << (age >= 18 && hasLicense) << endl;
+
+    cout << "OR Result = " << (age >= 18 || hasLicense) << endl;
+
+    cout << "NOT Result = " << (!hasLicense) << endl;
+
+    return 0;
+}

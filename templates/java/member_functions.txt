@@ -1,0 +1,16 @@
+﻿class Student {
+
+    void displayDetails() {
+        System.out.println("Student Details");
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.displayDetails();
+    }
+}

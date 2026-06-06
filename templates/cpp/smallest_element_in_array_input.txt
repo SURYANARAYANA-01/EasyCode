@@ -1,0 +1,30 @@
+﻿#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter Array Size: ";
+    cin >> size;
+
+    vector<int> numbers(size);
+
+    for (int index = 0; index < size; index++) {
+        cout << "Enter Element " << index + 1 << ": ";
+
+        cin >> numbers[index];
+    }
+
+    int smallestElement = numbers[0];
+
+    for (int index = 1; index < size; index++) {
+        if (numbers[index] < smallestElement) {
+            smallestElement = numbers[index];
+        }
+    }
+
+    cout << "Smallest Element = " << smallestElement << endl;
+
+    return 0;
+}

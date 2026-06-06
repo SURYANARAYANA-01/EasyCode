@@ -1,0 +1,14 @@
+﻿public class ${CLASS_NAME} {
+
+    static int addNumbers(int firstNumber, int secondNumber) {
+
+        return firstNumber + secondNumber;
+    }
+
+    public static void main(String[] args) {
+
+        int result =addNumbers(20, 30);
+
+        System.out.println("Result = " + result);
+    }
+}

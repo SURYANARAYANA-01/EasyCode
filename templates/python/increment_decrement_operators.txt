@@ -1,0 +1,11 @@
+﻿number = 10
+
+print("Original Value =", number)
+
+number += 1
+
+print("After Increment =", number)
+
+number -= 1
+
+print("After Decrement =", number)

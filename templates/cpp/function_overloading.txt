@@ -1,0 +1,22 @@
+﻿#include <iostream>
+using namespace std;
+
+class Calculator {
+    public:
+        int add(int firstNumber, int secondNumber) {
+            return firstNumber + secondNumber;
+        }
+
+        double add(double firstNumber, double secondNumber) {
+            return firstNumber + secondNumber;
+        }
+};
+
+int main() {
+    Calculator calculator;
+
+    cout << calculator.add(10, 20) << endl;
+    cout << calculator.add(10.5, 20.5) << endl;
+
+    return 0;
+}

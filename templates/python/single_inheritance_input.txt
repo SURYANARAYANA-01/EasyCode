@@ -1,0 +1,21 @@
+﻿class Person:
+
+    def __init__(self):
+        self.name = ""
+
+    def set_name(
+        self,
+        name
+    ):
+        self.name = name
+
+class Student(Person):
+
+    def display_details(self):
+        print("Name:", self.name)
+
+student = Student()
+
+student.set_name(input("Enter Name: "))
+
+student.display_details()

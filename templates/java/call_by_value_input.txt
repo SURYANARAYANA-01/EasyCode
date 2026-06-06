@@ -1,0 +1,24 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    static void updateValue(int number) {
+        number = number * 2;
+
+        System.out.println("Inside Function = " + number);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int number = scanner.nextInt();
+
+        updateValue(number);
+
+        System.out.println("Outside Function = " + number);
+
+        scanner.close();
+    }
+}

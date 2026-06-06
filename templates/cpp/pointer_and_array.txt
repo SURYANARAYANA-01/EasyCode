@@ -1,0 +1,16 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    int *pointer = numbers;
+
+    cout << "Array Elements: " << endl;
+
+    for (int index = 0; index < 5; index++) {
+        cout << *(pointer + index) << " ";
+    }
+
+    return 0;
+}

@@ -1,0 +1,7 @@
+﻿numbers = tuple(
+    map(int, input("Enter Numbers: ").split())
+)
+
+print("Tuple:", numbers)
+
+print("Length:", len(numbers))

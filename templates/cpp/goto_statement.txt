@@ -1,0 +1,18 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 1;
+
+start:
+
+    cout << number << " ";
+
+    number++;
+
+    if (number <= 5) {
+        goto start;
+    }
+
+    return 0;
+}

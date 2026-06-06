@@ -1,0 +1,36 @@
+﻿#include <iostream>
+using namespace std;
+
+class Person {
+    protected:
+        string name;
+
+    public:
+        void setName(
+            string personName
+        ) {
+            name = personName;
+        }
+};
+
+class Student : public Person {
+    public:
+        void displayDetails() {
+            cout << "Name: " << name << endl;
+        }
+};
+
+int main() {
+    Student student;
+
+    string name;
+
+    cout << "Enter Name: ";
+    cin >> name;
+
+    student.setName(name);
+
+    student.displayDetails();
+
+    return 0;
+}

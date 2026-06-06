@@ -1,0 +1,3 @@
+﻿numbers = [45, 12, 78, 34, 90]
+
+print("Smallest Element =", min(numbers))

@@ -1,0 +1,22 @@
+﻿#include <iostream>
+using namespace std;
+
+class Printable {
+    public:
+        virtual void print() = 0;
+};
+
+class Student : public Printable {
+    public:
+        void print() override {
+            cout << "Student Information" << endl;
+        }
+};
+
+int main() {
+    Student student;
+
+    student.print();
+
+    return 0;
+}

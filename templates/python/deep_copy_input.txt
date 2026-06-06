@@ -1,0 +1,11 @@
+﻿import copy
+
+numbers = list(
+    map(int, input("Enter Numbers: ").split())
+)
+
+copied_numbers = copy.deepcopy(numbers)
+
+print("Original:", numbers)
+
+print("Copied:", copied_numbers)

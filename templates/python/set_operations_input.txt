@@ -1,0 +1,11 @@
+﻿numbers = set(
+    map(int, input("Enter Numbers: ").split())
+    )
+
+print("Original Set:", numbers)
+
+value = int(input("Enter Value To Add: "))
+
+numbers.add(value)
+
+print("Updated Set:", numbers)

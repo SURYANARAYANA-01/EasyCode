@@ -1,0 +1,17 @@
+﻿age = int(input("Enter Age: "))
+
+has_license = input("Has License (true/false): ").lower() == "true"
+
+if age >= 18:
+
+    if has_license:
+
+        print("Eligible to Drive")
+
+    else:
+
+        print("License Required")
+
+else:
+
+    print("Not Eligible")

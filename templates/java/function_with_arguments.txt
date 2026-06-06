@@ -1,0 +1,11 @@
+﻿public class ${CLASS_NAME} {
+
+    static void displayMessage(String name) {
+        System.out.println("Welcome " + name);
+    }
+
+    public static void main(String[] args) {
+
+        displayMessage("Lazy");
+    }
+}

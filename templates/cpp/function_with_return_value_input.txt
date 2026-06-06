@@ -1,0 +1,17 @@
+﻿#include <iostream>
+using namespace std;
+
+int findSquare(int number) {
+    return number * number;
+}
+
+int main() {
+    int number;
+
+    cout << "Enter Number: ";
+    cin >> number;
+
+    cout << "Square = " << findSquare(number) << endl;
+
+    return 0;
+}

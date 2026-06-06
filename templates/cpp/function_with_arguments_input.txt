@@ -1,0 +1,17 @@
+﻿#include <iostream>
+using namespace std;
+
+void displayMessage(string name) {
+    cout << "Welcome " << name << endl;
+}
+
+int main() {
+    string name;
+
+    cout << "Enter Name: ";
+    cin >> name;
+
+    displayMessage(name);
+
+    return 0;
+}

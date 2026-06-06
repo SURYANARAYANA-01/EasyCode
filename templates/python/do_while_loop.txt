@@ -1,0 +1,10 @@
+﻿number = 1
+
+while True:
+
+    print(number, end=" ")
+
+    number += 1
+
+    if number > 5:
+        break

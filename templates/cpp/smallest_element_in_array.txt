@@ -1,0 +1,19 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[] = {45, 12, 78, 34, 90};
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    int smallestElement = numbers[0];
+
+    for (int index = 1; index < size; index++) {
+        if (numbers[index] < smallestElement) {
+            smallestElement = numbers[index];
+        }
+    }
+
+    cout << "Smallest Element = " << smallestElement << endl;
+
+    return 0;
+}

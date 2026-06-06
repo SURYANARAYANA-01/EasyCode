@@ -1,0 +1,14 @@
+﻿class Person:
+
+    def display_person(self):
+        print("Person Class")
+
+class Student(Person):
+
+    def display_student(self):
+        print("Student Class")
+
+student = Student()
+
+student.display_person()
+student.display_student()

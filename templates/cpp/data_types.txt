@@ -1,0 +1,20 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int age = 20;
+    float percentage = 85.5f;
+    double salary = 25000.75;
+    char grade = 'A';
+    bool isPassed = true;
+    string name = "Lazy";
+
+    cout << "Age: " << age << endl;
+    cout << "Percentage: " << percentage << endl;
+    cout << "Salary: " << salary << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Passed: " << isPassed << endl;
+    cout << "Name: " << name << endl;
+
+    return 0;
+}

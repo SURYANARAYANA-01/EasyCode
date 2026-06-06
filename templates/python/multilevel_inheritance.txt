@@ -1,0 +1,20 @@
+﻿class Person:
+
+    def display_person(self):
+        print("Person Class")
+
+class Student(Person):
+
+    def display_student(self):
+        print("Student Class")
+
+class GraduateStudent(Student):
+
+    def display_graduate_student(self):
+        print("Graduate Student Class")
+
+student = GraduateStudent()
+
+student.display_person()
+student.display_student()
+student.display_graduate_student()

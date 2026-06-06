@@ -1,0 +1,19 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {45, 12, 78, 34, 90};
+
+        int largestElement = numbers[0];
+
+        for (int index = 1; index < numbers.length; index++) {
+
+            if (numbers[index] > largestElement) {
+
+                largestElement = numbers[index];
+            }
+        }
+
+        System.out.println("Largest Element = " + largestElement);
+    }
+}

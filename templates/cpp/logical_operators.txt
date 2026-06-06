@@ -1,0 +1,15 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int age = 20;
+    bool hasLicense = true;
+
+    cout << "AND Result = " << (age >= 18 && hasLicense) << endl;
+
+    cout << "OR Result = " << (age >= 18 || hasLicense) << endl;
+
+    cout << "NOT Result = " << (!hasLicense) << endl;
+
+    return 0;
+}

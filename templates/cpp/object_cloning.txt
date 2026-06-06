@@ -1,0 +1,23 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+        string name;
+        int age;
+};
+
+int main() {
+    Student originalStudent;
+
+    originalStudent.name = "Lazy";
+    originalStudent.age = 20;
+
+    Student clonedStudent = originalStudent;
+
+    cout << "Name: " << clonedStudent.name << endl;
+
+    cout << "Age: " << clonedStudent.age << endl;
+
+    return 0;
+}

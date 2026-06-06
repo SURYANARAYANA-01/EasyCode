@@ -1,0 +1,25 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    int searchElement = 30;
+
+    bool found = false;
+
+    for (int index = 0; index < size; index++) {
+        if (numbers[index] == searchElement) {
+            cout << "Element Found at Index " << index << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Element Not Found" << endl;
+    } 
+    
+    return 0;
+}

@@ -1,0 +1,38 @@
+﻿class Person:
+
+    def __init__(self):
+        self.name = ""
+        self.age = 0
+
+class Student(Person):
+
+    def set_details(
+        self,
+        name,
+        age
+    ):
+        self.name = name
+        self.age = age
+
+class GraduateStudent(Student):
+
+    def display_details(self):
+        print(
+            "Name:",
+            self.name
+        )
+
+        print("Age:", self.age)
+
+student = GraduateStudent()
+
+name = input("Enter Name: ")
+
+age = int(input("Enter Age: "))
+
+student.set_details(
+    name,
+    age
+)
+
+student.display_details()

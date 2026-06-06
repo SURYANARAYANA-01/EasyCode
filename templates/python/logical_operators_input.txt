@@ -1,0 +1,9 @@
+﻿age = int(input("Enter Age: "))
+
+has_license = input("Has License (true/false): ").lower() == "true"
+
+print("AND Result =", age >= 18 and has_license)
+
+print("OR Result =", age >= 18 or has_license)
+
+print("NOT Result =", not has_license)

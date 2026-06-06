@@ -1,0 +1,7 @@
+﻿def find_square(number):
+
+    return number * number
+
+number = int(input("Enter Number: "))
+
+print("Square =", find_square(number))

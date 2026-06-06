@@ -1,0 +1,12 @@
+﻿#include <iostream>
+using namespace std;
+
+void displayMessage() {
+    cout << "Welcome to EasyCode" << endl;
+}
+
+int main() {
+    displayMessage();
+
+    return 0;
+}

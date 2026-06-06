@@ -1,0 +1,40 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Array Size: ");
+        int size = scanner.nextInt();
+
+        int[] numbers = new int[size];
+
+        for (int index = 0; index < size; index++) {
+            System.out.print("Enter Element " + (index + 1) + ": ");
+            numbers[index] = scanner.nextInt();
+        }
+
+        System.out.print("Enter Element To Search: ");
+        int searchElement = scanner.nextInt();
+
+        int index = 0;
+        boolean found = false;
+
+        for (int number : numbers) {
+            if (number == searchElement) {
+                System.out.println("Element Found at Index " + index);
+                found = true;
+                break;
+            }
+            index ++
+        }
+
+        if (!found) {
+             System.out.println("Element Not Found");
+        }
+
+        scanner.close();
+    }
+}

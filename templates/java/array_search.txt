@@ -1,0 +1,25 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        int searchElement = 30;
+
+        int index = 0;
+        boolean found = false;
+
+        for (int number : numbers) {
+            if (number == searchElement) {
+                System.out.println("Element Found at Index " + index);
+                found = true;
+                break;
+            }
+            index ++;
+        }
+
+        if (!found) {
+            System.out.println("Element Not Found");
+        }
+    }
+}

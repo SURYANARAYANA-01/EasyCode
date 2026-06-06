@@ -1,0 +1,15 @@
+﻿age = 20
+percentage = 85.5
+salary = 25000.75
+grade = "A"
+
+is_passed = True
+
+name = "Lazy"
+
+print("Age:", age)
+print("Percentage:", percentage)
+print("Salary:", salary)
+print("Grade:", grade)
+print("Passed:", is_passed)
+print("Name:", name)

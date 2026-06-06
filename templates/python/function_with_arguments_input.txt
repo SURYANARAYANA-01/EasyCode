@@ -1,0 +1,7 @@
+﻿name = input("Enter Name: ")
+
+def display_message(name):
+
+    print("Welcome", name)
+
+display_message(name)

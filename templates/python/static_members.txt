@@ -1,0 +1,5 @@
+﻿class Student:
+
+    student_count = 25
+
+print("Student Count =", Student.student_count)

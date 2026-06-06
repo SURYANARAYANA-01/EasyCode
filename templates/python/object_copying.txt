@@ -1,0 +1,20 @@
+﻿class Student:
+
+    def __init__(
+        self,
+        name,
+        age
+    ):
+        self.name = name
+        self.age = age
+
+student1 = Student(
+    "Lazy",
+    20
+)
+
+student2 = student1
+
+print("Name:", student2.name)
+
+print("Age:", student2.age)

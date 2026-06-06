@@ -1,0 +1,20 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int firstNumber = 20;
+        int secondNumber = 10;
+
+        System.out.println("Equal To: " + (firstNumber == secondNumber));
+
+        System.out.println("Not Equal To: " + (firstNumber != secondNumber));
+
+        System.out.println("Greater Than: " + (firstNumber > secondNumber));
+
+        System.out.println("Less Than: " + (firstNumber < secondNumber));
+
+        System.out.println("Greater Than Or Equal To: " + (firstNumber >= secondNumber));
+
+        System.out.println("Less Than Or Equal To: " + (firstNumber <= secondNumber));
+    }
+}

@@ -1,0 +1,34 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Has License (true/false): ");
+
+        boolean hasLicense = scanner.nextBoolean();
+
+        if (age >= 18) {
+
+            if (hasLicense) {
+
+                System.out.println("Eligible to Drive");
+            }
+            else {
+
+                System.out.println("License Required");
+            }
+        }
+        else {
+
+            System.out.println("Not Eligible");
+        }
+
+        scanner.close();
+    }
+}

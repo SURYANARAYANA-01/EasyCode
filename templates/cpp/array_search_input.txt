@@ -1,0 +1,38 @@
+﻿#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter array size: ";
+    cin >> size;
+
+    vector<int> numbers(size);
+
+    for (int index = 0; index < size; index++) {
+        cout << "Enter element " << index + 1 << ": ";
+        cin >> numbers[index];
+    }
+
+    int searchElement;
+
+    cout << "Enter element to search: ";
+    cin >> searchElement;
+
+    bool found = false;
+
+    for (int index = 0; index < size; index++) {
+        if (numbers[index] == searchElement) {
+            cout << "Element Found at Index " << index << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Element Not Found" << endl;
+    } 
+    
+    return 0;
+}

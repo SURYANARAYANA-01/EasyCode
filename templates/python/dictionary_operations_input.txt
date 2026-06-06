@@ -1,0 +1,10 @@
+﻿student = {}
+
+student["name"] = input("Enter Name: ")
+
+student["age"] = int(input("Enter Age: "))
+
+print("Dictionary:")
+
+for key, value in student.items():
+    print(key, ":", value)

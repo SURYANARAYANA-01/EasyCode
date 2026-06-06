@@ -1,0 +1,21 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int number = 10;
+
+        System.out.println("Initial Value = " + number);
+
+        number += 5;
+        System.out.println("number += 5 : " + number);
+
+        number -= 3;
+        System.out.println("number -= 3 : " + number);
+
+        number *= 2;
+        System.out.println("number *= 2 : " + number);
+
+        number /= 4;
+        System.out.println("number /= 4 : " + number);
+    }
+}

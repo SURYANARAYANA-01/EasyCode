@@ -1,0 +1,26 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    private:
+        string name;
+
+    public:
+        void setName(string studentName) {
+            name = studentName;
+        }
+
+        string getName() {
+            return name;
+        }
+};
+
+int main() {
+    Student student;
+
+    student.setName("Lazy");
+
+    cout << "Name: " << student.getName() << endl;
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+﻿number = int(input("Enter Number: "))
+
+print("Original Value =", number)
+
+number += 1
+
+print("After Increment =", number)
+
+number -= 1
+
+print("After Decrement =", number)

@@ -1,0 +1,11 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        System.out.println("Java does not support " + "operator overloading " + "for user-defined classes.");
+
+        int result = 10 + 20;
+
+        System.out.println("Addition Result = " + result);
+    }
+}

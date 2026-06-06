@@ -1,0 +1,27 @@
+﻿class Student
+    implements Cloneable {
+
+    String name = "Lazy";
+    int age = 20;
+
+    public Object clone()
+        throws CloneNotSupportedException {
+
+        return super.clone();
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args)
+        throws CloneNotSupportedException {
+
+        Student student1 = new Student();
+
+        Student student2 = (Student) student1.clone();
+
+        System.out.println("Name: " + student2.name);
+
+        System.out.println("Age: " + student2.age);
+    }
+}

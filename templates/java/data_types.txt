@@ -1,0 +1,19 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int age = 20;
+        float percentage = 85.5f;
+        double salary = 25000.75;
+        char grade = 'A';
+        boolean isPassed = true;
+        String name = "Lazy";
+
+        System.out.println("Age: " + age);
+        System.out.println("Percentage: " + percentage);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Passed: " + isPassed);
+        System.out.println("Name: " + name);
+    }
+}

@@ -1,0 +1,25 @@
+﻿#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter array size: ";
+    cin >> size;
+
+    vector<int> numbers(size);
+
+    int sum = 0;
+
+    for (int index = 0; index < size; index++) {
+        cout << "Enter element " << index + 1 << ": ";
+        cin >> numbers[index];
+
+        sum += numbers[index];
+    }
+
+    cout << "Sum = " << sum << endl;
+
+    return 0;
+}

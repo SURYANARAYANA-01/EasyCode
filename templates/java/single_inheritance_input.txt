@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Person {
+
+    String name;
+
+    void setName(String name) {
+
+        this.name = name;
+    }
+}
+
+class Student extends Person {
+
+    void displayDetails() {
+
+        System.out.println("Name = " + name);
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Student student = new Student();
+
+        System.out.print("Enter Name: ");
+
+        student.setName(scanner.nextLine());
+
+        student.displayDetails();
+
+        scanner.close();
+    }
+}

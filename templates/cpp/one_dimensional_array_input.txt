@@ -1,0 +1,27 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter Array Size: ";
+    cin >> size;
+
+    int numbers[100];
+
+    for (int index = 0; index < size; index++) {
+        cout << "Enter Element " << index + 1 << ": ";
+
+        cin >> numbers[index];
+    }
+
+    cout << "Array Elements: ";
+
+    for (int index = 0; index < size; index++) {
+        cout << numbers[index] << " ";
+    }
+
+    cout << endl;
+
+    return 0;
+}

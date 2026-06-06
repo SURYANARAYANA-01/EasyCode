@@ -1,0 +1,21 @@
+﻿#include <iostream>
+using namespace std;
+
+void updateValue(int number) {
+    number = number * 2;
+
+    cout << "Inside Function = " << number << endl;
+}
+
+int main() {
+    int number;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    updateValue(number);
+
+    cout << "Outside Function = " << number << endl;
+
+    return 0;
+}

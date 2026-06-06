@@ -1,0 +1,10 @@
+﻿def add_numbers(
+    first_number,
+    second_number
+):
+
+    return (first_number + second_number)
+
+result = add_numbers(20, 30)
+
+print("Result =", result)

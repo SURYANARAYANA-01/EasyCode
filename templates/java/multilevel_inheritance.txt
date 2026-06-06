@@ -1,0 +1,33 @@
+﻿class Person {
+
+    void displayPerson() {
+        System.out.println("Person Class");
+    }
+}
+
+class Student extends Person {
+
+    void displayStudent() {
+        System.out.println("Student Class");
+    }
+}
+
+class GraduateStudent
+    extends Student {
+
+    void displayGraduateStudent() {
+        System.out.println("Graduate Student Class");
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        GraduateStudent student = new GraduateStudent();
+
+        student.displayPerson();
+        student.displayStudent();
+        student.displayGraduateStudent();
+    }
+}

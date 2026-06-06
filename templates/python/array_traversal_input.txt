@@ -1,0 +1,14 @@
+﻿size = int(input("Enter Array Size: "))
+
+numbers = []
+
+for index in range(size):
+    number = int(input(f"Enter Element {index + 1}: ")
+    )
+
+    numbers.append(number)
+
+print("Array Elements:")
+
+for number in numbers:
+    print(number, end=" ")

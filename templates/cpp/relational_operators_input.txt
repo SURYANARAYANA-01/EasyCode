@@ -1,0 +1,27 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int firstNumber;
+    int secondNumber;
+
+    cout << "Enter First Number: ";
+    cin >> firstNumber;
+
+    cout << "Enter Second Number: ";
+    cin >> secondNumber;
+
+    cout << "Equal To: " << (firstNumber == secondNumber) << endl;
+
+    cout << "Not Equal To: " << (firstNumber != secondNumber) << endl;
+
+    cout << "Greater Than: " << (firstNumber > secondNumber) << endl;
+
+    cout << "Less Than: " << (firstNumber < secondNumber) << endl;
+
+    cout << "Greater Than Or Equal To: " << (firstNumber >= secondNumber) << endl;
+
+    cout << "Less Than Or Equal To: " << (firstNumber <= secondNumber) << endl;
+
+    return 0;
+}

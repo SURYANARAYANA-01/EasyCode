@@ -1,0 +1,48 @@
+﻿#include <iostream>
+using namespace std;
+
+class Person {
+    protected:
+        string name;
+
+    public:
+        void setName(string personName) {
+            name = personName;
+        }
+};
+
+class Student : public Person {
+    public:
+        void displayStudent() {
+            cout << "Student Name: " << name << endl;
+        }
+};
+
+class Teacher : public Person {
+    public:
+        void displayTeacher() {
+            cout << "Teacher Name: " << name << endl;
+        }
+};
+
+int main() {
+    Student student;
+    Teacher teacher;
+
+    string studentName;
+    string teacherName;
+
+    cout << "Enter Student Name: ";
+    cin >> studentName;
+
+    cout << "Enter Teacher Name: ";
+    cin >> teacherName;
+
+    student.setName(studentName);
+    teacher.setName(teacherName);
+
+    student.displayStudent();
+    teacher.displayTeacher();
+
+    return 0;
+}

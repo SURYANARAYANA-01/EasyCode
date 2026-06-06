@@ -1,0 +1,10 @@
+﻿def update_value(number):
+    number = 100
+
+number = 50
+
+print("Before Function Call =", number)
+
+update_value(number)
+
+print("After Function Call =", number)

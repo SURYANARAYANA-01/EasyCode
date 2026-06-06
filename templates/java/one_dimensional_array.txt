@@ -1,0 +1,73 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int[] numbers =
+            new int[10];
+
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+
+        int size = 5;
+
+        System.out.print("Original Array: ");
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print(numbers[index] + " ");
+        }
+
+        System.out.println();
+
+        numbers[1] = 25;
+
+        System.out.print("After Update: ");
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print(numbers[index] + " ");
+        }
+
+        System.out.println();
+
+        int insertPosition = 3;
+        int insertValue = 35;
+
+        for (int index = size; index > insertPosition; index--) {
+
+            numbers[index] = numbers[index - 1];
+        }
+
+        numbers[insertPosition] = insertValue;
+
+        size++;
+
+        System.out.print("After Insert: ");
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print(numbers[index] + " ");
+        }
+
+        System.out.println();
+
+        int removePosition = 2;
+
+        for (int index = removePosition; index < size - 1; index++) {
+
+            numbers[index] = numbers[index + 1];
+        }
+
+        size--;
+
+        System.out.print("After Remove: ");
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print(numbers[index] + " ");
+        }
+    }
+}

@@ -1,0 +1,16 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 10;
+
+    int *pointer = &number;
+
+    cout << "Value: " << number << endl;
+
+    cout << "Address: " << pointer << endl;
+
+    cout << "Dereferenced Value: " << *pointer << endl;
+
+    return 0;
+}

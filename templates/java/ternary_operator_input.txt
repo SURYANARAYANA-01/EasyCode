@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+
+        int number = scanner.nextInt();
+
+        String result = (number % 2 == 0) ? "Even" : "Odd";
+
+        System.out.println("The Number is " + result);
+
+        scanner.close();
+    }
+}

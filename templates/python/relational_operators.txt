@@ -1,0 +1,14 @@
+﻿first_number = 20
+second_number = 10
+
+print("Equal To =", first_number == second_number)
+
+print("Not Equal To =", first_number != second_number)
+
+print("Greater Than =", first_number > second_number)
+
+print("Less Than =", first_number < second_number)
+
+print("Greater Than Or Equal To =", first_number >= second_number)
+
+print("Less Than Or Equal To =", first_number <= second_number)

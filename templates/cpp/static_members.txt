@@ -1,0 +1,17 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+        static int studentCount;
+};
+
+int Student::studentCount = 0;
+
+int main() {
+    Student::studentCount = 25;
+
+    cout << "Student Count = " << Student::studentCount << endl;
+
+    return 0;
+}

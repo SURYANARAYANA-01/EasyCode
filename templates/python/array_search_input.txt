@@ -1,0 +1,21 @@
+﻿size = int(input("Enter Array Size: "))
+
+numbers = []
+
+for index in range(size):
+
+    number = int(input(f"Enter Element {index + 1}: "))
+
+    numbers.append(number)
+
+search_element = int(input("Enter Element To Search: "))
+
+if search_element in numbers:
+
+    index = numbers.index(search_element)
+
+    print("Element Found At Index", index)
+
+else:
+
+    print("Element Not Found")

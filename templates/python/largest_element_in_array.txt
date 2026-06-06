@@ -1,0 +1,5 @@
+﻿numbers = [45, 12, 78, 34, 90]
+
+largest_element = max(numbers)
+
+print("Largest Element = ", largest_element)

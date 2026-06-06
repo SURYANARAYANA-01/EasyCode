@@ -1,0 +1,28 @@
+﻿#include <iostream>
+using namespace std;
+
+class Sports {
+    public:
+        void playSport() {
+            cout << "Playing Sport" << endl;
+        }
+};
+
+class Academics {
+    public:
+        void study() {
+            cout << "Studying" << endl;
+        }
+};
+
+class Student : public Sports, public Academics {
+};
+
+int main() {
+    Student student;
+
+    student.playSport();
+    student.study();
+
+    return 0;
+}

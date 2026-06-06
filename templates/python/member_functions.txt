@@ -1,0 +1,8 @@
+﻿class Student:
+
+    def display_details(self):
+        print("Student Details")
+
+student = Student()
+
+student.display_details()

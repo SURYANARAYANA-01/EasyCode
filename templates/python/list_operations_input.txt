@@ -1,0 +1,11 @@
+﻿numbers = list(
+    map(int, input("Enter Numbers: ").split())
+)
+
+print("Original List:", numbers)
+
+value = int(input("Enter Value To Append: "))
+
+numbers.append(value)
+
+print("After Append:", numbers)

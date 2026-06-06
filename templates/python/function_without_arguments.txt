@@ -1,0 +1,5 @@
+﻿def display_message():
+
+    print("Welcome to EasyCode")
+
+display_message()

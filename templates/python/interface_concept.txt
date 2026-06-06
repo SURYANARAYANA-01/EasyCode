@@ -1,0 +1,17 @@
+﻿from abc import ABC, abstractmethod
+
+class Printable(ABC):
+
+    @abstractmethod
+    def print_data(self):
+        pass
+
+
+class Student(Printable):
+
+    def print_data(self):
+        print("Student Information")
+
+student = Student()
+
+student.print_data()

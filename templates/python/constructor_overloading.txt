@@ -1,0 +1,14 @@
+﻿class Student:
+
+    def __init__(
+        self,
+        name=None
+    ):
+        if name is None:
+            print("Default Constructor Called")
+        else:
+            print("Student Name:", name)
+
+student1 = Student()
+
+student2 = Student("Lazy")

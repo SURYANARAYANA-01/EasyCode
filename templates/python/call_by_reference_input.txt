@@ -1,0 +1,8 @@
+﻿numbers = [int(input("Enter Number: "))]
+
+def update_value(values):
+    values[0] *= 2
+
+update_value(numbers)
+
+print("Updated Value =", numbers[0])

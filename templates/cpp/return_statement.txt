@@ -1,0 +1,17 @@
+﻿#include <iostream>
+using namespace std;
+
+int addNumbers(
+    int firstNumber,
+    int secondNumber
+) {
+    return firstNumber + secondNumber;
+}
+
+int main() {
+    int result = addNumbers(20, 30);
+
+    cout << "Result = " << result << endl;
+
+    return 0;
+}

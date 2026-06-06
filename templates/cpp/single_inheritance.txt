@@ -1,0 +1,25 @@
+﻿#include <iostream>
+using namespace std;
+
+class Person {
+    public:
+        void displayPerson() {
+            cout << "Person Class" << endl;
+        }
+};
+
+class Student : public Person {
+    public:
+        void displayStudent() {
+            cout << "Student Class" << endl;
+        }
+};
+
+int main() {
+    Student student;
+
+    student.displayPerson();
+    student.displayStudent();
+
+    return 0;
+}

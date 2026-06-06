@@ -1,0 +1,35 @@
+﻿import java.util.Scanner;
+
+class Student {
+
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Student student = new Student();
+
+        System.out.print("Enter Name: ");
+        String name = scanner.next();
+
+        student.setName(name);
+
+        System.out.println(
+            "Name: " + student.getName()
+        );
+
+        scanner.close();
+    }
+}

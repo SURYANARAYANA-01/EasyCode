@@ -1,0 +1,12 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 15;
+
+    string result = (number % 2 == 0) ? "Even" : "Odd";
+
+    cout << result << endl;
+
+    return 0;
+}

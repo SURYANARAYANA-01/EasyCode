@@ -1,0 +1,11 @@
+﻿numbers = {10, 20, 30}
+
+print("Original Set:", numbers)
+
+numbers.add(40)
+
+print("After Add:", numbers)
+
+numbers.remove(20)
+
+print("After Remove:", numbers)

@@ -1,0 +1,17 @@
+﻿public class ${CLASS_NAME} {
+
+    static void updateValue(int number) {
+        number = 100;
+    }
+
+    public static void main(String[] args) {
+
+        int number = 50;
+
+        System.out.println("Before Function Call = " + number);
+
+        updateValue(number);
+
+        System.out.println("After Function Call = " + number);
+    }
+}

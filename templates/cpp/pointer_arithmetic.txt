@@ -1,0 +1,20 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 10;
+
+    int *pointer = &number;
+
+    cout << "Current Address: " << pointer << endl;
+
+    pointer++;
+
+    cout << "After Increment: " << pointer << endl;
+
+    pointer--;
+
+    cout << "After Decrement: " << pointer << endl;
+
+    return 0;
+}

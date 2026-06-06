@@ -1,0 +1,15 @@
+﻿numbers = [10, 20, 30, 40, 50]
+
+print("Original Array:", numbers)
+
+numbers[1] = 25
+
+print("After Update:", numbers)
+
+numbers.insert(2, 35)
+
+print("After Insert:", numbers)
+
+numbers.pop(3)
+
+print("After Remove:", numbers)

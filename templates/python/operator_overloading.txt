@@ -1,0 +1,20 @@
+﻿class Number:
+
+    def __init__(
+        self,
+        value
+    ):
+        self.value = value
+
+    def __add__(
+        self,
+        other
+    ):
+        return Number(self.value + other.value)
+
+first_number = Number(10)
+second_number = Number(20)
+
+result = (first_number + second_number)
+
+print("Result =", result.value)

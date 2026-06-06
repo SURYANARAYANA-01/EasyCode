@@ -1,0 +1,21 @@
+﻿interface Printable {
+
+    void print();
+}
+
+class Student implements Printable {
+
+    public void print() {
+        System.out.println("Student Information");
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.print();
+    }
+}

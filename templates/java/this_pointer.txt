@@ -1,0 +1,24 @@
+﻿class Student {
+
+    private String name;
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + this.name);
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.setName("Lazy");
+
+        student.displayDetails();
+    }
+}

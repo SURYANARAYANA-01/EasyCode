@@ -1,0 +1,27 @@
+﻿rows = int(input("Enter Rows: "))
+
+columns = int(input("Enter Columns: "))
+
+numbers = []
+
+for row in range(rows):
+
+    current_row = []
+
+    for column in range(columns):
+
+        value = int(input(f"Enter Element [{row}][{column}]: "))
+
+        current_row.append(value)
+
+    numbers.append(current_row)
+
+print("Array Elements:")
+
+for row in numbers:
+
+    for value in row:
+
+        print(value, end=" ")
+
+    print()

@@ -1,0 +1,35 @@
+﻿#include <iostream>
+using namespace std;
+
+class Complex {
+    public:
+        int real;
+        int imaginary;
+
+        Complex(int r, int i) {
+            real = r;
+            imaginary = i;
+        }
+
+        Complex operator +(Complex object) {
+            return Complex(
+                real + object.real,
+                imaginary + object.imaginary
+            );
+        }
+
+        void display() {
+            cout << real << " + " << imaginary << "i" << endl;
+        }
+};
+
+int main() {
+    Complex number1(2, 3);
+    Complex number2(4, 5);
+
+    Complex result = number1 + number2;
+
+    result.display();
+
+    return 0;
+}

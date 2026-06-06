@@ -1,0 +1,22 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    static int findSquare(int number) {
+        return number * number;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Number: ");
+        int number = scanner.nextInt();
+
+        System.out.println(
+            "Square = " + findSquare(number)
+        );
+
+        scanner.close();
+    }
+}

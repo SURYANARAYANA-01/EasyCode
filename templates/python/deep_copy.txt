@@ -1,0 +1,14 @@
+﻿import copy
+
+original_list = [
+    [10, 20],
+    [30, 40]
+]
+
+copied_list = copy.deepcopy(original_list)
+
+copied_list[0][0] = 100
+
+print("Original:", original_list)
+
+print("Copied:", copied_list)

@@ -1,0 +1,25 @@
+﻿#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+        string name;
+        int age;
+};
+
+int main() {
+    Student student1;
+
+    cout << "Enter Name: ";
+    cin >> student1.name;
+
+    cout << "Enter Age: ";
+    cin >> student1.age;
+
+    Student student2 = student1;
+
+    cout << "Copied Name: " << student2.name << endl;
+    cout << "Copied Age: " << student2.age << endl;
+
+    return 0;
+}

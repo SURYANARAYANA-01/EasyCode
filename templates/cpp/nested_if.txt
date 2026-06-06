@@ -1,0 +1,15 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int age = 20;
+    bool hasLicense = true;
+
+    if (age >= 18) {
+        if (hasLicense) {
+            cout << "Eligible to Drive" << endl;
+        }
+    }
+
+    return 0;
+}

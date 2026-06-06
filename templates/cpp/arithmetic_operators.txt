@@ -1,0 +1,15 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int firstNumber = 20;
+    int secondNumber = 10;
+
+    cout << "Addition = " << firstNumber + secondNumber << endl;
+    cout << "Subtraction = " << firstNumber - secondNumber << endl;
+    cout << "Multiplication = " << firstNumber * secondNumber << endl;
+    cout << "Division = " << firstNumber / secondNumber << endl;
+    cout << "Modulus = " << firstNumber % secondNumber << endl;
+
+    return 0;
+}

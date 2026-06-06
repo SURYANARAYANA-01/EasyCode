@@ -1,0 +1,16 @@
+﻿class Student:
+
+    def __init__(self):
+        self.public_name = "Lazy"
+        self._protected_department = "CSE"
+        self.__private_age = 20
+
+    def display_details(self):
+        print("Age:", self.__private_age)
+        print("Department:", self._protected_department)
+
+student = Student()
+
+print("Name:", student.public_name)
+
+student.display_details()

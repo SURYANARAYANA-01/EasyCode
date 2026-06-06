@@ -1,0 +1,24 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Limit: ");
+
+        int limit = scanner.nextInt();
+
+        int number = 1;
+
+        while (number <= limit) {
+
+            System.out.print(number + " ");
+
+            number++;
+        }
+
+        scanner.close();
+    }
+}

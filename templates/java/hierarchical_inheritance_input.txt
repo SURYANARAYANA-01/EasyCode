@@ -1,0 +1,50 @@
+﻿import java.util.Scanner;
+
+class Person {
+
+    protected String name;
+
+    void setName(String name) {
+        this.name = name;
+    }
+}
+
+class Student extends Person {
+
+    void displayStudent() {
+        System.out.println(
+            "Student Name: " + name
+        );
+    }
+}
+
+class Teacher extends Person {
+
+    void displayTeacher() {
+        System.out.println(
+            "Teacher Name: " + name
+        );
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Student student = new Student();
+        Teacher teacher = new Teacher();
+
+        System.out.print("Enter Student Name: ");
+        student.setName(scanner.next());
+
+        System.out.print("Enter Teacher Name: ");
+        teacher.setName(scanner.next());
+
+        student.displayStudent();
+        teacher.displayTeacher();
+
+        scanner.close();
+    }
+}

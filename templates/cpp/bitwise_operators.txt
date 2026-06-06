@@ -1,0 +1,15 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int firstNumber = 5;
+    int secondNumber = 3;
+
+    cout << "Bitwise AND = " << (firstNumber & secondNumber) << endl;
+    cout << "Bitwise OR = " << (firstNumber | secondNumber) << endl;
+    cout << "Bitwise XOR = " << (firstNumber ^ secondNumber) << endl;
+    cout << "Left Shift = " << (firstNumber << 1) << endl;
+    cout << "Right Shift = " << (firstNumber >> 1) << endl;
+
+    return 0;
+}

@@ -1,0 +1,15 @@
+﻿numbers = [10, 20, 30]
+
+print("Original List:", numbers)
+
+numbers.append(40)
+
+print("After Append:", numbers)
+
+numbers[1] = 25
+
+print("After Update:", numbers)
+
+numbers.remove(30)
+
+print("After Remove:", numbers)

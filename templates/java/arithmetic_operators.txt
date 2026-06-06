@@ -1,0 +1,14 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int firstNumber = 20;
+        int secondNumber = 10;
+
+        System.out.println("Addition = " + (firstNumber + secondNumber));
+        System.out.println("Subtraction = " + (firstNumber - secondNumber));
+        System.out.println("Multiplication = " + (firstNumber * secondNumber));
+        System.out.println("Division = " + (firstNumber / secondNumber));
+        System.out.println("Modulus = " + (firstNumber % secondNumber));
+    }
+}

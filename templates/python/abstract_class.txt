@@ -1,0 +1,16 @@
+﻿from abc import ABC, abstractmethod
+
+class Student(ABC):
+
+    @abstractmethod
+    def display(self):
+        pass
+
+class CollegeStudent(Student):
+
+    def display(self):
+        print("Abstract Class Example")
+
+student = CollegeStudent()
+
+student.display()

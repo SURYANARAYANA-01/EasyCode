@@ -1,0 +1,23 @@
+﻿import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        int firstNumber = scanner.nextInt();
+
+        System.out.print("Enter Second Number: ");
+        int secondNumber = scanner.nextInt();
+
+        System.out.println("Bitwise AND = " + (firstNumber & secondNumber));
+        System.out.println("Bitwise OR = " + (firstNumber | secondNumber));
+        System.out.println("Bitwise XOR = " + (firstNumber ^ secondNumber));
+        System.out.println("Left Shift = " + (firstNumber << 1));
+        System.out.println("Right Shift = " + (firstNumber >> 1));
+
+        scanner.close();
+    }
+}

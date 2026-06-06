@@ -1,0 +1,30 @@
+﻿#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int size;
+
+    cout << "Enter Array Size: ";
+    cin >> size;
+
+    vector<int> numbers(size);
+
+    for (int index = 0; index < size; index++) {
+        cout << "Enter Element " << index + 1 << ": ";
+
+        cin >> numbers[index];
+    }
+
+    int largestElement = numbers[0];
+
+    for (int index = 1; index < size; index++) {
+        if (numbers[index] > largestElement) {
+            largestElement = numbers[index];
+        }
+    }
+
+    cout << "Largest Element = " << largestElement << endl;
+
+    return 0;
+}

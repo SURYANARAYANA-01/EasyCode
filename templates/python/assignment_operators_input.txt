@@ -1,0 +1,15 @@
+﻿number = int(input("Enter Number: "))
+
+print("Initial Value =", number)
+
+number += 5
+print("number += 5 =", number)
+
+number -= 3
+print("number -= 3 =", number)
+
+number *= 2
+print("number *= 2 =", number)
+
+number /= 4
+print("number /= 4 =", number)

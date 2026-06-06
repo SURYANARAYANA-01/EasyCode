@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Array Size: ");
+
+        int size = scanner.nextInt();
+
+        int[] numbers = new int[size];
+
+        for (int index = 0; index < size; index++) {
+
+            System.out.print("Enter Element " + (index + 1) + ": ");
+
+            numbers[index] = scanner.nextInt();
+        }
+
+        int smallest = numbers[0];
+
+        for (int number : numbers) {
+
+            if (number < smallest) {
+
+                smallest = number;
+            }
+        }
+
+        System.out.println("Smallest Element = " + smallest);
+
+        scanner.close();
+    }
+}

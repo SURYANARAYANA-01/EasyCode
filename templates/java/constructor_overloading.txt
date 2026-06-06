@@ -1,0 +1,19 @@
+﻿class Student {
+
+    Student() {
+        System.out.println("Default Constructor Called");
+    }
+
+    Student(String name) {
+        System.out.println("Student Name: " + name);
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Student student1 = new Student();
+        Student student2 = new Student("Lazy");
+    }
+}

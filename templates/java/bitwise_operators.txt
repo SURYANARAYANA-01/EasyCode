@@ -1,0 +1,14 @@
+﻿public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        int firstNumber = 5;
+        int secondNumber = 3;
+
+        System.out.println("Bitwise AND = " + (firstNumber & secondNumber));
+        System.out.println("Bitwise OR = " + (firstNumber | secondNumber));
+        System.out.println("Bitwise XOR = " + (firstNumber ^ secondNumber));
+        System.out.println("Left Shift = " + (firstNumber << 1));
+        System.out.println("Right Shift = " + (firstNumber >> 1));
+    }
+}

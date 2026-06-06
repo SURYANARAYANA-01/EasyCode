@@ -1,0 +1,18 @@
+﻿#include <iostream>
+using namespace std;
+
+void updateValue(int &number) {
+    number = 100;
+}
+
+int main() {
+    int number = 50;
+
+    cout << "Before Function Call = " << number << endl;
+
+    updateValue(number);
+
+    cout << "After Function Call = " << number << endl;
+
+    return 0;
+}

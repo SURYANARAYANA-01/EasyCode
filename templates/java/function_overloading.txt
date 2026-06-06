@@ -1,0 +1,21 @@
+﻿class Calculator {
+
+    int add(int firstNumber, int secondNumber) {
+        return firstNumber + secondNumber;
+    }
+
+    double add(double firstNumber, double secondNumber) {
+        return firstNumber + secondNumber;
+    }
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Calculator calculator = new Calculator();
+
+        System.out.println(calculator.add(10, 20));
+        System.out.println(calculator.add(10.5, 20.5));
+    }
+}

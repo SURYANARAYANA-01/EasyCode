@@ -1,0 +1,12 @@
+﻿#include <iostream>
+using namespace std;
+
+void displayMessage(string name) {
+    cout << "Welcome " << name << endl;
+}
+
+int main() {
+    displayMessage("Lazy");
+
+    return 0;
+}

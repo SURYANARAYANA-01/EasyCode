@@ -1,0 +1,16 @@
+﻿public abstract class ${CLASS_NAME} {
+
+    abstract void display();
+
+    static class Student extends ${CLASS_NAME} {
+        void display() {
+            System.out.println("Abstract Class Example");
+        }
+    }
+
+    public static void main(String[] args) {
+        Student student = new Student();
+
+        student.display();
+    }
+}

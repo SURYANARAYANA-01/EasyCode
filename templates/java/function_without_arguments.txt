@@ -1,0 +1,11 @@
+﻿public class ${CLASS_NAME} {
+
+    static void displayMessage() {
+        System.out.println("Welcome to EasyCode");
+    }
+
+    public static void main(String[] args) {
+
+        displayMessage();
+    }
+}

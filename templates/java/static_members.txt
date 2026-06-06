@@ -1,0 +1,12 @@
+class Student {
+
+    static int count = 25;
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        System.out.println("Student Count = " + Student.count);
+    }
+}

@@ -1,0 +1,61 @@
+﻿#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[10] = {10, 20, 30, 40, 50};
+    int size = 5;
+
+    cout << "Original Array: ";
+
+    for (int index = 0; index < size; index++) {
+        cout << numbers[index] << " ";
+    }
+
+    cout << endl;
+
+    numbers[1] = 25;
+
+    cout << "After Update: ";
+
+    for (int index = 0; index < size; index++) {
+        cout << numbers[index] << " ";
+    }
+
+    cout << endl;
+
+    int insertPosition = 3;
+    int insertValue = 35;
+
+    for (int index = size; index > insertPosition; index--) {
+        numbers[index] = numbers[index - 1];
+    }
+
+    numbers[insertPosition] = insertValue;
+    size++;
+
+    cout << "After Insert: ";
+
+    for (int index = 0; index < size; index++) {
+        cout << numbers[index] << " ";
+    }
+
+    cout << endl;
+
+    int removePosition = 2;
+
+    for (int index = removePosition; index < size - 1; index++) {
+        numbers[index] = numbers[index + 1];
+    }
+
+    size--;
+
+    cout << "After Remove: ";
+
+    for (int index = 0; index < size; index++) {
+        cout << numbers[index] << " ";
+    }
+
+    cout << endl;
+
+    return 0;
+}
