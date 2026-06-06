@@ -5,6 +5,10 @@
                          "trigger":  "abstract class"
                      },
                      {
+                         "id": "function_without_arguments",
+                         "trigger": "function without arguments"
+                     },
+                     {
                          "id":  "access_specifiers",
                          "trigger":  "access specifiers"
                      },

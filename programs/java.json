@@ -5,6 +5,10 @@
                          "trigger":  "abstract class"
                      },
                      {
+                         "id": "function_without_arguments",
+                         "trigger": "function without arguments"
+                     },
+                     {
                          "id":  "abstract_method",
                          "trigger":  "abstract method"
                      },

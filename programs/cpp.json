@@ -259,6 +259,14 @@
     {
       "id": "inline_function",
       "trigger": "inline function"
+    },
+    {
+      "id": "copying_objects",
+      "trigger": "copying objects"
+    },
+    {
+      "id": "object_cloning",
+      "trigger": "object cloning"
     }
   ]
 }
