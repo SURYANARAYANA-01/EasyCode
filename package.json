@@ -20,15 +20,15 @@
   "contributes": {
   "keybindings": [
   {
-    "command": "easycode.generateProgram",
+    "command": "easycodedev.generateProgram",
     "key": "ctrl+enter",
     "when": "editorTextFocus"
   }
 ],
   "commands": [
     {
-      "command": "easycode.generateProgram",
-      "title": "EasyCode: Generate Program"
+      "command": "easycodedev.generateProgram",
+      "title": "EasyCode Dev: Generate Program"
     }
   ]
 },

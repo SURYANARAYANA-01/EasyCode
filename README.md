@@ -1,4 +1,4 @@
-# EasyCode
+# EasyCode Dev
 
 Generate beginner-friendly C++, Java, and Python programs instantly inside VS Code.
 
@@ -75,13 +75,13 @@ Ctrl + Enter
 ```
 
 ```text
-EasyCode: Generate Program
+EasyCode Dev: Generate Program
 ```
-EasyCode will automatically generate the corresponding program below the command.
+EasyCode Dev will automatically generate the corresponding program below the command.
 
 ## Requirements
 
 * Visual Studio Code
 * C++, Java, or Python file
 
-## Enjoy Coding with EasyCode!
+## Enjoy Coding with EasyCode Dev!

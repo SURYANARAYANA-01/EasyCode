@@ -8,7 +8,7 @@ export function activate(
 
 	const disposable =
 		vscode.commands.registerCommand(
-			'easycode.generateProgram',
+			'easycodedev.generateProgram',
 			async () => {
 
 				const editor =
