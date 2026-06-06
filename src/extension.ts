@@ -87,7 +87,7 @@ export function activate(
 					) {
 
 						vscode.window.showErrorMessage(
-							'No EasyCode command found on this line.'
+							'No EasyCode Dev command found on this line.'
 						);
 
 						return;
@@ -104,7 +104,7 @@ export function activate(
 					) {
 
 						vscode.window.showErrorMessage(
-							'No EasyCode command found on this line.'
+							'No EasyCode Dev command found on this line.'
 						);
 
 						return;
@@ -287,7 +287,7 @@ export function activate(
 				);
 
 				vscode.window.showInformationMessage(
-					'EasyCode generated successfully!'
+					'EasyCode Dev generated successfully!'
 				);
 			}
 		);
