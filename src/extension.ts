@@ -2,6 +2,31 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
+const RESERVED_JAVA_CLASS_NAMES = new Set([
+    "String",
+    "System",
+    "Object",
+    "Integer",
+    "Double",
+    "Character",
+    "Boolean"
+]);
+
+function validateJavaFileName(fileName: string): boolean {
+    const className = fileName.replace(".java", "");
+
+    console.log("Class Name:", className);
+
+    if (RESERVED_JAVA_CLASS_NAMES.has(className)) {
+        vscode.window.showErrorMessage(
+            "Invalid Java file name. Please rename the file. Reserved names: String, System, Object, Integer, Double, Character, Boolean."
+        );
+        return false;
+    }
+
+    return true;
+}
+
 export function activate(
 	context: vscode.ExtensionContext
 ) {
@@ -23,8 +48,14 @@ export function activate(
 					return;
 				}
 
-				const fileName =
-					editor.document.fileName;
+				const fileName = path.basename(editor.document.fileName);
+
+				if (fileName.endsWith('.java')) {
+
+					if (!validateJavaFileName(fileName)) {
+						return;
+					}
+				}
 
 				let language = '';
 
@@ -253,10 +284,7 @@ export function activate(
 				);
 
 				const fileBaseName =
-					path
-						.basename(
-							fileName
-						)
+					path.basename(editor.document.fileName)
 						.replace(
 							/\.[^/.]+$/,
 							''

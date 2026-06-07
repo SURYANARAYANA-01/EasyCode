@@ -184,6 +184,8 @@
 //Smallest Element In Array
 //Smallest Element In Array Input
 //Static Members
+//String 
+//String Reverse
 //Ternary Operator
 //Ternary Operator Input
 //This Pointer

@@ -5,6 +5,14 @@
                          "trigger":  "abstract class"
                      },
                      {
+                         "id": "string_reverse",
+                         "trigger": "String Reverse"
+                     },
+                     {
+                         "id": "string",
+                         "trigger": "String"
+                     },
+                     {
                          "id": "function_without_arguments",
                          "trigger": "function without arguments"
                      },

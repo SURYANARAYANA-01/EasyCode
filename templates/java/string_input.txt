@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String first = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String second = sc.nextLine();
+
+        String result = first + " " + second;
+
+        System.out.println("Concatenated String: " + result);
+        System.out.println("Length of Concatenated String: " + result.length());
+
+        sc.close();
+    }
+}

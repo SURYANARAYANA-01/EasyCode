@@ -1,6 +1,6 @@
 # EasyCode Dev
 
-Generate beginner-friendly C++, Java, and Python programs instantly inside VS Code.
+Generate beginner-friendly C++, Java, and Python programs instantly inside Visual Studio Code using simple commands and Ctrl + Enter.
 
 ## Features
 
@@ -9,10 +9,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside VS Co
 * Python Templates
 * Input and Non-Input Programs
 * Beginner-Friendly Examples
-* One-Click Code Generation
-
-```md
-- Generate programs instantly with Ctrl + Enter
+* Generate Programs Instantly with Ctrl + Enter
 
 ## C++ Example
 
@@ -20,7 +17,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside VS Co
 //hello world
 ```
 
-![C++ Example](images/CPP.jpeg)
+![C++ Example](https://raw.githubusercontent.com/SURYANARAYANA-01/EasyCode/main/images/CPP.jpeg)
 
 ## Java Example
 
@@ -28,7 +25,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside VS Co
 //class and object
 ```
 
-![Java Example](images/Java.jpeg)
+![Java Example](https://raw.githubusercontent.com/SURYANARAYANA-01/EasyCode/main/images/Java.jpeg)
 
 ## Python Example
 
@@ -36,11 +33,11 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside VS Co
 #for loop
 ```
 
-![Python Example](images/Python.jpeg)
+![Python Example](https://raw.githubusercontent.com/SURYANARAYANA-01/EasyCode/main/images/Python.jpeg)
 
 ## Multiple Templates
 
-![Multiple Templates](images/Template.jpeg)
+![Multiple Templates](https://raw.githubusercontent.com/SURYANARAYANA-01/EasyCode/main/images/Template.jpeg)
 
 ## Supported Languages
 
@@ -83,5 +80,37 @@ EasyCode Dev will automatically generate the corresponding program below the com
 
 * Visual Studio Code
 * C++, Java, or Python file
+
+## Installation
+
+1. Install EasyCode Dev from the VS Code Marketplace.
+2. Open a C++, Java, or Python file.
+3. Type a supported command.
+4. Place the cursor on the command line.
+5. Press Ctrl + Enter.
+
+## Template Library
+
+EasyCode Dev includes 100+ beginner-friendly templates covering:
+
+* OOP Concepts
+* Arrays
+* Functions
+* Loops
+* Operators
+* Inheritance
+* Polymorphism
+* And more...
+
+## Quick Commands
+
+| Command | Description |
+|----------|-------------|
+| //Class And Object | Generate class and object program |
+| //For Loop | Generate for loop example |
+| //String | Generate string operations example |
+| //String Reverse | Generate string reverse example |
+
+For the complete command list, see [COMMANDS.md](./COMMANDS.md).
 
 ## Enjoy Coding with EasyCode Dev!

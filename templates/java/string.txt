@@ -1,0 +1,15 @@
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        String firstName = "EasyCode";
+        String lastName = "Dev";
+
+        String fullName = firstName + " " + lastName;
+
+        System.out.println("First String: " + firstName);
+        System.out.println("Second String: " + lastName);
+        System.out.println("Concatenated String: " + fullName);
+        System.out.println("Length of Concatenated String: " + fullName.length());
+    }
+}
