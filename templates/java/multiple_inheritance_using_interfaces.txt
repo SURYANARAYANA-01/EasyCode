@@ -1,0 +1,27 @@
+interface A {
+    void showA();
+}
+
+interface B {
+    void showB();
+}
+
+class Demo implements A, B {
+    public void showA() {
+        System.out.println("Interface A");
+    }
+
+    public void showB() {
+        System.out.println("Interface B");
+    }
+}
+
+public class ${CLASS_NAME} {
+    public static void main(String[] args) {
+
+        Demo d = new Demo();
+
+        d.showA();
+        d.showB();
+    }
+}

@@ -1,0 +1,12 @@
+int main() {
+
+    string str;
+
+    cout << "Enter String: ";
+    getline(cin, str);
+
+    cout << "String: " << str << endl;
+    cout << "Length: " << str.length();
+
+    return 0;
+}

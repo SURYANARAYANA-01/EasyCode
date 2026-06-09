@@ -1,0 +1,11 @@
+int main() {
+
+    string firstName = "EasyCode";
+    string lastName = "Dev";
+
+    string fullName = firstName + " " + lastName;
+
+    cout << "Concatenated String: " << fullName;
+
+    return 0;
+}

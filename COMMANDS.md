@@ -1,13 +1,18 @@
 ## Commands for CPP
 
+//Abstraction
 //Abstract Class
 //Access Specifiers
 //Arithmetic Operators
 //Arithmetic Operators Input
 //Array Average
 //Array Average Input
+//Array Reverse
+//Array Reverse Input
 //Array Search
 //Array Search Input
+//Array Sorting
+//Array Sorting Input
 //Array Sum
 //Array Sum Input
 //Array Traversal
@@ -35,10 +40,16 @@
 //Destructor
 //Do While Loop
 //Else If Ladder
+//Exception Handling
+//Exception Handling Input
+//Encapsulation
+//Encapsulation Input
 //For Loop
 //Foreach Loop
 //Function Overloading
 //Function With Arguments
+//Function With Arguments And Return Value
+//Function With Arguments And Return Value Input
 //Function With Arguments Input
 //Function With Return Value
 //Function With Return Value Input
@@ -80,6 +91,7 @@
 //Pointer Arithmetic
 //Pointer Arithmetic Input
 //Pointer Basics
+//Polymorphism
 //Pure Virtual Function
 //Recursive Function
 //Recursive Function Input
@@ -94,6 +106,18 @@
 //Smallest Element In Array
 //Smallest Element In Array Input
 //Static Members
+//String
+//String Comparison
+//String Comparison Input
+//String Concatenation
+//String Concatenation Input
+//String Input
+//String Palindrome
+//String Palindrome Input
+//String Reverse
+//String Reverse Input
+//Substring
+//Substring Input
 //Ternary Operator
 //Ternary Operator Input
 //This Pointer
@@ -105,6 +129,7 @@
 
 ## Command for Java
 
+//Abstraction
 //Abstract Class
 //Abstract Method
 //Access Specifiers
@@ -112,8 +137,12 @@
 //Arithmetic Operators Input
 //Array Average
 //Array Average Input
+//Array Reverse
+//Array Reverse Input
 //Array Search
 //Array Search Input
+//Array Sorting
+//Array Sorting Input
 //Array Sum
 //Array Sum Input
 //Array Traversal
@@ -137,10 +166,16 @@
 //Default Constructor
 //Do While Loop
 //Else If Ladder
+//Exception Handling Try Catch
+//Exception Handling Try Catch Input
+//Encapsulation
+//Encapsulation Input
 //For Loop
 //Foreach Loop
 //Function Overloading
 //Function With Arguments
+//Function With Arguments And Return Value
+//Function With Arguments And Return Value Input
 //Function With Arguments Input
 //Function With Return Value
 //Function With Return Value Input
@@ -163,6 +198,7 @@
 //Method Overriding
 //Multilevel Inheritance
 //Multilevel Inheritance Input
+//Multiple Inheritance Using Interfaces
 //Nested If
 //Nested If Input
 //Nested Loops
@@ -173,6 +209,7 @@
 //Operator Overloading
 //Parameterized Constructor
 //Parameterized Constructor Input
+//Polymorphism
 //Recursive Function
 //Recursive Function Input
 //Relational Operators
@@ -184,8 +221,18 @@
 //Smallest Element In Array
 //Smallest Element In Array Input
 //Static Members
-//String 
+//String
+//String Input
+//String Comparison
+//String Comparison Input
+//String Concatenation
+//String Concatenation Input
+//String Palindrome
+//String Palindrome Input
 //String Reverse
+//String Reverse Input
+//Substring
+//Substring Input
 //Ternary Operator
 //Ternary Operator Input
 //This Pointer
@@ -197,14 +244,19 @@
 
 ## Command for Python
 
+#Abstraction
 #Abstract Class
 #Access Specifiers
 #Arithmetic Operators
 #Arithmetic Operators Input
 #Array Average
 #Array Average Input
+#Array Reverse
+#Array Reverse Input
 #Array Search
 #Array Search Input
+#Array Sorting
+#Array Sorting Input
 #Array Sum
 #Array Sum Input
 #Array Traversal
@@ -232,10 +284,17 @@
 #Dictionary Operations Input
 #Do While Loop
 #Else If Ladder
+#Exception Handling
+#Exception Handling Input
+#Exception Handling Multiple Except
+#File Handling
+#File Handling Input
 #For Loop
 #Foreach Loop
 #Function Overloading
 #Function With Arguments
+#Function With Arguments And Return Value
+#Function With Arguments And Return Value Input
 #Function With Arguments Input
 #Function With Return Value
 #Function With Return Value Input
@@ -250,8 +309,10 @@
 #Increment Decrement Operators
 #Increment Decrement Operators Input
 #Interface Concept
+#Lambda Function
 #Largest Element In Array
 #Largest Element In Array Input
+#List Comprehension
 #List Operations
 #List Operations Input
 #Logical Operators
@@ -270,6 +331,7 @@
 #Operator Overloading
 #Parameterized Constructor
 #Parameterized Constructor Input
+#Polymorphism
 #Recursive Function
 #Recursive Function Input
 #Relational Operators
@@ -283,6 +345,18 @@
 #Smallest Element In Array
 #Smallest Element In Array Input
 #Static Members
+#String
+#String Comparison
+#String Comparison Input
+#String Concatenation
+#String Concatenation Input
+#String Input
+#String Palindrome
+#String Palindrome Input
+#String Reverse
+#String Reverse Input
+#Substring
+#Substring Input
 #Ternary Operator
 #Ternary Operator Input
 #Tuple Operations

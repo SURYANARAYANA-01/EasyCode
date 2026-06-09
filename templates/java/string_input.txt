@@ -6,16 +6,14 @@ public class ${CLASS_NAME} {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first string: ");
-        String first = sc.nextLine();
+        System.out.print("Enter a String: ");
+        String str = sc.nextLine();
 
-        System.out.print("Enter second string: ");
-        String second = sc.nextLine();
-
-        String result = first + " " + second;
-
-        System.out.println("Concatenated String: " + result);
-        System.out.println("Length of Concatenated String: " + result.length());
+        System.out.println("String: " + str);
+        System.out.println("Length: " + str.length());
+        System.out.println("Uppercase: " + str.toUpperCase());
+        System.out.println("Lowercase: " + str.toLowerCase());
+        System.out.println("First Character: " + str.charAt(0));
 
         sc.close();
     }

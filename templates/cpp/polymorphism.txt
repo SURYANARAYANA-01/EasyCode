@@ -1,0 +1,23 @@
+class Animal {
+    public:
+        virtual void sound() {
+            cout << "Animal Sound";
+        }
+};
+
+class Dog : public Animal {
+    public:
+        void sound() {
+            cout << "Dog Barks";
+        }
+};
+
+int main() {
+
+    Animal* a = new Dog();
+    a->sound();
+
+    delete a;
+
+    return 0;
+}

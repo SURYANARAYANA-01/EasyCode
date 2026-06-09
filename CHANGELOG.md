@@ -2,6 +2,23 @@
 
 All notable changes to EasyCode Dev will be documented in this file.
 
+## [1.0.2] - 2026-06-09
+
+### Added
+
+- New Java, Python, and C++ templates.
+- Abstraction, Encapsulation, and Polymorphism examples.
+- Exception Handling templates.
+- Array Sorting and Array Reverse templates.
+- String handling templates.
+- File Handling, Lambda Function, and List Comprehension templates (Python).
+    
+### Improved
+
+- Expanded template library across all languages.
+- Updated command mappings and documentation.
+- Improved template consistency and organization.
+
 ## [1.0.1] - 2026-06-07
 
 ### Added

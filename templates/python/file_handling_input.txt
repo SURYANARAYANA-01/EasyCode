@@ -1,0 +1,9 @@
+text = input("Enter Text: ")
+
+file = open("sample.txt", "w")
+
+file.write(text)
+
+file.close()
+
+print("File Saved Successfully")

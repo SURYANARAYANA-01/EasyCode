@@ -1,0 +1,10 @@
+int main() {
+
+    string str = "EasyCode";
+
+    reverse(str.begin(), str.end());
+
+    cout << "Reversed String: " << str;
+
+    return 0;
+}

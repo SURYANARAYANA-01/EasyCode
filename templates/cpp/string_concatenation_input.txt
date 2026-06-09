@@ -1,0 +1,16 @@
+int main() {
+
+    string firstName, lastName;
+
+    cout << "Enter First String: ";
+    getline(cin, firstName);
+
+    cout << "Enter Second String: ";
+    getline(cin, lastName);
+
+    string fullName = firstName + " " + lastName;
+
+    cout << "Concatenated String: " << fullName;
+
+    return 0;
+}

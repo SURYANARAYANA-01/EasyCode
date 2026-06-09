@@ -1,0 +1,19 @@
+int main() {
+
+    int num;
+
+    cout << "Enter Number: ";
+    cin >> num;
+
+    try {
+        if (num < 0)
+            throw num;
+
+        cout << "Number: " << num;
+    }
+    catch (int error) {
+        cout << "Negative Number Not Allowed";
+    }
+
+    return 0;
+}

@@ -1,0 +1,8 @@
+int main() {
+
+    string str = "EasyCode";
+
+    cout << "Substring: " << str.substr(0, 4);
+
+    return 0;
+}

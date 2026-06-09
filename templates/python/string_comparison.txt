@@ -1,0 +1,7 @@
+str1 = "EasyCode"
+str2 = "EasyCode"
+
+if str1 == str2:
+    print("Strings are Equal")
+else:
+    print("Strings are Not Equal")

@@ -235,6 +235,75 @@
                      {
                          "id":  "while_loop",
                          "trigger":  "while loop"
+                     },
+                     {
+                         "id": "encapsulation",
+                         "trigger": "encapsulation"
+                     },
+                     {
+                         "id": "abstraction",
+                         "trigger": "abstraction"
+                     },
+                     {
+                         "id": "array_reverse",
+                         "trigger": "array reverse"
+                     },
+                     {
+                         "id": "array_sorting",
+                         "trigger": "array sorting"
+                     },
+                     {
+                         "id": "exception_handling",
+                         "trigger": "exception handling"
+                     },
+                     {
+                         "id": "exception_handling_multiple_except",
+                         "trigger": "multiple except"
+                     },
+                     {
+                         "id": "file_handling",
+                         "trigger": "file handling"
+                     },
+                     {
+                         "id": "function_with_arguments_and_return_value",
+                         "trigger": "function with arguments and return value"
+                     },
+                     {
+                         "id": "lambda_function",
+                         "trigger": "lambda function"
+                     },
+                     {
+                         "id": "list_comprehension",
+                         "trigger": "list comprehension"
+                     },
+                     {
+                         "id": "polymorphism",
+                         "trigger": "polymorphism"
+                     },
+                     {
+                         "id": "string",
+                         "trigger": "string"
+                     },
+                     {
+                         "id": "string_comparison",
+                         "trigger": "string comparison"
+                     },
+                     {
+                         "id": "string_concatenation",
+                         "trigger": "string concatenation"
+                     },
+                     {
+                         "id": "string_palindrome",
+                         "trigger": "string palindrome"
+                     },
+                     {
+                         "id": "string_reverse",
+                         "trigger": "string reverse"
+                     },
+                     {
+                         "id": "substring",
+                         "trigger": "substring"
                      }
+
                  ]
 }

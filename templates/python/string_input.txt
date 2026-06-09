@@ -1,0 +1,9 @@
+text = input("Enter a String: ")
+
+print("String:", text)
+print("Length:", len(text))
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
+
+if len(text) > 0:
+    print("First Character:", text[0])

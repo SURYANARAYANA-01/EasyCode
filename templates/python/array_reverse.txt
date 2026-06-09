@@ -1,0 +1,7 @@
+numbers = [1, 2, 3, 4, 5]
+
+print("Original List:", numbers)
+
+numbers.reverse()
+
+print("Reversed List:", numbers)

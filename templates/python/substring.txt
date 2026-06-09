@@ -1,0 +1,5 @@
+text = "EasyCode"
+
+substring = text[0:4]
+
+print("Substring:", substring)

@@ -1,0 +1,17 @@
+int main() {
+
+    string str1, str2;
+
+    cout << "Enter First String: ";
+    getline(cin, str1);
+
+    cout << "Enter Second String: ";
+    getline(cin, str2);
+
+    if (str1 == str2)
+        cout << "Strings are Equal";
+    else
+        cout << "Strings are Not Equal";
+
+    return 0;
+}

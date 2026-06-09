@@ -2,14 +2,12 @@ public class ${CLASS_NAME} {
 
     public static void main(String[] args) {
 
-        String firstName = "EasyCode";
-        String lastName = "Dev";
+        String str = "EasyCode Dev";
 
-        String fullName = firstName + " " + lastName;
-
-        System.out.println("First String: " + firstName);
-        System.out.println("Second String: " + lastName);
-        System.out.println("Concatenated String: " + fullName);
-        System.out.println("Length of Concatenated String: " + fullName.length());
+        System.out.println("String: " + str);
+        System.out.println("Length: " + str.length());
+        System.out.println("Uppercase: " + str.toUpperCase());
+        System.out.println("Lowercase: " + str.toLowerCase());
+        System.out.println("First Character: " + str.charAt(0));
     }
 }

@@ -1,0 +1,11 @@
+int main() {
+
+    try {
+        throw 404;
+    }
+    catch (int error) {
+        cout << "Error Code: " << error;
+    }
+
+    return 0;
+}

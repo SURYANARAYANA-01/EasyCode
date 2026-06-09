@@ -1,0 +1,8 @@
+text = input("Enter a String: ")
+
+start = int(input("Enter Start Index: "))
+end = int(input("Enter End Index: "))
+
+substring = text[start:end]
+
+print("Substring:", substring)

@@ -1,0 +1,18 @@
+int main() {
+
+    string str;
+    int start, length;
+
+    cout << "Enter String: ";
+    getline(cin, str);
+
+    cout << "Enter Start Index: ";
+    cin >> start;
+
+    cout << "Enter Length: ";
+    cin >> length;
+
+    cout << "Substring: " << str.substr(start, length);
+
+    return 0;
+}

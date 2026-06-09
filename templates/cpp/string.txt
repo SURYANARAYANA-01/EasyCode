@@ -1,0 +1,9 @@
+int main() {
+
+    string str = "EasyCode Dev";
+
+    cout << "String: " << str << endl;
+    cout << "Length: " << str.length() << endl;
+
+    return 0;
+}

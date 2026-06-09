@@ -1,0 +1,7 @@
+numbers = [5, 2, 8, 1, 9]
+
+print("Original List:", numbers)
+
+numbers.sort()
+
+print("Sorted List:", numbers)

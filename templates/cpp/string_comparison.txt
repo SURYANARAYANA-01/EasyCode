@@ -1,0 +1,12 @@
+int main() {
+
+    string str1 = "EasyCode";
+    string str2 = "EasyCode";
+
+    if (str1 == str2)
+        cout << "Strings are Equal";
+    else
+        cout << "Strings are Not Equal";
+
+    return 0;
+}

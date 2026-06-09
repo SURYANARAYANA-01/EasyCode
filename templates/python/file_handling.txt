@@ -1,0 +1,7 @@
+file = open("sample.txt", "w")
+
+file.write("Welcome to EasyCode")
+
+file.close()
+
+print("File Created Successfully")

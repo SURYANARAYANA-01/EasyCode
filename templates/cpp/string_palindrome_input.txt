@@ -1,0 +1,18 @@
+int main() {
+
+    string str;
+
+    cout << "Enter String: ";
+    getline(cin, str);
+
+    string rev = str;
+
+    reverse(rev.begin(), rev.end());
+
+    if (str == rev)
+        cout << "Palindrome";
+    else
+        cout << "Not a Palindrome";
+
+    return 0;
+}
