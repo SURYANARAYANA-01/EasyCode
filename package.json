@@ -2,7 +2,7 @@
   "name": "easycode-dev",
   "displayName": "EasyCode Dev",
   "description": "Generate beginner-friendly C++, Java, and Python programs instantly.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "LazyDev",
   "icon": "images/Icon.png",
   "repository": {

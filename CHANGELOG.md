@@ -2,6 +2,11 @@
 
 All notable changes to EasyCode Dev will be documented in this file.
 
+### [i.0.3] - 2026-06-10
+
+- Fixed Java, Python, and C++ templates.
+- Fixed Images.
+
 ## [1.0.2] - 2026-06-09
 
 ### Added
