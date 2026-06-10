@@ -17,7 +17,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 //hello world
 ```
 
-![C++ Example](images/CPP.jpeg)
+![C++ Example](images/CPP.png)
 
 ## Java Example
 
@@ -25,7 +25,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 //class and object
 ```
 
-![Java Example](images/Java.jpeg)
+![Java Example](images/Java.png)
 
 ## Python Example
 
@@ -33,11 +33,11 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 #for loop
 ```
 
-![Python Example](images/Python.jpeg)
+![Python Example](images/Python.png)
 
 ## Multiple Templates
 
-![Multiple Templates](images/Template.jpeg)
+![Multiple Templates](images/Template.png)
 
 ## Supported Languages
 
