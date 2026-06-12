@@ -1,0 +1,204 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+class Contact {
+public:
+    string name;
+    string phone;
+};
+
+bool isValidPhone(string phone) {
+    if(phone.length() != 10) {
+        return false;
+    }
+
+    for(char ch : phone) {
+        if(!isdigit(ch)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    Contact contacts[100];
+    int count = 0;
+    int choice;
+
+    do {
+        cout << "\n===== Contact Book =====";
+        cout << "\n1. Add Contact";
+        cout << "\n2. View Contacts";
+        cout << "\n3. Search Contact";
+        cout << "\n4. Update Contact";
+        cout << "\n5. Delete Contact";
+        cout << "\n6. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+
+                if(count >= 100) {
+                    cout << "Contact Book Full.\n";
+                    break;
+                }
+
+                cin.ignore();
+
+                cout << "Enter Name: ";
+                getline(cin, contacts[count].name);
+
+                cout << "Enter Phone Number: ";
+                cin >> contacts[count].phone;
+
+                if(isValidPhone(contacts[count].phone)) {
+                    count++;
+                    cout << "Contact Added Successfully.\n";
+                }
+                else {
+                    cout << "Invalid Phone Number. Must contain exactly 10 digits.\n";
+                }
+
+                break;
+
+            case 2:
+
+                if(count == 0) {
+                    cout << "No Contacts Found.\n";
+                }
+                else {
+                    cout << "\n===== Contact List =====\n";
+
+                    for(int i = 0; i < count; i++) {
+                        cout << "\nContact " << i + 1 << endl;
+                        cout << "Name  : " << contacts[i].name << endl;
+                        cout << "Phone : " << contacts[i].phone << endl;
+                    }
+                }
+
+                break;
+
+            case 3:
+            {
+                string searchName;
+                bool found = false;
+
+                cin.ignore();
+
+                cout << "Enter Name to Search: ";
+                getline(cin, searchName);
+
+                for(int i = 0; i < count; i++) {
+                    if(contacts[i].name == searchName) {
+                        cout << "\nContact Found\n";
+                        cout << "Name  : " << contacts[i].name << endl;
+                        cout << "Phone : " << contacts[i].phone << endl;
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if(!found) {
+                    cout << "Contact Not Found.\n";
+                }
+
+                break;
+            }
+
+            case 4:
+            {
+                string updateName;
+                bool found = false;
+
+                cin.ignore();
+
+                cout << "Enter Name to Update: ";
+                getline(cin, updateName);
+
+                for(int i = 0; i < count; i++) {
+                    if(contacts[i].name == updateName) {
+
+                        string newPhone;
+
+                        cout << "Enter New Phone Number: ";
+                        cin >> newPhone;
+
+                        if(isValidPhone(newPhone)) {
+                            contacts[i].phone = newPhone;
+                            cout << "Contact Updated Successfully.\n";
+                        }
+                        else {
+                            cout << "Invalid Phone Number.\n";
+                        }
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if(!found) {
+                    cout << "Contact Not Found.\n";
+                }
+
+                break;
+            }
+
+            case 5:
+            {
+                string deleteName;
+                bool found = false;
+                char confirm;
+
+                cin.ignore();
+
+                cout << "Enter Name to Delete: ";
+                getline(cin, deleteName);
+
+                for(int i = 0; i < count; i++) {
+                    if(contacts[i].name == deleteName) {
+
+                        cout << "Are you sure? (Y/N): ";
+                        cin >> confirm;
+
+                        if(confirm == 'Y' || confirm == 'y') {
+
+                            for(int j = i; j < count - 1; j++) {
+                                contacts[j] = contacts[j + 1];
+                            }
+
+                            count--;
+                            cout << "Contact Deleted Successfully.\n";
+                        }
+                        else {
+                            cout << "Delete Cancelled.\n";
+                        }
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if(!found) {
+                    cout << "Contact Not Found.\n";
+                }
+
+                break;
+            }
+
+            case 6:
+                cout << "Exiting Program...\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

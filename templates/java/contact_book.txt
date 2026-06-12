@@ -1,0 +1,208 @@
+import java.util.Scanner;
+
+class Contact {
+    String name;
+    String phone;
+}
+
+public class ${CLASS_NAME} {
+
+    public static boolean isValidPhone(String phone) {
+
+        if(phone.length() != 10) {
+            return false;
+        }
+
+        for(int i = 0; i < phone.length(); i++) {
+            if(!Character.isDigit(phone.charAt(i))) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Contact[] contacts = new Contact[100];
+        int count = 0;
+        int choice;
+
+        do {
+
+            System.out.println("\n===== Contact Book =====");
+            System.out.println("1. Add Contact");
+            System.out.println("2. View Contacts");
+            System.out.println("3. Search Contact");
+            System.out.println("4. Update Contact");
+            System.out.println("5. Delete Contact");
+            System.out.println("6. Exit");
+
+            System.out.print("Enter Choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+
+            switch(choice) {
+
+                case 1:
+
+                    if(count >= 100) {
+                        System.out.println("Contact Book Full.");
+                        break;
+                    }
+
+                    contacts[count] = new Contact();
+
+                    System.out.print("Enter Name: ");
+                    contacts[count].name = sc.nextLine();
+
+                    System.out.print("Enter Phone Number: ");
+                    contacts[count].phone = sc.nextLine();
+
+                    if(isValidPhone(contacts[count].phone)) {
+
+                        count++;
+
+                        System.out.println("Contact Added Successfully.");
+                    }
+                    else {
+                        System.out.println("Invalid Phone Number. Must contain exactly 10 digits.");
+                    }
+
+                    break;
+
+                case 2:
+
+                    if(count == 0) {
+                        System.out.println("No Contacts Found.");
+                    }
+                    else {
+
+                        System.out.println("\n===== Contact List =====");
+
+                        for(int i = 0; i < count; i++) {
+
+                            System.out.println("\nContact " + (i + 1));
+                            System.out.println("Name  : " + contacts[i].name);
+                            System.out.println("Phone : " + contacts[i].phone);
+                        }
+                    }
+
+                    break;
+
+                case 3:
+
+                    boolean found = false;
+
+                    System.out.print("Enter Name to Search: ");
+                    String searchName = sc.nextLine();
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(contacts[i].name.equals(searchName)) {
+
+                            System.out.println("\nContact Found");
+                            System.out.println("Name  : " + contacts[i].name);
+                            System.out.println("Phone : " + contacts[i].phone);
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Contact Not Found.");
+                    }
+
+                    break;
+
+                case 4:
+
+                    found = false;
+
+                    System.out.print("Enter Name to Update: ");
+                    String updateName = sc.nextLine();
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(contacts[i].name.equals(updateName)) {
+
+                            System.out.print("Enter New Phone Number: ");
+                            String newPhone = sc.nextLine();
+
+                            if(isValidPhone(newPhone)) {
+
+                                contacts[i].phone = newPhone;
+
+                                System.out.println("Contact Updated Successfully.");
+                            }
+                            else {
+                                System.out.println("Invalid Phone Number.");
+                            }
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Contact Not Found.");
+                    }
+
+                    break;
+
+                case 5:
+
+                    found = false;
+
+                    System.out.print("Enter Name to Delete: ");
+                    String deleteName = sc.nextLine();
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(contacts[i].name.equals(deleteName)) {
+
+                            System.out.print("Are you sure? (Y/N): ");
+                            char confirm = sc.next().charAt(0);
+                            sc.nextLine();
+
+                            if(confirm == 'Y' || confirm == 'y') {
+
+                                for(int j = i; j < count - 1; j++) {
+                                    contacts[j] = contacts[j + 1];
+                                }
+
+                                count--;
+
+                                System.out.println("Contact Deleted Successfully.");
+                            }
+                            else {
+                                System.out.println("Delete Cancelled.");
+                            }
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Contact Not Found.");
+                    }
+
+                    break;
+
+                case 6:
+                    System.out.println("Exiting Program...");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while(choice != 6);
+
+        sc.close();
+    }
+}

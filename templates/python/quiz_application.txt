@@ -1,0 +1,75 @@
+score = 0
+
+print("===== Quiz Application =====")
+print("Choose the correct option.")
+
+print("\nQ1. What is the Capital of India?")
+print("1. Delhi")
+print("2. Mumbai")
+print("3. Chennai")
+ans = int(input("Enter your answer: "))
+
+if ans == 1:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct Answer: Delhi")
+
+print("\nQ2. What is 5 + 3?")
+print("1. 6")
+print("2. 8")
+print("3. 10")
+ans = int(input("Enter your answer: "))
+
+if ans == 2:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct Answer: 8")
+
+print("\nQ3. C++ is a?")
+print("1. Programming Language")
+print("2. Browser")
+print("3. Operating System")
+ans = int(input("Enter your answer: "))
+
+if ans == 1:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct Answer: Programming Language")
+
+print("\nQ4. How many days are there in a week?")
+print("1. 5")
+print("2. 7")
+print("3. 10")
+ans = int(input("Enter your answer: "))
+
+if ans == 2:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct Answer: 7")
+
+print("\nQ5. Which planet is known as the Red Planet?")
+print("1. Mars")
+print("2. Earth")
+print("3. Venus")
+ans = int(input("Enter your answer: "))
+
+if ans == 1:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct Answer: Mars")
+
+percentage = (score / 5) * 100
+
+print("\n===== Quiz Result =====")
+print("Score:", score, "/5")
+print("Percentage:", percentage, "%")
+
+if score >= 3:
+    print("Result: Pass")
+else:
+    print("Result: Fail")

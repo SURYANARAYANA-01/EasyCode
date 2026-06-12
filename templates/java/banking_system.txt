@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME}{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double balance = 1000.0;
+        double amount;
+        int choice;
+
+        String[] history = new String[100];
+        int transactionCount = 0;
+
+        do {
+            System.out.println("\n===== Banking System =====");
+            System.out.println("1. Deposit");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Check Balance");
+            System.out.println("4. Transaction History");
+            System.out.println("5. Exit");
+            System.out.print("Enter Choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Enter Deposit Amount: ");
+                    amount = sc.nextDouble();
+
+                    if (amount > 0) {
+                        balance += amount;
+
+                        history[transactionCount] = "Deposited Rs. " + amount;
+                        transactionCount++;
+
+                        System.out.println("Amount Deposited Successfully.");
+                    } else {
+                        System.out.println("Invalid Amount.");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter Withdrawal Amount: ");
+                    amount = sc.nextDouble();
+
+                    if (amount > 0 && amount <= balance) {
+                        balance -= amount;
+
+                        history[transactionCount] = "Withdrawn Rs. " + amount;
+                        transactionCount++;
+
+                        System.out.println("Amount Withdrawn Successfully.");
+                    } else if (amount > balance) {
+                        System.out.println("Insufficient Balance.");
+                    } else {
+                        System.out.println("Invalid Amount.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Current Balance: Rs. " + balance);
+                    break;
+
+                case 4:
+                    if (transactionCount == 0) {
+                        System.out.println("No Transactions Found.");
+                    } else {
+                        System.out.println("\n===== Transaction History =====");
+
+                        for (int i = 0; i < transactionCount; i++) {
+                            System.out.println((i + 1) + ". " + history[i]);
+                        }
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Thank You for Using Banking System.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (choice != 5);
+
+        sc.close();
+    }
+}

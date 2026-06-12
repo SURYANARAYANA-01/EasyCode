@@ -1,0 +1,132 @@
+class Book:
+    def __init__(self, book_id, title):
+        self.id = book_id
+        self.title = title
+
+
+books = []
+MAX_BOOKS = 100
+
+while True:
+
+    print("\n===== Library Management System =====")
+    print("1. Add Book")
+    print("2. View Books")
+    print("3. Search Book")
+    print("4. Update Book")
+    print("5. Delete Book")
+    print("6. Exit")
+
+    choice = int(input("Enter Choice: "))
+
+    if choice == 1:
+
+        if len(books) >= MAX_BOOKS:
+            print("Library Full.")
+            continue
+
+        new_id = int(input("Enter Book ID: "))
+
+        exists = False
+
+        for book in books:
+            if book.id == new_id:
+                exists = True
+                break
+
+        if exists:
+            print("Book ID Already Exists!")
+            continue
+
+        title = input("Enter Book Title: ")
+
+        books.append(Book(new_id, title))
+
+        print("Book Added Successfully!")
+
+    elif choice == 2:
+
+        if len(books) == 0:
+            print("No Books Available.")
+        else:
+
+            print("\n===== Book List =====")
+
+            for i, book in enumerate(books, start=1):
+                print("\nBook", i)
+                print("ID    :", book.id)
+                print("Title :", book.title)
+
+    elif choice == 3:
+
+        search_id = int(input("Enter Book ID to Search: "))
+
+        found = False
+
+        for book in books:
+
+            if book.id == search_id:
+
+                print("\nBook Found")
+                print("ID    :", book.id)
+                print("Title :", book.title)
+
+                found = True
+                break
+
+        if not found:
+            print("Book Not Found.")
+
+    elif choice == 4:
+
+        update_id = int(input("Enter Book ID to Update: "))
+
+        found = False
+
+        for book in books:
+
+            if book.id == update_id:
+
+                book.title = input("Enter New Title: ")
+
+                print("Book Updated Successfully!")
+
+                found = True
+                break
+
+        if not found:
+            print("Book Not Found.")
+
+    elif choice == 5:
+
+        delete_id = int(input("Enter Book ID to Delete: "))
+
+        found = False
+
+        for book in books:
+
+            if book.id == delete_id:
+
+                confirm = input("Are you sure? (Y/N): ")
+
+                if confirm.lower() == "y":
+
+                    books.remove(book)
+
+                    print("Book Deleted Successfully!")
+                else:
+                    print("Delete Cancelled.")
+
+                found = True
+                break
+
+        if not found:
+            print("Book Not Found.")
+
+    elif choice == 6:
+
+        print("Exiting Program...")
+        break
+
+    else:
+        print("Invalid Choice.")

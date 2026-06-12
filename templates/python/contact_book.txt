@@ -1,0 +1,135 @@
+class Contact:
+    def __init__(self, name, phone):
+        self.name = name
+        self.phone = phone
+
+
+def is_valid_phone(phone):
+    return len(phone) == 10 and phone.isdigit()
+
+
+contacts = []
+MAX_CONTACTS = 100
+
+while True:
+
+    print("\n===== Contact Book =====")
+    print("1. Add Contact")
+    print("2. View Contacts")
+    print("3. Search Contact")
+    print("4. Update Contact")
+    print("5. Delete Contact")
+    print("6. Exit")
+
+    choice = int(input("Enter Choice: "))
+
+    if choice == 1:
+
+        if len(contacts) >= MAX_CONTACTS:
+            print("Contact Book Full.")
+            continue
+
+        name = input("Enter Name: ")
+        phone = input("Enter Phone Number: ")
+
+        if is_valid_phone(phone):
+
+            contacts.append(Contact(name, phone))
+
+            print("Contact Added Successfully.")
+        else:
+            print("Invalid Phone Number. Must contain exactly 10 digits.")
+
+    elif choice == 2:
+
+        if len(contacts) == 0:
+            print("No Contacts Found.")
+        else:
+
+            print("\n===== Contact List =====")
+
+            for i, contact in enumerate(contacts, start=1):
+
+                print("\nContact", i)
+                print("Name  :", contact.name)
+                print("Phone :", contact.phone)
+
+    elif choice == 3:
+
+        search_name = input("Enter Name to Search: ")
+
+        found = False
+
+        for contact in contacts:
+
+            if contact.name == search_name:
+
+                print("\nContact Found")
+                print("Name  :", contact.name)
+                print("Phone :", contact.phone)
+
+                found = True
+                break
+
+        if not found:
+            print("Contact Not Found.")
+
+    elif choice == 4:
+
+        update_name = input("Enter Name to Update: ")
+
+        found = False
+
+        for contact in contacts:
+
+            if contact.name == update_name:
+
+                new_phone = input("Enter New Phone Number: ")
+
+                if is_valid_phone(new_phone):
+
+                    contact.phone = new_phone
+
+                    print("Contact Updated Successfully.")
+                else:
+                    print("Invalid Phone Number.")
+
+                found = True
+                break
+
+        if not found:
+            print("Contact Not Found.")
+
+    elif choice == 5:
+
+        delete_name = input("Enter Name to Delete: ")
+
+        found = False
+
+        for contact in contacts:
+
+            if contact.name == delete_name:
+
+                confirm = input("Are you sure? (Y/N): ")
+
+                if confirm.lower() == "y":
+
+                    contacts.remove(contact)
+
+                    print("Contact Deleted Successfully.")
+                else:
+                    print("Delete Cancelled.")
+
+                found = True
+                break
+
+        if not found:
+            print("Contact Not Found.")
+
+    elif choice == 6:
+
+        print("Exiting Program...")
+        break
+
+    else:
+        print("Invalid Choice.")

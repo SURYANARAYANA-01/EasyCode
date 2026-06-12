@@ -127,6 +127,14 @@
 //While Loop
 //While Loop Input
 
+## Mini Projects
+
+//Banking System
+//Contact Book
+//Library Management System
+//Quiz Application
+//Student Management System
+
 ## Command for Java
 
 //Abstraction
@@ -242,6 +250,14 @@
 //While Loop
 //While Loop Input
 
+## Mini Projects
+
+//Banking System
+//Contact Book
+//Library Management System
+//Quiz Application
+//Student Management System
+
 ## Command for Python
 
 #Abstraction
@@ -273,6 +289,8 @@
 #Call By Value Input
 #Class And Object
 #Class And Object Input
+#Copying Object
+#Copying Object Input
 #Constructor Overloading
 #Continue Statement
 #Data Hiding
@@ -286,7 +304,6 @@
 #Else If Ladder
 #Exception Handling
 #Exception Handling Input
-#Exception Handling Multiple Except
 #File Handling
 #File Handling Input
 #For Loop
@@ -319,13 +336,12 @@
 #Logical Operators Input
 #Member Functions
 #Method Overriding
+#multiple exception handling
 #Multilevel Inheritance
 #Multilevel Inheritance Input
 #Nested If
 #Nested If Input
 #Nested Loops
-#Object Copying
-#Object Copying Input
 #One Dimensional Array
 #One Dimensional Array Input
 #Operator Overloading
@@ -365,3 +381,11 @@
 #Two Dimensional Array Input
 #While Loop
 #While Loop Input
+
+## Mini Projects
+
+#Banking System
+#Contact Book
+#Library Management System
+#Quiz Application
+#Student Management System

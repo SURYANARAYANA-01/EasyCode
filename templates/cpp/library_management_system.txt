@@ -1,0 +1,193 @@
+#include <iostream>
+using namespace std;
+
+class Book {
+public:
+    int id;
+    string title;
+};
+
+int main() {
+    Book books[100];
+    int count = 0;
+    int choice;
+
+    do {
+        cout << "\n===== Library Management System =====";
+        cout << "\n1. Add Book";
+        cout << "\n2. View Books";
+        cout << "\n3. Search Book";
+        cout << "\n4. Update Book";
+        cout << "\n5. Delete Book";
+        cout << "\n6. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> choice;
+
+        switch(choice) {
+
+        case 1:
+        {
+            if(count >= 100) {
+                cout << "\nLibrary Full.\n";
+                break;
+            }
+
+            int newId;
+            bool exists = false;
+
+            cout << "\nEnter Book ID: ";
+            cin >> newId;
+
+            for(int i = 0; i < count; i++) {
+                if(books[i].id == newId) {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if(exists) {
+                cout << "Book ID Already Exists!\n";
+                break;
+            }
+
+            books[count].id = newId;
+
+            cin.ignore();
+
+            cout << "Enter Book Title: ";
+            getline(cin, books[count].title);
+
+            count++;
+
+            cout << "Book Added Successfully!\n";
+            break;
+        }
+
+        case 2:
+        {
+            if(count == 0) {
+                cout << "\nNo Books Available.\n";
+            }
+            else {
+                cout << "\n===== Book List =====\n";
+
+                for(int i = 0; i < count; i++) {
+                    cout << "\nBook " << i + 1 << endl;
+                    cout << "ID    : " << books[i].id << endl;
+                    cout << "Title : " << books[i].title << endl;
+                }
+            }
+
+            break;
+        }
+
+        case 3:
+        {
+            int searchId;
+            bool found = false;
+
+            cout << "\nEnter Book ID to Search: ";
+            cin >> searchId;
+
+            for(int i = 0; i < count; i++) {
+                if(books[i].id == searchId) {
+
+                    cout << "\nBook Found\n";
+                    cout << "ID    : " << books[i].id << endl;
+                    cout << "Title : " << books[i].title << endl;
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Book Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 4:
+        {
+            int updateId;
+            bool found = false;
+
+            cout << "\nEnter Book ID to Update: ";
+            cin >> updateId;
+
+            for(int i = 0; i < count; i++) {
+                if(books[i].id == updateId) {
+
+                    cin.ignore();
+
+                    cout << "Enter New Title: ";
+                    getline(cin, books[i].title);
+
+                    cout << "Book Updated Successfully!\n";
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Book Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 5:
+        {
+            int deleteId;
+            bool found = false;
+            char confirm;
+
+            cout << "\nEnter Book ID to Delete: ";
+            cin >> deleteId;
+
+            for(int i = 0; i < count; i++) {
+                if(books[i].id == deleteId) {
+
+                    cout << "Are you sure? (Y/N): ";
+                    cin >> confirm;
+
+                    if(confirm == 'Y' || confirm == 'y') {
+
+                        for(int j = i; j < count - 1; j++) {
+                            books[j] = books[j + 1];
+                        }
+
+                        count--;
+
+                        cout << "Book Deleted Successfully!\n";
+                    }
+                    else {
+                        cout << "Delete Cancelled.\n";
+                    }
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Book Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 6:
+            cout << "\nExiting Program...\n";
+            break;
+
+        default:
+            cout << "\nInvalid Choice!\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    double balance = 1000.0;
+    double amount;
+    int choice;
+
+    string history[100];
+    int transactionCount = 0;
+
+    do {
+        cout << "\n===== Banking System =====";
+        cout << "\n1. Deposit";
+        cout << "\n2. Withdraw";
+        cout << "\n3. Check Balance";
+        cout << "\n4. Transaction History";
+        cout << "\n5. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                cout << "Enter Deposit Amount: ";
+                cin >> amount;
+
+                if(amount > 0) {
+                    balance += amount;
+
+                    history[transactionCount] = "Deposited Rs. " + to_string(amount);
+                    transactionCount++;
+
+                    cout << "Amount Deposited Successfully.\n";
+                }
+                else {
+                    cout << "Invalid Amount.\n";
+                }
+                break;
+
+            case 2:
+                cout << "Enter Withdrawal Amount: ";
+                cin >> amount;
+
+                if(amount > 0 && amount <= balance) {
+                    balance -= amount;
+
+                    history[transactionCount] = "Withdrawn Rs. " + to_string(amount);
+                    transactionCount++;
+
+                    cout << "Amount Withdrawn Successfully.\n";
+                }
+                else if(amount > balance) {
+                    cout << "Insufficient Balance.\n";
+                }
+                else {
+                    cout << "Invalid Amount.\n";
+                }
+                break;
+
+            case 3:
+                cout << "Current Balance: Rs. " << balance << endl;
+                break;
+
+            case 4:
+                if(transactionCount == 0) {
+                    cout << "No Transactions Found.\n";
+                }
+                else {
+                    cout << "\n===== Transaction History =====\n";
+
+                    for(int i = 0; i < transactionCount; i++) {
+                        cout << i + 1 << ". " << history[i] << endl;
+                    }
+                }
+                break;
+
+            case 5:
+                cout << "Thank You for Using Banking System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 5);
+
+    return 0;
+}

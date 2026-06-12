@@ -1,0 +1,109 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int score = 0;
+    int ans;
+
+    cout << "===== Quiz Application =====\n";
+    cout << "Choose the correct option.\n";
+
+    // Question 1
+    cout << "\nQ1. What is the Capital of India?\n";
+    cout << "1. Delhi\n";
+    cout << "2. Mumbai\n";
+    cout << "3. Chennai\n";
+    cout << "Enter your answer: ";
+    cin >> ans;
+
+    if(ans < 1 || ans > 3) {
+        cout << "Invalid Option!\n";
+    } else if(ans == 1) {
+        cout << "Correct!\n";
+        score++;
+    } else {
+        cout << "Wrong! Correct Answer: Delhi\n";
+    }
+
+    // Question 2
+    cout << "\nQ2. What is 5 + 3?\n";
+    cout << "1. 6\n";
+    cout << "2. 8\n";
+    cout << "3. 10\n";
+    cout << "Enter your answer: ";
+    cin >> ans;
+
+    if(ans < 1 || ans > 3) {
+        cout << "Invalid Option!\n";
+    } else if(ans == 2) {
+        cout << "Correct!\n";
+        score++;
+    } else {
+        cout << "Wrong! Correct Answer: 8\n";
+    }
+
+    // Question 3
+    cout << "\nQ3. C++ is a?\n";
+    cout << "1. Programming Language\n";
+    cout << "2. Browser\n";
+    cout << "3. Operating System\n";
+    cout << "Enter your answer: ";
+    cin >> ans;
+
+    if(ans < 1 || ans > 3) {
+        cout << "Invalid Option!\n";
+    } else if(ans == 1) {
+        cout << "Correct!\n";
+        score++;
+    } else {
+        cout << "Wrong! Correct Answer: Programming Language\n";
+    }
+
+    // Question 4
+    cout << "\nQ4. How many days are there in a week?\n";
+    cout << "1. 5\n";
+    cout << "2. 7\n";
+    cout << "3. 10\n";
+    cout << "Enter your answer: ";
+    cin >> ans;
+
+    if(ans < 1 || ans > 3) {
+        cout << "Invalid Option!\n";
+    } else if(ans == 2) {
+        cout << "Correct!\n";
+        score++;
+    } else {
+        cout << "Wrong! Correct Answer: 7\n";
+    }
+
+    // Question 5
+    cout << "\nQ5. Which planet is known as the Red Planet?\n";
+    cout << "1. Mars\n";
+    cout << "2. Earth\n";
+    cout << "3. Venus\n";
+    cout << "Enter your answer: ";
+    cin >> ans;
+
+    if(ans < 1 || ans > 3) {
+        cout << "Invalid Option!\n";
+    } else if(ans == 1) {
+        cout << "Correct!\n";
+        score++;
+    } else {
+        cout << "Wrong! Correct Answer: Mars\n";
+    }
+
+    double percentage = (score / 5.0) * 100;
+
+    cout << "\n===== Quiz Result =====\n";
+    cout << "Score: " << score << "/5\n";
+    cout << "Percentage: " << percentage << "%\n";
+
+    if(score >= 3) {
+        cout << "Result: Pass\n";
+    } else {
+        cout << "Result: Fail\n";
+    }
+
+    return 0;
+}

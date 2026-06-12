@@ -17,7 +17,8 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 //hello world
 ```
 
-![C++ Example](images/CPP.png)
+![C++ Example](https://github.com/SURYANARAYANA-01/EasyCode/blob/main/images/CPP.png)
+
 
 ## Java Example
 
@@ -25,7 +26,7 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 //class and object
 ```
 
-![Java Example](images/Java.png)
+![Java Example](https://github.com/SURYANARAYANA-01/EasyCode/blob/main/images/Java.png)
 
 ## Python Example
 
@@ -33,11 +34,11 @@ Generate beginner-friendly C++, Java, and Python programs instantly inside Visua
 #for loop
 ```
 
-![Python Example](images/Python.png)
+![Python Example](https://github.com/SURYANARAYANA-01/EasyCode/blob/main/images/Python.png)
 
 ## Multiple Templates
 
-![Multiple Templates](images/Template.png)
+![Multiple Templates](https://github.com/SURYANARAYANA-01/EasyCode/blob/main/images/Template.png)
 
 ## Supported Languages
 

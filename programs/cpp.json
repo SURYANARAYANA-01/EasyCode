@@ -1,324 +1,89 @@
 {
   "programs": [
-    {
-      "id": "hello_world",
-      "trigger": "hello world"
-    },
-    {
-      "id": "data_types",
-      "trigger": "data types"
-    },
-    {
-      "id": "if_statement",
-      "trigger": "if statement"
-    },
-    {
-      "id": "if_else_statement",
-      "trigger": "if else statement"
-    },
-    {
-      "id": "else_if_ladder",
-      "trigger": "else if ladder"
-    },
-    {
-      "id": "nested_if",
-      "trigger": "nested if"
-    },
-    {
-      "id": "arithmetic_operators",
-      "trigger": "arithmetic operators"
-    },
-    {
-      "id": "relational_operators",
-      "trigger": "relational operators"
-    },
-    {
-      "id": "logical_operators",
-      "trigger": "logical operators"
-    },
-    {
-      "id": "assignment_operators",
-      "trigger": "assignment operators"
-    },
-    {
-      "id": "increment_decrement_operators",
-      "trigger": "increment decrement operators"
-    },
-    {
-      "id": "bitwise_operators",
-      "trigger": "bitwise operators"
-    },
-    {
-      "id": "ternary_operator",
-      "trigger": "ternary operator"
-    },
-    {
-      "id": "basic_switch_case",
-      "trigger": "switch case"
-    },
-    {
-      "id": "for_loop",
-      "trigger": "for loop"
-    },
-    {
-      "id": "foreach_loop",
-      "trigger": "foreach loop"
-    },
-    {
-      "id": "while_loop",
-      "trigger": "while loop"
-    },
-    {
-      "id": "do_while_loop",
-      "trigger": "do while loop"
-    },
-    {
-      "id": "nested_loops",
-      "trigger": "nested loops"
-    },
-    {
-      "id": "continue_statement",
-      "trigger": "continue statement"
-    },
-    {
-      "id": "return_statement",
-      "trigger": "return statement"
-    },
-    {
-      "id": "goto_statement",
-      "trigger": "goto statement"
-    },
-    {
-      "id": "one_dimensional_array",
-      "trigger": "one dimensional array"
-    },
-    {
-      "id": "two_dimensional_array",
-      "trigger": "two dimensional array"
-    },
-    {
-      "id": "array_traversal",
-      "trigger": "array traversal"
-    },
-    {
-      "id": "array_sum",
-      "trigger": "array sum"
-    },
-    {
-      "id": "largest_element_in_array",
-      "trigger": "largest element in array"
-    },
-    {
-      "id": "smallest_element_in_array",
-      "trigger": "smallest element in array"
-    },
-    {
-      "id": "array_average",
-      "trigger": "array average"
-    },
-    {
-      "id": "array_search",
-      "trigger": "array search"
-    },
-    {
-      "id": "function_without_arguments",
-      "trigger": "function without arguments"
-    },
-    {
-      "id": "function_with_arguments",
-      "trigger": "function with arguments"
-    },
-    {
-      "id": "function_with_return_value",
-      "trigger": "function with return value"
-    },
-    {
-      "id": "function_overloading",
-      "trigger": "function overloading"
-    },
-    {
-      "id": "recursive_function",
-      "trigger": "recursive function"
-    },
-    {
-      "id": "call_by_value",
-      "trigger": "call by value"
-    },
-    {
-      "id": "call_by_reference",
-      "trigger": "call by reference"
-    },
-    {
-      "id": "pointer_basics",
-      "trigger": "pointer basics"
-    },
-    {
-      "id": "pointer_arithmetic",
-      "trigger": "pointer arithmetic"
-    },
-    {
-      "id": "pointer_and_array",
-      "trigger": "pointer and array"
-    },
-    {
-      "id": "class_and_object",
-      "trigger": "class and object"
-    },
-    {
-      "id": "member_functions",
-      "trigger": "member functions"
-    },
-    {
-      "id": "access_specifiers",
-      "trigger": "access specifiers"
-    },
-    {
-      "id": "this_pointer",
-      "trigger": "this pointer"
-    },
-    {
-      "id": "static_members",
-      "trigger": "static members"
-    },
-    {
-      "id": "default_constructor",
-      "trigger": "default constructor"
-    },
-    {
-      "id": "parameterized_constructor",
-      "trigger": "parameterized constructor"
-    },
-    {
-      "id": "copy_constructor",
-      "trigger": "copy constructor"
-    },
-    {
-      "id": "destructor",
-      "trigger": "destructor"
-    },
-    {
-      "id": "constructor_overloading",
-      "trigger": "constructor overloading"
-    },
-    {
-      "id": "getters_and_setters",
-      "trigger": "getters and setters"
-    },
-    {
-      "id": "data_hiding",
-      "trigger": "data hiding"
-    },
-    {
-      "id": "single_inheritance",
-      "trigger": "single inheritance"
-    },
-    {
-      "id": "multilevel_inheritance",
-      "trigger": "multilevel inheritance"
-    },
-    {
-      "id": "multiple_inheritance",
-      "trigger": "multiple inheritance"
-    },
-    {
-      "id": "hierarchical_inheritance",
-      "trigger": "hierarchical inheritance"
-    },
-    {
-      "id": "operator_overloading",
-      "trigger": "operator overloading"
-    },
-    {
-      "id": "method_overriding",
-      "trigger": "method overriding"
-    },
-    {
-      "id": "virtual_functions",
-      "trigger": "virtual functions"
-    },
-    {
-      "id": "runtime_polymorphism",
-      "trigger": "runtime polymorphism"
-    },
-    {
-      "id": "abstract_class",
-      "trigger": "abstract class"
-    },
-    {
-      "id": "pure_virtual_function",
-      "trigger": "pure virtual function"
-    },
-    {
-      "id": "interface_concept",
-      "trigger": "interface concept"
-    },
-    {
-      "id": "scope_resolution_operator",
-      "trigger": "scope resolution operator"
-    },
-    {
-      "id": "inline_function",
-      "trigger": "inline function"
-    },
-    {
-      "id": "copying_objects",
-      "trigger": "copying objects"
-    },
-    {
-      "id": "object_cloning",
-      "trigger": "object cloning"
-    },
-    {
-      "id": "encapsulation",
-      "trigger": "encapsulation"
-    },
-    {
-    "id": "abstraction",
-    "trigger": "abstraction"
-    },
-    {
-    "id": "polymorphism",
-    "trigger": "polymorphism"
-    },
-    {
-    "id": "exception_handling",
-    "trigger": "exception handling"
-    },
-    {
-    "id": "string",
-    "trigger": "string"
-    },
-    {
-    "id": "string_comparison",
-    "trigger": "string comparison"
-    },
-    {
-    "id": "string_concatenation",
-    "trigger": "string concatenation"
-    },
-    {
-    "id": "string_reverse",
-    "trigger": "string reverse"
-    },
-    {
-    "id": "string_palindrome",
-    "trigger": "string palindrome"
-    },
-    {
-    "id": "substring",
-    "trigger": "substring"
-    },
-    {
-    "id": "array_sorting",
-    "trigger": "array sorting"
-    },
-    {
-    "id": "array_reverse",
-    "trigger": "array reverse"
-    },
-    {
-    "id": "function_with_arguments_and_return_value",
-    "trigger": "function with arguments and return value"
-    }
+    { "id": "hello_world", "trigger": "hello world" },
+    { "id": "data_types", "trigger": "data types" },
+    { "id": "if_statement", "trigger": "if statement" },
+    { "id": "if_else_statement", "trigger": "if else statement" },
+    { "id": "else_if_ladder", "trigger": "else if ladder" },
+    { "id": "nested_if", "trigger": "nested if" },
+    { "id": "arithmetic_operators", "trigger": "arithmetic operators" },
+    { "id": "relational_operators", "trigger": "relational operators" },
+    { "id": "logical_operators", "trigger": "logical operators" },
+    { "id": "assignment_operators", "trigger": "assignment operators" },
+    { "id": "increment_decrement_operators", "trigger": "increment decrement operators" },
+    { "id": "bitwise_operators", "trigger": "bitwise operators" },
+    { "id": "ternary_operator", "trigger": "ternary operator" },
+    { "id": "basic_switch_case", "trigger": "switch case" },
+    { "id": "for_loop", "trigger": "for loop" },
+    { "id": "foreach_loop", "trigger": "foreach loop" },
+    { "id": "while_loop", "trigger": "while loop" },
+    { "id": "do_while_loop", "trigger": "do while loop" },
+    { "id": "nested_loops", "trigger": "nested loops" },
+    { "id": "continue_statement", "trigger": "continue statement" },
+    { "id": "return_statement", "trigger": "return statement" },
+    { "id": "goto_statement", "trigger": "goto statement" },
+    { "id": "one_dimensional_array", "trigger": "one dimensional array" },
+    { "id": "two_dimensional_array", "trigger": "two dimensional array" },
+    { "id": "array_traversal", "trigger": "array traversal" },
+    { "id": "array_sum", "trigger": "array sum" },
+    { "id": "largest_element_in_array", "trigger": "largest element in array" },
+    { "id": "smallest_element_in_array", "trigger": "smallest element in array" },
+    { "id": "array_average", "trigger": "array average" },
+    { "id": "array_search", "trigger": "array search" },
+    { "id": "array_sorting", "trigger": "array sorting" },
+    { "id": "array_reverse", "trigger": "array reverse" },
+    { "id": "function_without_arguments", "trigger": "function without arguments" },
+    { "id": "function_with_arguments", "trigger": "function with arguments" },
+    { "id": "function_with_return_value", "trigger": "function with return value" },
+    { "id": "function_with_arguments_and_return_value", "trigger": "function with arguments and return value" },
+    { "id": "function_overloading", "trigger": "function overloading" },
+    { "id": "recursive_function", "trigger": "recursive function" },
+    { "id": "call_by_value", "trigger": "call by value" },
+    { "id": "call_by_reference", "trigger": "call by reference" },
+    { "id": "pointer_basics", "trigger": "pointer basics" },
+    { "id": "pointer_arithmetic", "trigger": "pointer arithmetic" },
+    { "id": "pointer_and_array", "trigger": "pointer and array" },
+    { "id": "class_and_object", "trigger": "class and object" },
+    { "id": "member_functions", "trigger": "member functions" },
+    { "id": "access_specifiers", "trigger": "access specifiers" },
+    { "id": "this_pointer", "trigger": "this pointer" },
+    { "id": "static_members", "trigger": "static members" },
+    { "id": "default_constructor", "trigger": "default constructor" },
+    { "id": "parameterized_constructor", "trigger": "parameterized constructor" },
+    { "id": "copy_constructor", "trigger": "copy constructor" },
+    { "id": "destructor", "trigger": "destructor" },
+    { "id": "constructor_overloading", "trigger": "constructor overloading" },
+    { "id": "getters_and_setters", "trigger": "getters and setters" },
+    { "id": "data_hiding", "trigger": "data hiding" },
+    { "id": "single_inheritance", "trigger": "single inheritance" },
+    { "id": "multilevel_inheritance", "trigger": "multilevel inheritance" },
+    { "id": "multiple_inheritance", "trigger": "multiple inheritance" },
+    { "id": "hierarchical_inheritance", "trigger": "hierarchical inheritance" },
+    { "id": "operator_overloading", "trigger": "operator overloading" },
+    { "id": "method_overriding", "trigger": "method overriding" },
+    { "id": "virtual_functions", "trigger": "virtual functions" },
+    { "id": "runtime_polymorphism", "trigger": "runtime polymorphism" },
+    { "id": "abstract_class", "trigger": "abstract class" },
+    { "id": "pure_virtual_function", "trigger": "pure virtual function" },
+    { "id": "interface_concept", "trigger": "interface concept" },
+    { "id": "scope_resolution_operator", "trigger": "scope resolution operator" },
+    { "id": "inline_function", "trigger": "inline function" },
+    { "id": "copying_objects", "trigger": "copying objects" },
+    { "id": "object_cloning", "trigger": "object cloning" },
+    { "id": "encapsulation", "trigger": "encapsulation" },
+    { "id": "abstraction", "trigger": "abstraction" },
+    { "id": "polymorphism", "trigger": "polymorphism" },
+    { "id": "exception_handling", "trigger": "exception handling" },
+    { "id": "string", "trigger": "string" },
+    { "id": "string_comparison", "trigger": "string comparison" },
+    { "id": "string_concatenation", "trigger": "string concatenation" },
+    { "id": "string_reverse", "trigger": "string reverse" },
+    { "id": "string_palindrome", "trigger": "string palindrome" },
+    { "id": "substring", "trigger": "substring" },
+    { "id": "student_management_system", "trigger": "student management system" },
+    { "id": "library_management_system", "trigger": "library management system" },
+    { "id": "banking_system", "trigger": "banking system" },
+    { "id": "contact_book", "trigger": "contact book" },
+    { "id": "quiz_application", "trigger": "quiz application" }
   ]
 }

@@ -1,0 +1,187 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+public:
+    int id;
+    string name;
+};
+
+int main() {
+    Student s[100];
+    int count = 0;
+    int choice;
+
+    do {
+        cout << "\n===== Student Management System =====";
+        cout << "\n1. Add Student";
+        cout << "\n2. View Students";
+        cout << "\n3. Search Student";
+        cout << "\n4. Update Student";
+        cout << "\n5. Delete Student";
+        cout << "\n6. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> choice;
+
+        switch(choice) {
+
+        case 1:
+        {
+            if(count >= 100) {
+                cout << "\nStorage Full! Cannot Add More Students.\n";
+                break;
+            }
+
+            int newId;
+            bool exists = false;
+
+            cout << "\nEnter Student ID: ";
+            cin >> newId;
+
+            for(int i = 0; i < count; i++) {
+                if(s[i].id == newId) {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if(exists) {
+                cout << "Student ID Already Exists!\n";
+                break;
+            }
+
+            s[count].id = newId;
+
+            cout << "Enter Student Name: ";
+            getline(cin >> ws, s[count].name);
+
+            count++;
+
+            cout << "Student Added Successfully!\n";
+            break;
+        }
+
+        case 2:
+        {
+            if(count == 0) {
+                cout << "\nNo Student Records Found.\n";
+            }
+            else {
+                cout << "\nStudent Records:\n";
+                cout << "ID\tName\n";
+
+                for(int i = 0; i < count; i++) {
+                    cout << s[i].id << "\t" << s[i].name << endl;
+                }
+            }
+            break;
+        }
+
+        case 3:
+        {
+            int searchId;
+            bool found = false;
+
+            cout << "\nEnter Student ID to Search: ";
+            cin >> searchId;
+
+            for(int i = 0; i < count; i++) {
+                if(s[i].id == searchId) {
+                    cout << "\nStudent Found:\n";
+                    cout << "ID: " << s[i].id << endl;
+                    cout << "Name: " << s[i].name << endl;
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Student Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 4:
+        {
+            int updateId;
+            bool found = false;
+
+            cout << "\nEnter Student ID to Update: ";
+            cin >> updateId;
+
+            for(int i = 0; i < count; i++) {
+                if(s[i].id == updateId) {
+
+                    cout << "Enter New Name: ";
+                    getline(cin >> ws, s[i].name);
+
+                    cout << "Record Updated Successfully!\n";
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Student Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 5:
+        {
+            int deleteId;
+            bool found = false;
+            char confirm;
+
+            cout << "\nEnter Student ID to Delete: ";
+            cin >> deleteId;
+
+            for(int i = 0; i < count; i++) {
+                if(s[i].id == deleteId) {
+
+                    cout << "Are you sure? (Y/N): ";
+                    cin >> confirm;
+
+                    if(confirm == 'Y' || confirm == 'y') {
+
+                        for(int j = i; j < count - 1; j++) {
+                            s[j] = s[j + 1];
+                        }
+
+                        count--;
+
+                        cout << "Student Deleted Successfully!\n";
+                    }
+                    else {
+                        cout << "Delete Cancelled.\n";
+                    }
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) {
+                cout << "Student Not Found.\n";
+            }
+
+            break;
+        }
+
+        case 6:
+            cout << "\nExiting Program...\n";
+            break;
+
+        default:
+            cout << "\nInvalid Choice!\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

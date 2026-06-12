@@ -1,0 +1,195 @@
+import java.util.Scanner;
+
+class Book {
+    int id;
+    String title;
+}
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Book[] books = new Book[100];
+        int count = 0;
+        int choice;
+
+        do {
+
+            System.out.println("\n===== Library Management System =====");
+            System.out.println("1. Add Book");
+            System.out.println("2. View Books");
+            System.out.println("3. Search Book");
+            System.out.println("4. Update Book");
+            System.out.println("5. Delete Book");
+            System.out.println("6. Exit");
+
+            System.out.print("Enter Choice: ");
+            choice = sc.nextInt();
+
+            switch(choice) {
+
+                case 1:
+
+                    if(count >= 100) {
+                        System.out.println("Library Full.");
+                        break;
+                    }
+
+                    System.out.print("Enter Book ID: ");
+                    int newId = sc.nextInt();
+                    sc.nextLine();
+
+                    boolean exists = false;
+
+                    for(int i = 0; i < count; i++) {
+                        if(books[i].id == newId) {
+                            exists = true;
+                            break;
+                        }
+                    }
+
+                    if(exists) {
+                        System.out.println("Book ID Already Exists!");
+                        break;
+                    }
+
+                    books[count] = new Book();
+                    books[count].id = newId;
+
+                    System.out.print("Enter Book Title: ");
+                    books[count].title = sc.nextLine();
+
+                    count++;
+
+                    System.out.println("Book Added Successfully!");
+                    break;
+
+                case 2:
+
+                    if(count == 0) {
+                        System.out.println("No Books Available.");
+                    }
+                    else {
+
+                        System.out.println("\n===== Book List =====");
+
+                        for(int i = 0; i < count; i++) {
+
+                            System.out.println("\nBook " + (i + 1));
+                            System.out.println("ID    : " + books[i].id);
+                            System.out.println("Title : " + books[i].title);
+                        }
+                    }
+
+                    break;
+
+                case 3:
+
+                    System.out.print("Enter Book ID to Search: ");
+                    int searchId = sc.nextInt();
+
+                    boolean found = false;
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(books[i].id == searchId) {
+
+                            System.out.println("\nBook Found");
+                            System.out.println("ID    : " + books[i].id);
+                            System.out.println("Title : " + books[i].title);
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Book Not Found.");
+                    }
+
+                    break;
+
+                case 4:
+
+                    System.out.print("Enter Book ID to Update: ");
+                    int updateId = sc.nextInt();
+                    sc.nextLine();
+
+                    found = false;
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(books[i].id == updateId) {
+
+                            System.out.print("Enter New Title: ");
+                            books[i].title = sc.nextLine();
+
+                            System.out.println("Book Updated Successfully!");
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Book Not Found.");
+                    }
+
+                    break;
+
+                case 5:
+
+                    System.out.print("Enter Book ID to Delete: ");
+                    int deleteId = sc.nextInt();
+
+                    found = false;
+
+                    for(int i = 0; i < count; i++) {
+
+                        if(books[i].id == deleteId) {
+
+                            System.out.print("Are you sure? (Y/N): ");
+                            char confirm = sc.next().charAt(0);
+
+                            if(confirm == 'Y' || confirm == 'y') {
+
+                                for(int j = i; j < count - 1; j++) {
+                                    books[j] = books[j + 1];
+                                }
+
+                                count--;
+
+                                System.out.println("Book Deleted Successfully!");
+                            }
+                            else {
+                                System.out.println("Delete Cancelled.");
+                            }
+
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if(!found) {
+                        System.out.println("Book Not Found.");
+                    }
+
+                    break;
+
+                case 6:
+
+                    System.out.println("Exiting Program...");
+                    break;
+
+                default:
+
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while(choice != 6);
+
+        sc.close();
+    }
+}

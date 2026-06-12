@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME} {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int score = 0;
+        int ans;
+
+        System.out.println("===== Quiz Application =====");
+        System.out.println("Choose the correct option.");
+
+        // Question 1
+        System.out.println("\nQ1. What is the Capital of India?");
+        System.out.println("1. Delhi");
+        System.out.println("2. Mumbai");
+        System.out.println("3. Chennai");
+        System.out.print("Enter your answer: ");
+        ans = sc.nextInt();
+
+        if(ans < 1 || ans > 3) {
+            System.out.println("Invalid Option!");
+        } else if(ans == 1) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! Correct Answer: Delhi");
+        }
+
+        // Question 2
+        System.out.println("\nQ2. What is 5 + 3?");
+        System.out.println("1. 6");
+        System.out.println("2. 8");
+        System.out.println("3. 10");
+        System.out.print("Enter your answer: ");
+        ans = sc.nextInt();
+
+        if(ans < 1 || ans > 3) {
+            System.out.println("Invalid Option!");
+        } else if(ans == 2) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! Correct Answer: 8");
+        }
+
+        // Question 3
+        System.out.println("\nQ3. C++ is a?");
+        System.out.println("1. Programming Language");
+        System.out.println("2. Browser");
+        System.out.println("3. Operating System");
+        System.out.print("Enter your answer: ");
+        ans = sc.nextInt();
+
+        if(ans < 1 || ans > 3) {
+            System.out.println("Invalid Option!");
+        } else if(ans == 1) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! Correct Answer: Programming Language");
+        }
+
+        // Question 4
+        System.out.println("\nQ4. How many days are there in a week?");
+        System.out.println("1. 5");
+        System.out.println("2. 7");
+        System.out.println("3. 10");
+        System.out.print("Enter your answer: ");
+        ans = sc.nextInt();
+
+        if(ans < 1 || ans > 3) {
+            System.out.println("Invalid Option!");
+        } else if(ans == 2) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! Correct Answer: 7");
+        }
+
+        // Question 5
+        System.out.println("\nQ5. Which planet is known as the Red Planet?");
+        System.out.println("1. Mars");
+        System.out.println("2. Earth");
+        System.out.println("3. Venus");
+        System.out.print("Enter your answer: ");
+        ans = sc.nextInt();
+
+        if(ans < 1 || ans > 3) {
+            System.out.println("Invalid Option!");
+        } else if(ans == 1) {
+            System.out.println("Correct!");
+            score++;
+        } else {
+            System.out.println("Wrong! Correct Answer: Mars");
+        }
+
+        double percentage = (score / 5.0) * 100;
+
+        System.out.println("\n===== Quiz Result =====");
+        System.out.println("Score: " + score + "/5");
+        System.out.println("Percentage: " + percentage + "%");
+
+        if(score >= 3) {
+            System.out.println("Result: Pass");
+        } else {
+            System.out.println("Result: Fail");
+        }
+
+        sc.close();
+    }
+}

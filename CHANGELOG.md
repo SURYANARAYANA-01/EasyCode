@@ -2,7 +2,25 @@
 
 All notable changes to EasyCode Dev will be documented in this file.
 
-### [i.0.3] - 2026-06-10
+### [1.0.4] - 2026-06-12
+
+### Added
+
+- Student Management System mini project.
+- Library Management System mini project.
+- Banking System mini project.
+- Contact Book mini project.
+- Quiz Application mini project.
+
+### Improved
+
+- Added validation and safety checks to mini projects.
+- Improved CRUD workflows and user experience.
+- Standardized project logic across C++, Java, and Python.
+
+### [1.0.3] - 2026-06-10
+
+### Added
 
 - Fixed Java, Python, and C++ templates.
 - Fixed Images.

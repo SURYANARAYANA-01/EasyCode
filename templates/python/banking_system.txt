@@ -1,0 +1,53 @@
+balance = 1000.0
+transaction_history = []
+
+while True:
+    print("\n===== Banking System =====")
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Check Balance")
+    print("4. Transaction History")
+    print("5. Exit")
+
+    choice = input("Enter Choice: ")
+
+    if choice == "1":
+        amount = float(input("Enter Deposit Amount: "))
+
+        if amount > 0:
+            balance += amount
+            transaction_history.append(f"Deposited Rs. {amount}")
+            print("Amount Deposited Successfully.")
+        else:
+            print("Invalid Amount.")
+
+    elif choice == "2":
+        amount = float(input("Enter Withdrawal Amount: "))
+
+        if amount > 0 and amount <= balance:
+            balance -= amount
+            transaction_history.append(f"Withdrawn Rs. {amount}")
+            print("Amount Withdrawn Successfully.")
+        elif amount > balance:
+            print("Insufficient Balance.")
+        else:
+            print("Invalid Amount.")
+
+    elif choice == "3":
+        print(f"Current Balance: Rs. {balance}")
+
+    elif choice == "4":
+        if len(transaction_history) == 0:
+            print("No Transactions Found.")
+        else:
+            print("\n===== Transaction History =====")
+
+            for i in range(len(transaction_history)):
+                print(f"{i + 1}. {transaction_history[i]}")
+
+    elif choice == "5":
+        print("Thank You for Using Banking System.")
+        break
+
+    else:
+        print("Invalid Choice.")
