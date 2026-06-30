@@ -17,7 +17,7 @@ while True:
     print("5. Delete Student")
     print("6. Exit")
 
-    choice = int(input("Enter Choice: "))
+    choice = int(input("Please choose an option: "))
 
     if choice == 1:
 

@@ -1,0 +1,129 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME}{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] id = new int[100];
+        String[] title = new String[100];
+        String[] author = new String[100];
+        int count = 0;
+        int choice;
+        int key;
+
+        do {
+            System.out.println("\n===== Digital Library =====");
+            System.out.println("1. Add Record");
+            System.out.println("2. View All Records");
+            System.out.println("3. Search Record");
+            System.out.println("4. Update Record");
+            System.out.println("5. Delete Record");
+            System.out.println("6. Exit");
+            System.out.print("Please choose an option: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    if (count >= 100) {
+                        System.out.println("Cannot add more items. Storage is full.");
+                        break;
+                    }
+                    System.out.print("Enter Book ID: ");
+                    id[count] = sc.nextInt();
+                    System.out.print("Enter Title: ");
+                    sc.nextLine();
+                    title[count] = sc.nextLine();
+                    System.out.print("Enter Author: ");
+                    sc.nextLine();
+                    author[count] = sc.nextLine();
+                    count++;
+                    System.out.println("Added successfully!");
+                    break;
+
+                case 2:
+                    if (count == 0) {
+                        System.out.println("No Records Found.");
+                    }
+                    else {
+                        System.out.println("\n===== Records (Book ID | Title | Author) =====");
+                        for (int i = 0; i < count; i++) {
+                            System.out.println((i + 1) + ". " + id[i] + " | " + title[i] + " | " + author[i]);
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Book ID to Search: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                                System.out.println("Found: " + id[i] + " | " + title[i] + " | " + author[i]);
+                                found = true;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter Book ID to Update: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                            System.out.print("Enter New Book ID: ");
+                            id[i] = sc.nextInt();
+                            System.out.print("Enter New Title: ");
+                            sc.nextLine();
+                            title[i] = sc.nextLine();
+                            System.out.print("Enter New Author: ");
+                            sc.nextLine();
+                            author[i] = sc.nextLine();
+                                System.out.println("Updated successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.print("Enter Book ID to Delete: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                                for (int j = i; j < count - 1; j++) {
+                                    id[j] = id[j + 1];
+                            title[j] = title[j + 1];
+                            author[j] = author[j + 1];
+                                }
+                                count--;
+                                System.out.println("Deleted successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("Thank You for Using Digital Library.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+}

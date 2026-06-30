@@ -1,0 +1,132 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    string movie;
+    string customer;
+    int seats;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    string key;
+
+    do {
+        cout << "\n===== Movie Ticket Booking System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Movie Name: ";
+                cin.ignore();
+                getline(cin, records[count].movie);
+                cout << "Enter Customer Name: ";
+                cin.ignore();
+                getline(cin, records[count].customer);
+                cout << "Enter Seats: ";
+                cin >> records[count].seats;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Movie Name | Customer Name | Seats) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].movie << " | " << records[i].customer << " | " << records[i].seats << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Movie Name to Search: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].movie == key) {
+                            cout << "Found: " << records[i].movie << " | " << records[i].customer << " | " << records[i].seats << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Movie Name to Update: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].movie == key) {
+                        cout << "Enter New Movie Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].movie);
+                        cout << "Enter New Customer Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].customer);
+                        cout << "Enter New Seats: ";
+                        cin >> records[i].seats;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Movie Name to Delete: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].movie == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Movie Ticket Booking System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

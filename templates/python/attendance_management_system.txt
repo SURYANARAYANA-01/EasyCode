@@ -1,0 +1,74 @@
+records = []
+
+while True:
+    print("\n===== Attendance Management System =====")
+    print("1. Add Record")
+    print("2. View All Records")
+    print("3. Search Record")
+    print("4. Update Record")
+    print("5. Delete Record")
+    print("6. Exit")
+
+    choice = input("Please choose an option: ")
+
+    if choice == "1":
+        if len(records) >= 100:
+            print("Cannot add more items. Storage is full.")
+            continue
+        record = {}
+        record["id"] = int(input("Enter Student ID: "))
+        record["name"] = input("Enter Name: ")
+        record["present"] = int(input("Enter Present Count: "))
+        records.append(record)
+        print("Added successfully!")
+
+    elif choice == "2":
+        if len(records) == 0:
+            print("No Records Found.")
+        else:
+            print("\n===== Records (Student ID | Name | Present Count) =====")
+            for i, record in enumerate(records):
+                print(f"{i + 1}. " + str(record["id"]) + " | " + str(record["name"]) + " | " + str(record["present"]))
+
+    elif choice == "3":
+        key = int(input("Enter Student ID to Search: "))
+        found = False
+        for record in records:
+            if record["id"] == key:
+                print("Found: " + str(record["id"]) + " | " + str(record["name"]) + " | " + str(record["present"]))
+                found = True
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "4":
+        key = int(input("Enter Student ID to Update: "))
+        found = False
+        for i in range(len(records)):
+            if records[i]["id"] == key:
+                records[i]["id"] = int(input("Enter New Student ID: "))
+                records[i]["name"] = input("Enter New Name: ")
+                records[i]["present"] = int(input("Enter New Present Count: "))
+                print("Updated successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "5":
+        key = int(input("Enter Student ID to Delete: "))
+        found = False
+        for i in range(len(records)):
+            if records[i]["id"] == key:
+                records.pop(i)
+                print("Deleted successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "6":
+        print("Thank You for Using Attendance Management System.")
+        break
+
+    else:
+        print("Invalid Choice.")

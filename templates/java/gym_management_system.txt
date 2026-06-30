@@ -1,0 +1,129 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME}{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] id = new int[100];
+        String[] name = new String[100];
+        String[] plan = new String[100];
+        int count = 0;
+        int choice;
+        int key;
+
+        do {
+            System.out.println("\n===== Gym Management System =====");
+            System.out.println("1. Add Record");
+            System.out.println("2. View All Records");
+            System.out.println("3. Search Record");
+            System.out.println("4. Update Record");
+            System.out.println("5. Delete Record");
+            System.out.println("6. Exit");
+            System.out.print("Please choose an option: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    if (count >= 100) {
+                        System.out.println("Cannot add more items. Storage is full.");
+                        break;
+                    }
+                    System.out.print("Enter Member ID: ");
+                    id[count] = sc.nextInt();
+                    System.out.print("Enter Name: ");
+                    sc.nextLine();
+                    name[count] = sc.nextLine();
+                    System.out.print("Enter Plan: ");
+                    sc.nextLine();
+                    plan[count] = sc.nextLine();
+                    count++;
+                    System.out.println("Added successfully!");
+                    break;
+
+                case 2:
+                    if (count == 0) {
+                        System.out.println("No Records Found.");
+                    }
+                    else {
+                        System.out.println("\n===== Records (Member ID | Name | Plan) =====");
+                        for (int i = 0; i < count; i++) {
+                            System.out.println((i + 1) + ". " + id[i] + " | " + name[i] + " | " + plan[i]);
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Member ID to Search: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                                System.out.println("Found: " + id[i] + " | " + name[i] + " | " + plan[i]);
+                                found = true;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter Member ID to Update: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                            System.out.print("Enter New Member ID: ");
+                            id[i] = sc.nextInt();
+                            System.out.print("Enter New Name: ");
+                            sc.nextLine();
+                            name[i] = sc.nextLine();
+                            System.out.print("Enter New Plan: ");
+                            sc.nextLine();
+                            plan[i] = sc.nextLine();
+                                System.out.println("Updated successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.print("Enter Member ID to Delete: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (id[i] == key) {
+                                for (int j = i; j < count - 1; j++) {
+                                    id[j] = id[j + 1];
+                            name[j] = name[j + 1];
+                            plan[j] = plan[j + 1];
+                                }
+                                count--;
+                                System.out.println("Deleted successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("Thank You for Using Gym Management System.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+}

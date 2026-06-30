@@ -1,0 +1,124 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME}{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String[] title = new String[100];
+        int[] status = new int[100];
+        int count = 0;
+        int choice;
+        String key;
+
+        do {
+            System.out.println("\n===== To-Do List Application =====");
+            System.out.println("1. Add Task");
+            System.out.println("2. View All Tasks");
+            System.out.println("3. Search Task");
+            System.out.println("4. Update Task");
+            System.out.println("5. Delete Task");
+            System.out.println("6. Exit");
+            System.out.print("Please choose an option: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    if (count >= 100) {
+                        System.out.println("Cannot add more items. Storage is full.");
+                        break;
+                    }
+                    System.out.print("Enter task title: ");
+                    sc.nextLine();
+                    title[count] = sc.nextLine();
+                    System.out.print("Enter Done (0/1): ");
+                    status[count] = sc.nextInt();
+                    count++;
+                    System.out.println("Task added successfully!");
+                    break;
+
+                case 2:
+                    if (count == 0) {
+                        System.out.println("No tasks available.");
+                    }
+                    else {
+                        System.out.println("\n========== Task List ==========");
+                        for (int i = 0; i < count; i++) {
+                            System.out.println((i + 1) + ". " + title[i] + " | " + status[i]);
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter the task title to search: ");
+                    sc.nextLine();
+                    key = sc.nextLine();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (title[i].equals(key)) {
+                                System.out.println("Task Found: " + title[i] + " | " + status[i]);
+                                found = true;
+                            }
+                        }
+                        if (!found) System.out.println("No matching task was found.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter the task title to update: ");
+                    sc.nextLine();
+                    key = sc.nextLine();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (title[i].equals(key)) {
+                            System.out.print("Enter the new task title: ");
+                            sc.nextLine();
+                            title[i] = sc.nextLine();
+                            System.out.print("Enter New Done (0/1): ");
+                            status[i] = sc.nextInt();
+                                System.out.println("Task updated successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching task was found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.print("Enter the task title to delete: ");
+                    sc.nextLine();
+                    key = sc.nextLine();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (title[i].equals(key)) {
+                                for (int j = i; j < count - 1; j++) {
+                                    title[j] = title[j + 1];
+                            status[j] = status[j + 1];
+                                }
+                                count--;
+                                System.out.println("Task deleted successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching task was found.");
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("Thank You for Using To-Do List Application.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+}

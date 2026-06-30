@@ -9,7 +9,7 @@ while True:
     print("4. Transaction History")
     print("5. Exit")
 
-    choice = input("Enter Choice: ")
+    choice = input("Please choose an option: ")
 
     if choice == "1":
         amount = float(input("Enter Deposit Amount: "))

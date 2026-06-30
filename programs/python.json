@@ -1,85 +1,432 @@
-﻿{
+{
   "programs": [
-    { "id": "hello_world", "trigger": "hello world" },
-    { "id": "data_types", "trigger": "data types" },
-    { "id": "if_statement", "trigger": "if statement" },
-    { "id": "if_else_statement", "trigger": "if else statement" },
-    { "id": "else_if_ladder", "trigger": "else if ladder" },
-    { "id": "nested_if", "trigger": "nested if" },
-    { "id": "arithmetic_operators", "trigger": "arithmetic operators" },
-    { "id": "relational_operators", "trigger": "relational operators" },
-    { "id": "logical_operators", "trigger": "logical operators" },
-    { "id": "assignment_operators", "trigger": "assignment operators" },
-    { "id": "increment_decrement_operators", "trigger": "increment decrement operators" },
-    { "id": "bitwise_operators", "trigger": "bitwise operators" },
-    { "id": "ternary_operator", "trigger": "ternary operator" },
-    { "id": "for_loop", "trigger": "for loop" },
-    { "id": "foreach_loop", "trigger": "foreach loop" },
-    { "id": "while_loop", "trigger": "while loop" },
-    { "id": "do_while_loop", "trigger": "do while loop" },
-    { "id": "nested_loops", "trigger": "nested loops" },
-    { "id": "continue_statement", "trigger": "continue statement" },
-    { "id": "return_statement", "trigger": "return statement" },
-    { "id": "basic_switch_case", "trigger": "switch case" },
-    { "id": "one_dimensional_array", "trigger": "one dimensional array" },
-    { "id": "two_dimensional_array", "trigger": "two dimensional array" },
-    { "id": "array_traversal", "trigger": "array traversal" },
-    { "id": "array_sum", "trigger": "array sum" },
-    { "id": "largest_element_in_array", "trigger": "largest element in array" },
-    { "id": "smallest_element_in_array", "trigger": "smallest element in array" },
-    { "id": "array_average", "trigger": "array average" },
-    { "id": "array_search", "trigger": "array search" },
-    { "id": "array_sorting", "trigger": "array sorting" },
-    { "id": "array_reverse", "trigger": "array reverse" },
-    { "id": "function_without_arguments", "trigger": "function without arguments" },
-    { "id": "function_with_arguments", "trigger": "function with arguments" },
-    { "id": "function_with_return_value", "trigger": "function with return value" },
-    { "id": "function_with_arguments_and_return_value", "trigger": "function with arguments and return value" },
-    { "id": "function_overloading", "trigger": "function overloading" },
-    { "id": "recursive_function", "trigger": "recursive function" },
-    { "id": "call_by_value", "trigger": "call by value" },
-    { "id": "call_by_reference", "trigger": "call by reference" },
-    { "id": "lambda_function", "trigger": "lambda function" },
-    { "id": "class_and_object", "trigger": "class and object" },
-    { "id": "member_functions", "trigger": "member functions" },
-    { "id": "access_specifiers", "trigger": "access specifiers" },
-    { "id": "default_constructor", "trigger": "default constructor" },
-    { "id": "parameterized_constructor", "trigger": "parameterized constructor" },
-    { "id": "constructor_overloading", "trigger": "constructor overloading" },
-    { "id": "static_members", "trigger": "static members" },
-    { "id": "getters_and_setters", "trigger": "getters and setters" },
-    { "id": "data_hiding", "trigger": "data hiding" },
-    { "id": "deep_copy", "trigger": "deep copy" },
-    { "id": "copying_objects", "trigger": "copying objects" },
-    { "id": "single_inheritance", "trigger": "single inheritance" },
-    { "id": "multilevel_inheritance", "trigger": "multilevel inheritance" },
-    { "id": "hierarchical_inheritance", "trigger": "hierarchical inheritance" },
-    { "id": "method_overriding", "trigger": "method overriding" },
-    { "id": "runtime_polymorphism", "trigger": "runtime polymorphism" },
-    { "id": "polymorphism", "trigger": "polymorphism" },
-    { "id": "encapsulation", "trigger": "encapsulation" },
-    { "id": "abstraction", "trigger": "abstraction" },
-    { "id": "abstract_class", "trigger": "abstract class" },
-    { "id": "interface_concept", "trigger": "interface concept" },
-    { "id": "operator_overloading", "trigger": "operator overloading" },
-    { "id": "string", "trigger": "string" },
-    { "id": "string_comparison", "trigger": "string comparison" },
-    { "id": "string_concatenation", "trigger": "string concatenation" },
-    { "id": "string_reverse", "trigger": "string reverse" },
-    { "id": "string_palindrome", "trigger": "string palindrome" },
-    { "id": "substring", "trigger": "substring" },
-    { "id": "list_operations", "trigger": "list operations" },
-    { "id": "tuple_operations", "trigger": "tuple operations" },
-    { "id": "set_operations", "trigger": "set operations" },
-    { "id": "dictionary_operations", "trigger": "dictionary operations" },
-    { "id": "list_comprehension", "trigger": "list comprehension" },
-    { "id": "exception_handling", "trigger": "exception handling" },
-    { "id": "exception_handling_multiple_except", "trigger": "multiple exception handling" },
-    { "id": "file_handling", "trigger": "file handling" },
-    { "id": "student_management_system", "trigger": "student management system" },
-    { "id": "library_management_system", "trigger": "library management system" },
-    { "id": "banking_system", "trigger": "banking system" },
-    { "id": "contact_book", "trigger": "contact book" },
-    { "id": "quiz_application", "trigger": "quiz application" }
+    {
+      "id": "hello_world",
+      "trigger": "hello world"
+    },
+    {
+      "id": "data_types",
+      "trigger": "data types"
+    },
+    {
+      "id": "if_statement",
+      "trigger": "if statement"
+    },
+    {
+      "id": "if_else_statement",
+      "trigger": "if else statement"
+    },
+    {
+      "id": "else_if_ladder",
+      "trigger": "else if ladder"
+    },
+    {
+      "id": "nested_if",
+      "trigger": "nested if"
+    },
+    {
+      "id": "arithmetic_operators",
+      "trigger": "arithmetic operators"
+    },
+    {
+      "id": "relational_operators",
+      "trigger": "relational operators"
+    },
+    {
+      "id": "logical_operators",
+      "trigger": "logical operators"
+    },
+    {
+      "id": "assignment_operators",
+      "trigger": "assignment operators"
+    },
+    {
+      "id": "increment_decrement_operators",
+      "trigger": "increment decrement operators"
+    },
+    {
+      "id": "bitwise_operators",
+      "trigger": "bitwise operators"
+    },
+    {
+      "id": "ternary_operator",
+      "trigger": "ternary operator"
+    },
+    {
+      "id": "for_loop",
+      "trigger": "for loop"
+    },
+    {
+      "id": "foreach_loop",
+      "trigger": "foreach loop"
+    },
+    {
+      "id": "while_loop",
+      "trigger": "while loop"
+    },
+    {
+      "id": "do_while_loop",
+      "trigger": "do while loop"
+    },
+    {
+      "id": "nested_loops",
+      "trigger": "nested loops"
+    },
+    {
+      "id": "continue_statement",
+      "trigger": "continue statement"
+    },
+    {
+      "id": "return_statement",
+      "trigger": "return statement"
+    },
+    {
+      "id": "basic_switch_case",
+      "trigger": "switch case"
+    },
+    {
+      "id": "one_dimensional_array",
+      "trigger": "one dimensional array"
+    },
+    {
+      "id": "two_dimensional_array",
+      "trigger": "two dimensional array"
+    },
+    {
+      "id": "array_traversal",
+      "trigger": "array traversal"
+    },
+    {
+      "id": "array_sum",
+      "trigger": "array sum"
+    },
+    {
+      "id": "largest_element_in_array",
+      "trigger": "largest element in array"
+    },
+    {
+      "id": "smallest_element_in_array",
+      "trigger": "smallest element in array"
+    },
+    {
+      "id": "array_average",
+      "trigger": "array average"
+    },
+    {
+      "id": "array_search",
+      "trigger": "array search"
+    },
+    {
+      "id": "array_sorting",
+      "trigger": "array sorting"
+    },
+    {
+      "id": "array_reverse",
+      "trigger": "array reverse"
+    },
+    {
+      "id": "function_without_arguments",
+      "trigger": "function without arguments"
+    },
+    {
+      "id": "function_with_arguments",
+      "trigger": "function with arguments"
+    },
+    {
+      "id": "function_with_return_value",
+      "trigger": "function with return value"
+    },
+    {
+      "id": "function_with_arguments_and_return_value",
+      "trigger": "function with arguments and return value"
+    },
+    {
+      "id": "function_overloading",
+      "trigger": "function overloading"
+    },
+    {
+      "id": "recursive_function",
+      "trigger": "recursive function"
+    },
+    {
+      "id": "call_by_value",
+      "trigger": "call by value"
+    },
+    {
+      "id": "call_by_reference",
+      "trigger": "call by reference"
+    },
+    {
+      "id": "lambda_function",
+      "trigger": "lambda function"
+    },
+    {
+      "id": "class_and_object",
+      "trigger": "class and object"
+    },
+    {
+      "id": "member_functions",
+      "trigger": "member functions"
+    },
+    {
+      "id": "access_specifiers",
+      "trigger": "access specifiers"
+    },
+    {
+      "id": "default_constructor",
+      "trigger": "default constructor"
+    },
+    {
+      "id": "parameterized_constructor",
+      "trigger": "parameterized constructor"
+    },
+    {
+      "id": "constructor_overloading",
+      "trigger": "constructor overloading"
+    },
+    {
+      "id": "static_members",
+      "trigger": "static members"
+    },
+    {
+      "id": "getters_and_setters",
+      "trigger": "getters and setters"
+    },
+    {
+      "id": "data_hiding",
+      "trigger": "data hiding"
+    },
+    {
+      "id": "deep_copy",
+      "trigger": "deep copy"
+    },
+    {
+      "id": "copying_objects",
+      "trigger": "copying objects"
+    },
+    {
+      "id": "single_inheritance",
+      "trigger": "single inheritance"
+    },
+    {
+      "id": "multilevel_inheritance",
+      "trigger": "multilevel inheritance"
+    },
+    {
+      "id": "hierarchical_inheritance",
+      "trigger": "hierarchical inheritance"
+    },
+    {
+      "id": "method_overriding",
+      "trigger": "method overriding"
+    },
+    {
+      "id": "runtime_polymorphism",
+      "trigger": "runtime polymorphism"
+    },
+    {
+      "id": "polymorphism",
+      "trigger": "polymorphism"
+    },
+    {
+      "id": "encapsulation",
+      "trigger": "encapsulation"
+    },
+    {
+      "id": "abstraction",
+      "trigger": "abstraction"
+    },
+    {
+      "id": "abstract_class",
+      "trigger": "abstract class"
+    },
+    {
+      "id": "interface_concept",
+      "trigger": "interface concept"
+    },
+    {
+      "id": "operator_overloading",
+      "trigger": "operator overloading"
+    },
+    {
+      "id": "string",
+      "trigger": "string"
+    },
+    {
+      "id": "string_comparison",
+      "trigger": "string comparison"
+    },
+    {
+      "id": "string_concatenation",
+      "trigger": "string concatenation"
+    },
+    {
+      "id": "string_reverse",
+      "trigger": "string reverse"
+    },
+    {
+      "id": "string_palindrome",
+      "trigger": "string palindrome"
+    },
+    {
+      "id": "substring",
+      "trigger": "substring"
+    },
+    {
+      "id": "list_operations",
+      "trigger": "list operations"
+    },
+    {
+      "id": "tuple_operations",
+      "trigger": "tuple operations"
+    },
+    {
+      "id": "set_operations",
+      "trigger": "set operations"
+    },
+    {
+      "id": "dictionary_operations",
+      "trigger": "dictionary operations"
+    },
+    {
+      "id": "list_comprehension",
+      "trigger": "list comprehension"
+    },
+    {
+      "id": "exception_handling",
+      "trigger": "exception handling"
+    },
+    {
+      "id": "exception_handling_multiple_except",
+      "trigger": "multiple exception handling"
+    },
+    {
+      "id": "file_handling",
+      "trigger": "file handling"
+    },
+    {
+      "id": "student_management_system",
+      "trigger": "student management system"
+    },
+    {
+      "id": "library_management_system",
+      "trigger": "library management system"
+    },
+    {
+      "id": "banking_system",
+      "trigger": "banking system"
+    },
+    {
+      "id": "contact_book",
+      "trigger": "contact book"
+    },
+    {
+      "id": "quiz_application",
+      "trigger": "quiz application"
+    },
+    {
+      "id": "employee_management_system",
+      "trigger": "employee management system"
+    },
+    {
+      "id": "inventory_management_system",
+      "trigger": "inventory management system"
+    },
+    {
+      "id": "expense_tracker",
+      "trigger": "expense tracker"
+    },
+    {
+      "id": "todo_list_application",
+      "trigger": "to-do list application"
+    },
+    {
+      "id": "address_book",
+      "trigger": "address book"
+    },
+    {
+      "id": "attendance_management_system",
+      "trigger": "attendance management system"
+    },
+    {
+      "id": "result_management_system",
+      "trigger": "result management system"
+    },
+    {
+      "id": "course_management_system",
+      "trigger": "course management system"
+    },
+    {
+      "id": "notes_manager",
+      "trigger": "notes manager"
+    },
+    {
+      "id": "password_manager",
+      "trigger": "password manager"
+    },
+    {
+      "id": "hospital_management_system",
+      "trigger": "hospital management system"
+    },
+    {
+      "id": "hotel_reservation_system",
+      "trigger": "hotel reservation system"
+    },
+    {
+      "id": "restaurant_management_system",
+      "trigger": "restaurant management system"
+    },
+    {
+      "id": "gym_management_system",
+      "trigger": "gym management system"
+    },
+    {
+      "id": "school_management_system",
+      "trigger": "school management system"
+    },
+    {
+      "id": "railway_reservation_system",
+      "trigger": "railway reservation system"
+    },
+    {
+      "id": "bus_reservation_system",
+      "trigger": "bus reservation system"
+    },
+    {
+      "id": "movie_ticket_booking_system",
+      "trigger": "movie ticket booking system"
+    },
+    {
+      "id": "parking_management_system",
+      "trigger": "parking management system"
+    },
+    {
+      "id": "vehicle_rental_system",
+      "trigger": "vehicle rental system"
+    },
+    {
+      "id": "ecommerce_system",
+      "trigger": "e-commerce system"
+    },
+    {
+      "id": "shopping_cart_system",
+      "trigger": "shopping cart system"
+    },
+    {
+      "id": "digital_library",
+      "trigger": "digital library"
+    },
+    {
+      "id": "online_examination_system",
+      "trigger": "online examination system"
+    },
+    {
+      "id": "voting_system",
+      "trigger": "voting system"
+    },
+    {
+      "id": "invoice_generator",
+      "trigger": "invoice generator"
+    }
   ]
 }

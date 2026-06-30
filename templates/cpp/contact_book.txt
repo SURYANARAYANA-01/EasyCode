@@ -35,7 +35,7 @@ int main() {
         cout << "\n4. Update Contact";
         cout << "\n5. Delete Contact";
         cout << "\n6. Exit";
-        cout << "\nEnter Choice: ";
+        cout << "\nPlease choose an option: ";
         cin >> choice;
 
         switch(choice) {

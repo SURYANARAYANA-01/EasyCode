@@ -1,0 +1,72 @@
+tasks = []
+
+while True:
+    print("\n===== To-Do List Application =====")
+    print("1. Add Task")
+    print("2. View All Tasks")
+    print("3. Search Task")
+    print("4. Update Task")
+    print("5. Delete Task")
+    print("6. Exit")
+
+    choice = input("Please choose an option: ")
+
+    if choice == "1":
+        if len(tasks) >= 100:
+            print("Cannot add more items. Storage is full.")
+            continue
+        record = {}
+        record["title"] = input("Enter task title: ")
+        record["status"] = int(input("Enter Done (0/1): "))
+        tasks.append(record)
+        print("Task added successfully!")
+
+    elif choice == "2":
+        if len(tasks) == 0:
+            print("No tasks available.")
+        else:
+            print("\n========== Task List ==========")
+            for i, record in enumerate(tasks):
+                print(f"{i + 1}. " + str(record["title"]) + " | " + str(record["status"]))
+
+    elif choice == "3":
+        key = input("Enter the task title to search: ")
+        found = False
+        for record in tasks:
+            if record["title"] == key:
+                print("Task Found: " + str(record["title"]) + " | " + str(record["status"]))
+                found = True
+        if not found:
+            print("No matching task was found.")
+
+    elif choice == "4":
+        key = input("Enter the task title to update: ")
+        found = False
+        for i in range(len(tasks)):
+            if tasks[i]["title"] == key:
+                tasks[i]["title"] = input("Enter the new task title: ")
+                tasks[i]["status"] = int(input("Enter New Done (0/1): "))
+                print("Task updated successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching task was found.")
+
+    elif choice == "5":
+        key = input("Enter the task title to delete: ")
+        found = False
+        for i in range(len(tasks)):
+            if tasks[i]["title"] == key:
+                tasks.pop(i)
+                print("Task deleted successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching task was found.")
+
+    elif choice == "6":
+        print("Thank You for Using To-Do List Application.")
+        break
+
+    else:
+        print("Invalid Choice.")

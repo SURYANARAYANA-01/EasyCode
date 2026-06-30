@@ -1,0 +1,127 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    int id;
+    string name;
+    double price;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    int key;
+
+    do {
+        cout << "\n===== E-Commerce System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Product ID: ";
+                cin >> records[count].id;
+                cout << "Enter Product Name: ";
+                cin.ignore();
+                getline(cin, records[count].name);
+                cout << "Enter Price: ";
+                cin >> records[count].price;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Product ID | Product Name | Price) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].id << " | " << records[i].name << " | " << records[i].price << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Product ID to Search: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            cout << "Found: " << records[i].id << " | " << records[i].name << " | " << records[i].price << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Product ID to Update: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                        cout << "Enter New Product ID: ";
+                        cin >> records[i].id;
+                        cout << "Enter New Product Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].name);
+                        cout << "Enter New Price: ";
+                        cin >> records[i].price;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Product ID to Delete: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using E-Commerce System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

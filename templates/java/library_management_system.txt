@@ -25,7 +25,7 @@ public class ${CLASS_NAME} {
             System.out.println("5. Delete Book");
             System.out.println("6. Exit");
 
-            System.out.print("Enter Choice: ");
+            System.out.print("Please choose an option: ");
             choice = sc.nextInt();
 
             switch(choice) {

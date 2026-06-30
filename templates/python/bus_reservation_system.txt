@@ -1,0 +1,74 @@
+records = []
+
+while True:
+    print("\n===== Bus Reservation System =====")
+    print("1. Add Record")
+    print("2. View All Records")
+    print("3. Search Record")
+    print("4. Update Record")
+    print("5. Delete Record")
+    print("6. Exit")
+
+    choice = input("Please choose an option: ")
+
+    if choice == "1":
+        if len(records) >= 100:
+            print("Cannot add more items. Storage is full.")
+            continue
+        record = {}
+        record["bus"] = int(input("Enter Bus Number: "))
+        record["passenger"] = input("Enter Passenger Name: ")
+        record["seat"] = int(input("Enter Seat Number: "))
+        records.append(record)
+        print("Added successfully!")
+
+    elif choice == "2":
+        if len(records) == 0:
+            print("No Records Found.")
+        else:
+            print("\n===== Records (Bus Number | Passenger Name | Seat Number) =====")
+            for i, record in enumerate(records):
+                print(f"{i + 1}. " + str(record["bus"]) + " | " + str(record["passenger"]) + " | " + str(record["seat"]))
+
+    elif choice == "3":
+        key = int(input("Enter Bus Number to Search: "))
+        found = False
+        for record in records:
+            if record["bus"] == key:
+                print("Found: " + str(record["bus"]) + " | " + str(record["passenger"]) + " | " + str(record["seat"]))
+                found = True
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "4":
+        key = int(input("Enter Bus Number to Update: "))
+        found = False
+        for i in range(len(records)):
+            if records[i]["bus"] == key:
+                records[i]["bus"] = int(input("Enter New Bus Number: "))
+                records[i]["passenger"] = input("Enter New Passenger Name: ")
+                records[i]["seat"] = int(input("Enter New Seat Number: "))
+                print("Updated successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "5":
+        key = int(input("Enter Bus Number to Delete: "))
+        found = False
+        for i in range(len(records)):
+            if records[i]["bus"] == key:
+                records.pop(i)
+                print("Deleted successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "6":
+        print("Thank You for Using Bus Reservation System.")
+        break
+
+    else:
+        print("Invalid Choice.")

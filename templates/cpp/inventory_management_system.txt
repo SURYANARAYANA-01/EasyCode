@@ -1,0 +1,132 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    int id;
+    string name;
+    int qty;
+    double price;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    int key;
+
+    do {
+        cout << "\n===== Inventory Management System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Item ID: ";
+                cin >> records[count].id;
+                cout << "Enter Item Name: ";
+                cin.ignore();
+                getline(cin, records[count].name);
+                cout << "Enter Quantity: ";
+                cin >> records[count].qty;
+                cout << "Enter Price: ";
+                cin >> records[count].price;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Item ID | Item Name | Quantity | Price) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].id << " | " << records[i].name << " | " << records[i].qty << " | " << records[i].price << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Item ID to Search: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            cout << "Found: " << records[i].id << " | " << records[i].name << " | " << records[i].qty << " | " << records[i].price << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Item ID to Update: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                        cout << "Enter New Item ID: ";
+                        cin >> records[i].id;
+                        cout << "Enter New Item Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].name);
+                        cout << "Enter New Quantity: ";
+                        cin >> records[i].qty;
+                        cout << "Enter New Price: ";
+                        cin >> records[i].price;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Item ID to Delete: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Inventory Management System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

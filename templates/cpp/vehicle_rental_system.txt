@@ -1,0 +1,127 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    int id;
+    string model;
+    double rate;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    int key;
+
+    do {
+        cout << "\n===== Vehicle Rental System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Vehicle ID: ";
+                cin >> records[count].id;
+                cout << "Enter Model: ";
+                cin.ignore();
+                getline(cin, records[count].model);
+                cout << "Enter Rate Per Day: ";
+                cin >> records[count].rate;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Vehicle ID | Model | Rate Per Day) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].id << " | " << records[i].model << " | " << records[i].rate << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Vehicle ID to Search: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            cout << "Found: " << records[i].id << " | " << records[i].model << " | " << records[i].rate << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Vehicle ID to Update: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                        cout << "Enter New Vehicle ID: ";
+                        cin >> records[i].id;
+                        cout << "Enter New Model: ";
+                        cin.ignore();
+                        getline(cin, records[i].model);
+                        cout << "Enter New Rate Per Day: ";
+                        cin >> records[i].rate;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Vehicle ID to Delete: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].id == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Vehicle Rental System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

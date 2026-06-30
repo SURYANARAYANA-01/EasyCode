@@ -1,0 +1,127 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    int bus;
+    string passenger;
+    int seat;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    int key;
+
+    do {
+        cout << "\n===== Bus Reservation System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Bus Number: ";
+                cin >> records[count].bus;
+                cout << "Enter Passenger Name: ";
+                cin.ignore();
+                getline(cin, records[count].passenger);
+                cout << "Enter Seat Number: ";
+                cin >> records[count].seat;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Bus Number | Passenger Name | Seat Number) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].bus << " | " << records[i].passenger << " | " << records[i].seat << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Bus Number to Search: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].bus == key) {
+                            cout << "Found: " << records[i].bus << " | " << records[i].passenger << " | " << records[i].seat << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Bus Number to Update: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].bus == key) {
+                        cout << "Enter New Bus Number: ";
+                        cin >> records[i].bus;
+                        cout << "Enter New Passenger Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].passenger);
+                        cout << "Enter New Seat Number: ";
+                        cin >> records[i].seat;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Bus Number to Delete: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].bus == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Bus Reservation System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

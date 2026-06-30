@@ -1,0 +1,127 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    int room;
+    string guest;
+    int nights;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    int key;
+
+    do {
+        cout << "\n===== Hotel Reservation System =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Room Number: ";
+                cin >> records[count].room;
+                cout << "Enter Guest Name: ";
+                cin.ignore();
+                getline(cin, records[count].guest);
+                cout << "Enter Nights: ";
+                cin >> records[count].nights;
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Room Number | Guest Name | Nights) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].room << " | " << records[i].guest << " | " << records[i].nights << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Room Number to Search: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].room == key) {
+                            cout << "Found: " << records[i].room << " | " << records[i].guest << " | " << records[i].nights << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Room Number to Update: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].room == key) {
+                        cout << "Enter New Room Number: ";
+                        cin >> records[i].room;
+                        cout << "Enter New Guest Name: ";
+                        cin.ignore();
+                        getline(cin, records[i].guest);
+                        cout << "Enter New Nights: ";
+                        cin >> records[i].nights;
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Room Number to Delete: ";
+                cin >> key;
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].room == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Hotel Reservation System.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

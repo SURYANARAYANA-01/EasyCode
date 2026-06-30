@@ -134,6 +134,32 @@
 //Library Management System
 //Quiz Application
 //Student Management System
+//Employee Management System
+//Inventory Management System
+//Expense Tracker
+//To-Do List Application
+//Address Book
+//Attendance Management System
+//Result Management System
+//Course Management System
+//Notes Manager
+//Password Manager
+//Hospital Management System
+//Hotel Reservation System
+//Restaurant Management System
+//Gym Management System
+//School Management System
+//Railway Reservation System
+//Bus Reservation System
+//Movie Ticket Booking System
+//Parking Management System
+//Vehicle Rental System
+//E-Commerce System
+//Shopping Cart System
+//Digital Library
+//Online Examination System
+//Voting System
+//Invoice Generator
 
 ## Command for Java
 
@@ -257,6 +283,32 @@
 //Library Management System
 //Quiz Application
 //Student Management System
+//Employee Management System
+//Inventory Management System
+//Expense Tracker
+//To-Do List Application
+//Address Book
+//Attendance Management System
+//Result Management System
+//Course Management System
+//Notes Manager
+//Password Manager
+//Hospital Management System
+//Hotel Reservation System
+//Restaurant Management System
+//Gym Management System
+//School Management System
+//Railway Reservation System
+//Bus Reservation System
+//Movie Ticket Booking System
+//Parking Management System
+//Vehicle Rental System
+//E-Commerce System
+//Shopping Cart System
+//Digital Library
+//Online Examination System
+//Voting System
+//Invoice Generator
 
 ## Command for Python
 
@@ -389,3 +441,29 @@
 #Library Management System
 #Quiz Application
 #Student Management System
+#Employee Management System
+#Inventory Management System
+#Expense Tracker
+#To-Do List Application
+#Address Book
+#Attendance Management System
+#Result Management System
+#Course Management System
+#Notes Manager
+#Password Manager
+#Hospital Management System
+#Hotel Reservation System
+#Restaurant Management System
+#Gym Management System
+#School Management System
+#Railway Reservation System
+#Bus Reservation System
+#Movie Ticket Booking System
+#Parking Management System
+#Vehicle Rental System
+#E-Commerce System
+#Shopping Cart System
+#Digital Library
+#Online Examination System
+#Voting System
+#Invoice Generator

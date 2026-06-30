@@ -1,0 +1,127 @@
+import java.util.Scanner;
+
+public class ${CLASS_NAME}{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] slot = new int[100];
+        String[] vehicle = new String[100];
+        int[] hours = new int[100];
+        int count = 0;
+        int choice;
+        int key;
+
+        do {
+            System.out.println("\n===== Parking Management System =====");
+            System.out.println("1. Add Record");
+            System.out.println("2. View All Records");
+            System.out.println("3. Search Record");
+            System.out.println("4. Update Record");
+            System.out.println("5. Delete Record");
+            System.out.println("6. Exit");
+            System.out.print("Please choose an option: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    if (count >= 100) {
+                        System.out.println("Cannot add more items. Storage is full.");
+                        break;
+                    }
+                    System.out.print("Enter Slot Number: ");
+                    slot[count] = sc.nextInt();
+                    System.out.print("Enter Vehicle Number: ");
+                    sc.nextLine();
+                    vehicle[count] = sc.nextLine();
+                    System.out.print("Enter Hours: ");
+                    hours[count] = sc.nextInt();
+                    count++;
+                    System.out.println("Added successfully!");
+                    break;
+
+                case 2:
+                    if (count == 0) {
+                        System.out.println("No Records Found.");
+                    }
+                    else {
+                        System.out.println("\n===== Records (Slot Number | Vehicle Number | Hours) =====");
+                        for (int i = 0; i < count; i++) {
+                            System.out.println((i + 1) + ". " + slot[i] + " | " + vehicle[i] + " | " + hours[i]);
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Slot Number to Search: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (slot[i] == key) {
+                                System.out.println("Found: " + slot[i] + " | " + vehicle[i] + " | " + hours[i]);
+                                found = true;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter Slot Number to Update: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (slot[i] == key) {
+                            System.out.print("Enter New Slot Number: ");
+                            slot[i] = sc.nextInt();
+                            System.out.print("Enter New Vehicle Number: ");
+                            sc.nextLine();
+                            vehicle[i] = sc.nextLine();
+                            System.out.print("Enter New Hours: ");
+                            hours[i] = sc.nextInt();
+                                System.out.println("Updated successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.print("Enter Slot Number to Delete: ");
+                    key = sc.nextInt();
+                    {
+                        boolean found = false;
+                        for (int i = 0; i < count; i++) {
+                            if (slot[i] == key) {
+                                for (int j = i; j < count - 1; j++) {
+                                    slot[j] = slot[j + 1];
+                            vehicle[j] = vehicle[j + 1];
+                            hours[j] = hours[j + 1];
+                                }
+                                count--;
+                                System.out.println("Deleted successfully!");
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) System.out.println("No matching record was found.");
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("Thank You for Using Parking Management System.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+}

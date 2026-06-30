@@ -1,0 +1,74 @@
+records = []
+
+while True:
+    print("\n===== Expense Tracker =====")
+    print("1. Add Record")
+    print("2. View All Records")
+    print("3. Search Record")
+    print("4. Update Record")
+    print("5. Delete Record")
+    print("6. Exit")
+
+    choice = input("Please choose an option: ")
+
+    if choice == "1":
+        if len(records) >= 100:
+            print("Cannot add more items. Storage is full.")
+            continue
+        record = {}
+        record["category"] = input("Enter Category: ")
+        record["amount"] = float(input("Enter Amount: "))
+        record["date"] = input("Enter Date: ")
+        records.append(record)
+        print("Added successfully!")
+
+    elif choice == "2":
+        if len(records) == 0:
+            print("No Records Found.")
+        else:
+            print("\n===== Records (Category | Amount | Date) =====")
+            for i, record in enumerate(records):
+                print(f"{i + 1}. " + str(record["category"]) + " | " + str(record["amount"]) + " | " + str(record["date"]))
+
+    elif choice == "3":
+        key = input("Enter Category to Search: ")
+        found = False
+        for record in records:
+            if record["category"] == key:
+                print("Found: " + str(record["category"]) + " | " + str(record["amount"]) + " | " + str(record["date"]))
+                found = True
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "4":
+        key = input("Enter Category to Update: ")
+        found = False
+        for i in range(len(records)):
+            if records[i]["category"] == key:
+                records[i]["category"] = input("Enter New Category: ")
+                records[i]["amount"] = float(input("Enter New Amount: "))
+                records[i]["date"] = input("Enter New Date: ")
+                print("Updated successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "5":
+        key = input("Enter Category to Delete: ")
+        found = False
+        for i in range(len(records)):
+            if records[i]["category"] == key:
+                records.pop(i)
+                print("Deleted successfully!")
+                found = True
+                break
+        if not found:
+            print("No matching record was found.")
+
+    elif choice == "6":
+        print("Thank You for Using Expense Tracker.")
+        break
+
+    else:
+        print("Invalid Choice.")

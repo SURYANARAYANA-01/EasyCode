@@ -1,0 +1,132 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Record {
+    string category;
+    double amount;
+    string date;
+};
+
+int main() {
+    Record records[100];
+    int count = 0;
+    int choice;
+    string key;
+
+    do {
+        cout << "\n===== Expense Tracker =====";
+        cout << "\n1. Add Record";
+        cout << "\n2. View All Records";
+        cout << "\n3. Search Record";
+        cout << "\n4. Update Record";
+        cout << "\n5. Delete Record";
+        cout << "\n6. Exit";
+        cout << "\nPlease choose an option: ";
+        cin >> choice;
+
+        switch(choice) {
+
+            case 1:
+                if(count >= 100) {
+                    cout << "Cannot add more items. Storage is full.\n";
+                    break;
+                }
+                cout << "Enter Category: ";
+                cin.ignore();
+                getline(cin, records[count].category);
+                cout << "Enter Amount: ";
+                cin >> records[count].amount;
+                cout << "Enter Date: ";
+                cin.ignore();
+                getline(cin, records[count].date);
+                count++;
+                cout << "Added successfully!\n";
+                break;
+
+            case 2:
+                if(count == 0) {
+                    cout << "No Records Found.\n";
+                }
+                else {
+                    cout << "\n===== Records (Category | Amount | Date) =====\n";
+                    for(int i = 0; i < count; i++) {
+                        cout << i + 1 << ". " << records[i].category << " | " << records[i].amount << " | " << records[i].date << endl;
+                    }
+                }
+                break;
+
+            case 3:
+                cout << "Enter Category to Search: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].category == key) {
+                            cout << "Found: " << records[i].category << " | " << records[i].amount << " | " << records[i].date << endl;
+                            found = true;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 4:
+                cout << "Enter Category to Update: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].category == key) {
+                        cout << "Enter New Category: ";
+                        cin.ignore();
+                        getline(cin, records[i].category);
+                        cout << "Enter New Amount: ";
+                        cin >> records[i].amount;
+                        cout << "Enter New Date: ";
+                        cin.ignore();
+                        getline(cin, records[i].date);
+                            cout << "Updated successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 5:
+                cout << "Enter Category to Delete: ";
+                cin.ignore();
+                getline(cin, key);
+                {
+                    bool found = false;
+                    for(int i = 0; i < count; i++) {
+                        if(records[i].category == key) {
+                            for(int j = i; j < count - 1; j++) {
+                                records[j] = records[j + 1];
+                            }
+                            count--;
+                            cout << "Deleted successfully!\n";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found) cout << "No matching record was found.\n";
+                }
+                break;
+
+            case 6:
+                cout << "Thank You for Using Expense Tracker.\n";
+                break;
+
+            default:
+                cout << "Invalid Choice.\n";
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}

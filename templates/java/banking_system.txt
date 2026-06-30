@@ -18,7 +18,7 @@ public class ${CLASS_NAME}{
             System.out.println("3. Check Balance");
             System.out.println("4. Transaction History");
             System.out.println("5. Exit");
-            System.out.print("Enter Choice: ");
+            System.out.print("Please choose an option: ");
             choice = sc.nextInt();
 
             switch (choice) {
