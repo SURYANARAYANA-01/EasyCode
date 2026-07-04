@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Inheritance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Inheritance</h1>
+    <p class="lead">Some properties (color, font) inherit from the parent; layout ones do not.</p>
+  </header>
+  <main class="demo">
+    <div class="parent">
+      Parent text.
+      <p>Child paragraph inherits color and font.</p>
+    </div>
+  </main>
+</body>
+</html>

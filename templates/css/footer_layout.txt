@@ -1,0 +1,25 @@
+/* ---------- Base reset & typography ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f8fafc;
+  padding: 2rem;
+}
+img { max-width: 100%; display: block; }
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Footer Layout ---------- */
+body { padding: 0; }
+.site-footer { background: #0f172a; color: #cbd5e1; padding: 3rem 1.5rem 1.5rem; }
+.cols {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem;
+}
+.site-footer h3, .site-footer h4 { color: #fff; margin-bottom: 0.75rem; }
+.site-footer a { display: block; color: #cbd5e1; padding: 0.25rem 0; }
+.site-footer a:hover { color: #fff; }
+.copy { text-align: center; margin-top: 2rem; font-size: 0.875rem; color: #64748b; }
+@media (max-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }

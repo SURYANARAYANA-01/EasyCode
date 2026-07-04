@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section</title>
+
+</head>
+<body>
+  <!-- <section> groups related content with its own heading -->
+  <section>
+    <h2>About Us</h2>
+    <p>We build fun learning tools.</p>
+  </section>
+
+  <section>
+    <h2>Our Team</h2>
+    <p>A small crew of makers.</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meter</title>
+
+</head>
+<body>
+  <!-- <meter> shows a value within a known range (e.g. disk usage) -->
+  <label for="disk">Disk Usage:</label>
+  <meter id="disk" value="0.6" min="0" max="1"
+         low="0.3" high="0.75" optimum="0.2">60%</meter>
+</body>
+</html>

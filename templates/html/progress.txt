@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress</title>
+
+</head>
+<body>
+  <!-- <progress> shows completion of a task (0 to max) -->
+  <label for="p1">Download:</label>
+  <progress id="p1" value="70" max="100">70%</progress>
+
+  <label for="p2">Loading:</label>
+  <progress id="p2">Indeterminate</progress>
+</body>
+</html>

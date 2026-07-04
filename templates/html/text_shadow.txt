@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Shadow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Text Shadow</h1>
+    <p class="lead">Shadows behind text.</p>
+  </header>
+  <main class="demo">
+    <h2 class="ts1">Soft Shadow</h2>
+    <h2 class="ts2">Glow</h2>
+    <h2 class="ts3">3D Stack</h2>
+  </main>
+</body>
+</html>

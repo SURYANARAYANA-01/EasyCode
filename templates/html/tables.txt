@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables</title>
+
+</head>
+<body>
+  <!-- Semantic table with header, body and footer -->
+  <table border="1" cellpadding="8">
+    <caption>Monthly Sales</caption>
+    <thead>
+      <tr><th>Month</th><th>Sales</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>January</td><td>$1,200</td></tr>
+      <tr><td>February</td><td>$1,850</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><th>Total</th><th>$3,050</th></tr>
+    </tfoot>
+  </table>
+</body>
+</html>

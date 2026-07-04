@@ -1,82 +1,108 @@
 # EasyCode Dev
 
-Generate beginner-friendly **C++**, **Java**, and **Python** programs instantly inside **Visual Studio Code** using simple commands and **Ctrl + Enter**.
+Generate beginner-friendly **C++**, **Java**, **Python**, **HTML**, and **CSS** code instantly inside **Visual Studio Code** using simple commands and **Ctrl + Enter**.
 
-EasyCode Dev is designed to help beginners learn programming faster with **300+ templates** and **31 real-world mini projects**, covering fundamental programming concepts, object-oriented programming, and practical applications.
-
----
-
-## Features
-
-* 300+ Beginner-Friendly Templates
-* 31 Real-World Mini Projects
-* C++ Templates
-* Java Templates
-* Python Templates
-* Input and Non-Input Programs
-* Object-Oriented Programming (OOP) Concepts
-* Arrays, Strings, Functions, Loops, Conditional Statements, Operators, Exception Handling, File Handling, Inheritance, Polymorphism, and more
-* Instant Code Generation using **Ctrl + Enter**
-* Automatic Java Class Name Replacement using `${CLASS_NAME}`
+EasyCode Dev is designed to help beginners learn programming and web development faster with **500+ templates** and **31 real-world mini projects**, covering programming fundamentals, object-oriented programming, HTML, CSS, and practical applications.
 
 ---
 
-## Preview
+# Features
 
-### C++ Example
+- 500+ Beginner-Friendly Templates
+- 31 Real-World Mini Projects
+- C++ Templates
+- Java Templates
+- Python Templates
+- HTML Templates
+- CSS Templates
+- Input and Non-Input Programs
+- Object-Oriented Programming (OOP) Concepts
+- Arrays, Strings, Functions, Loops, Conditional Statements, Operators, Exception Handling, File Handling, Inheritance, Polymorphism, and more
+- HTML and CSS Components
+- Automatic HTML + CSS File Generation
+- Automatic Java Class Name Replacement using `${CLASS_NAME}`
+- Instant Code Generation using **Ctrl + Enter**
+
+---
+
+# Preview
+
+### C++
 
 ```cpp
 //hello world
 ```
 
-### Java Example
+### Java
 
 ```java
 //class and object
 ```
 
-### Python Example
+### Python
 
 ```python
 #for loop
 ```
 
-### Multiple Templates
+### HTML
+
+```html
+<!-- Responsive Navbar -->
+```
+
+### CSS
+
+```css
+/* Responsive Navbar */
+```
 
 ---
 
-## Supported Languages
+# Supported Languages
 
-* C++
-* Java
-* Python
+- C++
+- Java
+- Python
+- HTML
+- CSS
 
 ---
 
-## How to Use
+# How to Use
 
 1. Install **EasyCode Dev** from the Visual Studio Code Marketplace.
-2. Open a C++, Java, or Python source file.
+2. Open a supported source file.
 3. Type a supported command.
 
-Example:
-
-**C++**
+### C++
 
 ```cpp
 //hello world
 ```
 
-**Java**
+### Java
 
 ```java
 //class and object
 ```
 
-**Python**
+### Python
 
 ```python
 #for loop
+```
+
+### HTML
+
+```html
+<!-- Responsive Navbar -->
+```
+
+### CSS
+
+```css
+/* Responsive Navbar */
 ```
 
 4. Place the cursor on the command line.
@@ -92,126 +118,137 @@ or run:
 EasyCode Dev: Generate Program
 ```
 
-The corresponding program will be generated automatically below the command.
+EasyCode Dev automatically generates the corresponding template below the command.
+
+For HTML templates, the extension automatically creates **style.css** when required and inserts the matching CSS template.
 
 ---
 
-## Template Library
+# Template Library
 
 EasyCode Dev includes beginner-friendly templates covering:
 
-* Mini Projects
-* Object-Oriented Programming (OOP)
-* Variables and Data Types
-* Input and Output
-* Conditional Statements
-* Loops
-* Functions
-* Arrays
-* Strings
-* Operators
-* Exception Handling
-* File Handling
-* Classes and Objects
-* Constructors
-* Inheritance
-* Polymorphism
-* Abstraction
-* Encapsulation
-* And many more...
+- Variables and Data Types
+- Input and Output
+- Conditional Statements
+- Loops
+- Functions
+- Arrays
+- Strings
+- Operators
+- Exception Handling
+- File Handling
+- Classes and Objects
+- Constructors
+- Inheritance
+- Polymorphism
+- Abstraction
+- Encapsulation
+- HTML Fundamentals
+- CSS Fundamentals
+- Responsive Components
+- Forms
+- Navigation Bars
+- Cards
+- Layouts
+- Mini Projects
+- And many more...
 
 ---
 
-## Mini Projects
+# Mini Projects
 
-EasyCode Dev includes 31 real-world console-based mini projects for C++, Java, and Python, including:
+EasyCode Dev includes **31 real-world console-based mini projects** for C++, Java, and Python, including:
 
-* Banking System
-* Contact Book
-* Library Management System
-* Quiz Application
-* Student Management System
-* Employee Management System
-* Inventory Management System
-* Expense Tracker
-* To-Do List Application
-* Address Book
-* Attendance Management System
-* Result Management System
-* Course Management System
-* Notes Manager
-* Password Manager
-* Hospital Management System
-* Hotel Reservation System
-* Restaurant Management System
-* Gym Management System
-* School Management System
-* Railway Reservation System
-* Bus Reservation System
-* Movie Ticket Booking System
-* Parking Management System
-* Vehicle Rental System
-* E-Commerce System
-* Shopping Cart System
-* Digital Library
-* Online Examination System
-* Voting System
-* Invoice Generator
-
----
-
-## Quick Commands
-
-| Command                       | Description                                         |
-| ----------------------------- | --------------------------------------------------- |
-| `//hello world`               | Generate Hello World program                        |
-| `//class and object`          | Generate a Class and Object example                 |
-| `//for loop`                  | Generate a For Loop example                         |
-| `//string`                    | Generate String operations                          |
-| `//banking system`            | Generate the Banking System mini project            |
-| `//library management system` | Generate the Library Management System mini project |
-| `//todo list application`     | Generate the To-Do List Application                 |
-
-For the complete list of supported commands, see **COMMANDS.md**.
+- Banking System
+- Contact Book
+- Library Management System
+- Quiz Application
+- Student Management System
+- Employee Management System
+- Inventory Management System
+- Expense Tracker
+- To-Do List Application
+- Address Book
+- Attendance Management System
+- Result Management System
+- Course Management System
+- Notes Manager
+- Password Manager
+- Hospital Management System
+- Hotel Reservation System
+- Restaurant Management System
+- Gym Management System
+- School Management System
+- Railway Reservation System
+- Bus Reservation System
+- Movie Ticket Booking System
+- Parking Management System
+- Vehicle Rental System
+- E-Commerce System
+- Shopping Cart System
+- Digital Library
+- Online Examination System
+- Voting System
+- Invoice Generator
 
 ---
 
-## Requirements
+# Quick Commands
 
-* Visual Studio Code
-* A C++, Java, or Python file
+| Language | Command |
+|----------|---------|
+| C++ | `//hello world` |
+| Java | `//class and object` |
+| Python | `#for loop` |
+| HTML | `<!-- Responsive Navbar -->` |
+| CSS | `/* Responsive Navbar */` |
+
+For the complete list of supported commands, see the [EasyCode Dev Commands](COMMANDS.md).
 
 ---
 
-## Installation
+# Requirements
+
+- Visual Studio Code
+- A C++, Java, Python, HTML, or CSS source file
+
+---
+
+# Installation
 
 1. Open Visual Studio Code.
 2. Install **EasyCode Dev** from the Marketplace.
 3. Open a supported source file.
 4. Type a supported command.
-5. Press **Ctrl + Enter** to generate the program instantly.
+5. Press **Ctrl + Enter** to generate the code instantly.
 
 ---
 
-## Planned Language Support
+# Planned Language Support
 
-* JavaScript
-* TypeScript
-* C
-* C#
-* HTML & CSS templates
-
----
-
-## Contributing
-
-Contributions, suggestions, and feature requests are always welcome. Feel free to open an issue or submit a pull request on GitHub.
+- JavaScript
+- TypeScript
+- C
+- C#
+- React
+- Node.js
 
 ---
 
-## License
+# Contributing
 
-EasyCode Dev is proprietary software. See the LICENSE file for the complete license terms.
+Contributions, suggestions, and feature requests are always welcome.
+
+Feel free to open an issue or submit a pull request on GitHub.
+
+---
+
+# License
+
+EasyCode Dev is proprietary software.
+
+See the **LICENSE** file for the complete license terms.
 
 ---
 

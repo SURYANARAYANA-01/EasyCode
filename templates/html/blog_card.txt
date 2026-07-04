@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article class="post">
+    <img src="https://picsum.photos/id/1005/600/300" alt="Post cover" />
+    <div class="body">
+      <span class="tag">Web Dev</span>
+      <h2>10 CSS tricks that will change your life</h2>
+      <p>Learn ten small but powerful CSS techniques you can use right now.</p>
+      <footer>
+        <img class="avatar" src="https://i.pravatar.cc/40?img=8" alt="" />
+        <div>
+          <strong>Alex Park</strong><br />
+          <small>Jan 12, 2026 &middot; 5 min read</small>
+        </div>
+      </footer>
+    </div>
+  </article>
+</body>
+</html>

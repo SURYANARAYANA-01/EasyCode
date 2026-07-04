@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@import Rule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>@import Rule</h1>
+    <p class="lead">Load another stylesheet from inside CSS. Prefer <link> for performance.</p>
+  </header>
+  <main class="demo">
+    <p class="imp">The @import comment at the top shows the syntax.</p>
+  </main>
+</body>
+</html>

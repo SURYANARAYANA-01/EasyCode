@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lists</title>
+
+</head>
+<body>
+  <!-- Unordered list (bullets) -->
+  <h2>Shopping List</h2>
+  <ul>
+    <li>Apples</li>
+    <li>Bread</li>
+    <li>Milk</li>
+  </ul>
+
+  <!-- Ordered list (numbers) -->
+  <h2>Steps</h2>
+  <ol>
+    <li>Open the door</li>
+    <li>Walk inside</li>
+    <li>Close the door</li>
+  </ol>
+
+  <!-- Description list -->
+  <h2>Glossary</h2>
+  <dl>
+    <dt>HTML</dt>
+    <dd>The language used to structure web pages.</dd>
+  </dl>
+</body>
+</html>

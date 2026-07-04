@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blend Modes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Blend Modes</h1>
+    <p class="lead">mix-blend-mode and background-blend-mode.</p>
+  </header>
+  <main class="demo">
+    <div class="blend"><h2>MULTIPLY</h2></div>
+  </main>
+</body>
+</html>

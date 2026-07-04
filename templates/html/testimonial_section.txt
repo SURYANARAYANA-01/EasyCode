@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonial Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="testimonials">
+    <h1>What our users say</h1>
+    <div class="grid">
+      <blockquote>
+        <p>&ldquo;EasyCode made me love coding again. The templates are pure gold.&rdquo;</p>
+        <footer>
+          <img src="https://i.pravatar.cc/60?img=5" alt="" />
+          <div><strong>Priya Nair</strong><br /><small>Student</small></div>
+        </footer>
+      </blockquote>
+
+      <blockquote>
+        <p>&ldquo;Clean, modern, and beginner-friendly. Highly recommended.&rdquo;</p>
+        <footer>
+          <img src="https://i.pravatar.cc/60?img=15" alt="" />
+          <div><strong>Marco Rossi</strong><br /><small>Bootcamp mentor</small></div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+</body>
+</html>

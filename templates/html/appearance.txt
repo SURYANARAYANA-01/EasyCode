@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>appearance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>appearance</h1>
+    <p class="lead">Remove or reset the default look of native controls.</p>
+  </header>
+  <main class="demo">
+    <button class="native">native button</button>
+    <button class="reset">reset appearance</button>
+  </main>
+</body>
+</html>

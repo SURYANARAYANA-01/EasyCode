@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>backdrop-filter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>backdrop-filter</h1>
+    <p class="lead">Apply filter effects to what is BEHIND an element (frosted glass).</p>
+  </header>
+  <main class="demo">
+    <div class="hero-bd">
+      <div class="glass">Frosted glass — backdrop-filter: blur().</div>
+    </div>
+  </main>
+</body>
+</html>

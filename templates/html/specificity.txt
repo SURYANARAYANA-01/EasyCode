@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Specificity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Specificity</h1>
+    <p class="lead">Specificity ranks selectors: inline > id > class > element.</p>
+  </header>
+  <main class="demo">
+    <p id="p1" class="hl" style="color: purple">Inline beats everything (purple).</p>
+    <p id="p2" class="hl">ID beats class (red).</p>
+    <p class="hl">Class beats element (blue).</p>
+    <p>Just an element (gray).</p>
+  </main>
+</body>
+</html>

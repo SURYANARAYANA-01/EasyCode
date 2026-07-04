@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <footer class="site-footer">
+    <div class="cols">
+      <div>
+        <h3>EasyCode</h3>
+        <p>Learn by building beautiful things.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Docs</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 EasyCode. All rights reserved.</p>
+  </footer>
+</body>
+</html>

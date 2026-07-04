@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Formatting</title>
+
+</head>
+<body>
+  <!-- Semantic text formatting tags -->
+  <p><strong>Strong (important)</strong> and <b>bold (visual only)</b></p>
+  <p><em>Emphasis</em> and <i>italic</i></p>
+  <p><mark>Highlighted text</mark></p>
+  <p><small>Small print</small> &mdash; <del>deleted</del> &mdash; <ins>inserted</ins></p>
+  <p>H<sub>2</sub>O and E = mc<sup>2</sup></p>
+  <p><code>inline code</code> and <kbd>Ctrl</kbd>+<kbd>C</kbd></p>
+</body>
+</html>

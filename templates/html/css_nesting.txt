@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Nesting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Nesting</h1>
+    <p class="lead">Native nesting (like Sass) — no preprocessor required.</p>
+  </header>
+  <main class="demo">
+    <div class="card-n">
+      <h3>Nested Card</h3>
+      <p>Body text.</p>
+      <a href="#">Read more</a>
+    </div>
+  </main>
+</body>
+</html>

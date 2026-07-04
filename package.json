@@ -2,36 +2,38 @@
   "name": "easycode-dev",
   "displayName": "EasyCode Dev",
   "description": "Generate beginner-friendly C++, Java, and Python programs instantly.",
-  "version": "1.1.0",
+  "version": "1.1.5",
   "publisher": "LazyDev",
   "icon": "images/Icon.png",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/SURYANARAYANA-01/EasyCode.git"
-},
+    "type": "git",
+    "url": "https://github.com/SURYANARAYANA-01/EasyCode.git"
+  },
   "engines": {
     "vscode": "^1.117.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
-  "keybindings": [
-  {
-    "command": "easycodedev.generateProgram",
-    "key": "ctrl+enter",
-    "when": "editorTextFocus"
-  }
-],
-  "commands": [
-    {
-      "command": "easycodedev.generateProgram",
-      "title": "EasyCode Dev: Generate Program"
-    }
-  ]
-},
+    "keybindings": [
+      {
+        "command": "easycodedev.generateProgram",
+        "key": "ctrl+enter",
+        "when": "editorTextFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "easycodedev.generateProgram",
+        "title": "EasyCode Dev: Generate Program"
+      }
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "npm run check-types && npm run lint && node esbuild.js",
@@ -47,15 +49,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.117.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
+    "@types/vscode": "^1.117.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "esbuild": "^0.27.3",
+    "eslint": "^9.39.3",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.56.1"
   }
 }

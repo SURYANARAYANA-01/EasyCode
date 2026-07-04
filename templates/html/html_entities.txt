@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Entities</title>
+
+</head>
+<body>
+  <!-- Entities let you display reserved or special characters -->
+  <p>Less than: &lt;   Greater than: &gt;   Ampersand: &amp;</p>
+  <p>Quotes: &quot;hello&quot; and &apos;hi&apos;</p>
+  <p>Copyright &copy; &mdash; Registered &reg; &mdash; Trademark &trade;</p>
+  <p>Non-breaking&nbsp;space keeps words together.</p>
+  <p>Arrows: &larr; &uarr; &rarr; &darr;</p>
+</body>
+</html>

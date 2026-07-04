@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>resize</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>resize</h1>
+    <p class="lead">Let the user resize an element (needs overflow != visible).</p>
+  </header>
+  <main class="demo">
+    <textarea class="ta">Drag my bottom-right corner.</textarea>
+    <div class="rs">Resize me both ways.</div>
+  </main>
+</body>
+</html>

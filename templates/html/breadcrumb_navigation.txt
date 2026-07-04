@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breadcrumb Navigation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Breadcrumbs show the user's location in the site hierarchy -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Electronics</a></li>
+      <li aria-current="page">Headphones</li>
+    </ol>
+  </nav>
+
+  <main><h1>Wireless Headphones</h1></main>
+</body>
+</html>

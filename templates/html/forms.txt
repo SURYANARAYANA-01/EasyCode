@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+
+</head>
+<body>
+  <!-- A basic form. action = URL to send data to, method = GET or POST -->
+  <form action="/submit" method="post">
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+    </p>
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+</body>
+</html>

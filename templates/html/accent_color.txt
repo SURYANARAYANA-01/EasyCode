@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>accent-color</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>accent-color</h1>
+    <p class="lead">Recolor native form controls (checkbox, radio, range, progress).</p>
+  </header>
+  <main class="demo">
+    <label><input type="checkbox" checked /> Checkbox</label>
+    <label><input type="radio" name="r" checked /> Radio</label>
+    <input type="range" />
+    <progress value="60" max="100"></progress>
+  </main>
+</body>
+</html>

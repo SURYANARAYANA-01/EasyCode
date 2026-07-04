@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paragraphs</title>
+
+</head>
+<body>
+  <!-- <p> defines a paragraph of text -->
+  <p>This is the first paragraph. Browsers automatically add space around it.</p>
+  <p>
+    Paragraphs can span multiple lines in your source code,
+    but the browser collapses whitespace into single spaces.
+  </p>
+  <p>Use &lt;br&gt; for a manual line break, like this:<br />new line.</p>
+</body>
+</html>

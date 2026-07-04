@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="team">
+    <h1>Meet the team</h1>
+    <div class="grid">
+      <article class="member">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Alex" />
+        <h3>Alex Park</h3>
+        <p>Designer</p>
+      </article>
+      <article class="member">
+        <img src="https://i.pravatar.cc/150?img=32" alt="Jane" />
+        <h3>Jane Doe</h3>
+        <p>Developer</p>
+      </article>
+      <article class="member">
+        <img src="https://i.pravatar.cc/150?img=45" alt="Sam" />
+        <h3>Sam Lee</h3>
+        <p>Product Manager</p>
+      </article>
+      <article class="member">
+        <img src="https://i.pravatar.cc/150?img=68" alt="Riya" />
+        <h3>Riya Shah</h3>
+        <p>Marketing</p>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

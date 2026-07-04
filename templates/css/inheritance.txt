@@ -1,0 +1,26 @@
+/* ============================================================
+   Concept: CSS Inheritance
+   Some properties (color, font) inherit from the parent; layout ones do not.
+   ============================================================ */
+
+/* ---------- Base reset & typography ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f8fafc;
+  padding: 2rem;
+}
+.page-header { max-width: 760px; margin: 0 auto 2rem; }
+.page-header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #0f172a; }
+.page-header .lead { color: #475569; }
+.demo { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.box { padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+
+.parent {
+  color: #059669;
+  font-family: Georgia, serif;
+  border: 2px solid #059669; /* border does NOT inherit */
+  padding: 1rem;
+}

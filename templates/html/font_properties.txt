@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Properties</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Font Properties</h1>
+    <p class="lead">font-family, font-size, font-weight, font-style.</p>
+  </header>
+  <main class="demo">
+    <p class="f1">Sans-serif regular</p>
+    <p class="f2">Serif italic bold</p>
+    <p class="f3">Monospace small</p>
+  </main>
+</body>
+</html>

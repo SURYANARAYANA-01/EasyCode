@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labels</title>
+
+</head>
+<body>
+  <!-- Labels improve accessibility. Two ways to connect them: -->
+
+  <!-- 1. Using the for attribute (matches input id) -->
+  <p>
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="uname" />
+  </p>
+
+  <!-- 2. Wrapping the input inside the label -->
+  <p>
+    <label>
+      Password:
+      <input type="password" name="pass" />
+    </label>
+  </p>
+</body>
+</html>

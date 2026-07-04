@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logical Properties</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Logical Properties</h1>
+    <p class="lead">Direction-aware alternatives to physical properties.</p>
+  </header>
+  <main class="demo">
+    <div class="lp">margin-inline-start = margin-left in LTR, margin-right in RTL.</div>
+  </main>
+</body>
+</html>

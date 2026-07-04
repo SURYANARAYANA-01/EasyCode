@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images</title>
+
+</head>
+<body>
+  <!-- <img> is a self-closing tag. alt describes the image for accessibility -->
+  <img
+    src="https://picsum.photos/400/250"
+    alt="A random placeholder photo"
+    width="400"
+    height="250"
+    loading="lazy"
+  />
+  <!-- Always include alt text. Use loading="lazy" for performance. -->
+</body>
+</html>

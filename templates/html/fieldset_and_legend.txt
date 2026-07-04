@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldset & Legend</title>
+
+</head>
+<body>
+  <!-- <fieldset> groups related form controls; <legend> gives it a title -->
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <p><label>First name: <input type="text" /></label></p>
+      <p><label>Last name:  <input type="text" /></label></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+      <label><input type="checkbox" /> Newsletter</label>
+      <label><input type="checkbox" /> SMS updates</label>
+    </fieldset>
+  </form>
+</body>
+</html>

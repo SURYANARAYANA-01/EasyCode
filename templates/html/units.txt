@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Units</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Units</h1>
+    <p class="lead">Absolute (px) vs relative (em, rem, %, vw, vh, ch).</p>
+  </header>
+  <main class="demo">
+    <div class="u px">200px wide</div>
+    <div class="u rem">20rem wide</div>
+    <div class="u vw">50vw wide (half viewport)</div>
+    <div class="u pct">80% wide</div>
+  </main>
+</body>
+</html>

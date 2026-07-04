@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrollbar Styling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Scrollbar Styling</h1>
+    <p class="lead">Style scrollbars in WebKit and Firefox.</p>
+  </header>
+  <main class="demo">
+    <div class="scrollable">
+      <p>Scroll me. Lorem ipsum dolor sit amet.</p>
+      <p>More content...</p><p>Even more...</p><p>Keep scrolling.</p><p>Final line.</p>
+    </div>
+  </main>
+</body>
+</html>

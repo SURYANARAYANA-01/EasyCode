@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas</title>
+
+</head>
+<body>
+  <!-- <canvas> is a bitmap surface you draw on with JavaScript -->
+  <canvas id="c" width="300" height="150" style="border:1px solid #333"></canvas>
+
+  <script>
+    // Beginner-friendly canvas example
+    const ctx = document.getElementById('c').getContext('2d');
+    ctx.fillStyle = '#3b82f6';
+    ctx.fillRect(20, 20, 100, 100);   // draw a blue square
+    ctx.fillStyle = '#ef4444';
+    ctx.beginPath();
+    ctx.arc(220, 70, 40, 0, Math.PI * 2);
+    ctx.fill();                       // draw a red circle
+  </script>
+</body>
+</html>

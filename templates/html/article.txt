@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article</title>
+
+</head>
+<body>
+  <!-- <article> is self-contained content (blog post, news item, comment) -->
+  <article>
+    <header>
+      <h2>How to Learn HTML</h2>
+      <p><small>Published on Jan 1, 2026</small></p>
+    </header>
+    <p>Start with the basics and practice every day.</p>
+    <footer><p>Tags: html, beginners</p></footer>
+  </article>
+</body>
+</html>

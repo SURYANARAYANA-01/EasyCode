@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@font-face</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>@font-face</h1>
+    <p class="lead">Register a custom web font by URL.</p>
+  </header>
+  <main class="demo">
+    <h2 class="custom">Custom Web Font</h2>
+    <p class="custom">Loaded via @font-face.</p>
+  </main>
+</body>
+</html>

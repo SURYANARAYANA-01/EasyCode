@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>user-select</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>user-select</h1>
+    <p class="lead">Control whether text can be selected.</p>
+  </header>
+  <main class="demo">
+    <p class="sel-all">Click anywhere — selects the whole line.</p>
+    <p class="sel-none">You cannot select this text.</p>
+    <p class="sel-auto">Normal (auto) selection behavior.</p>
+  </main>
+</body>
+</html>

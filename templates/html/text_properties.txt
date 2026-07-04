@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Properties</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Text Properties</h1>
+    <p class="lead">text-align, text-decoration, text-transform, text-indent.</p>
+  </header>
+  <main class="demo">
+    <p class="t-align">Centered text</p>
+    <p class="t-under">Underlined text</p>
+    <p class="t-upper">uppercase text</p>
+    <p class="t-indent">Indented first line of paragraph text.</p>
+  </main>
+</body>
+</html>

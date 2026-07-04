@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing Modes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Writing Modes</h1>
+    <p class="lead">Change the direction text flows.</p>
+  </header>
+  <main class="demo">
+    <div class="wm horizontal">horizontal-tb (default)</div>
+    <div class="wm vertical-r">vertical-rl</div>
+    <div class="wm vertical-l">vertical-lr</div>
+  </main>
+</body>
+</html>

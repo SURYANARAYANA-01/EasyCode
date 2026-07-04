@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperlinks</title>
+
+</head>
+<body>
+  <!-- <a> creates a hyperlink. href = destination -->
+  <p><a href="https://example.com">External link</a></p>
+  <!-- target="_blank" opens in a new tab; rel="noopener" for security -->
+  <p><a href="https://example.com" target="_blank" rel="noopener">Open in new tab</a></p>
+  <!-- Link to an email or phone -->
+  <p><a href="mailto:hello@example.com">Send email</a></p>
+  <p><a href="tel:+1234567890">Call us</a></p>
+  <!-- Jump to a section on the same page -->
+  <p><a href="#footer">Go to footer</a></p>
+  <footer id="footer"><p>You reached the footer.</p></footer>
+</body>
+</html>

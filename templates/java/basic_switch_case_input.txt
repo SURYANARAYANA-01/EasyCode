@@ -7,7 +7,7 @@ public class ${CLASS_NAME} {
 
         System.out.print("Enter a Day: ");
         int Day = scanner.nextInt;
-        
+
 
         switch (Day) {
             case 1:
@@ -41,6 +41,6 @@ public class ${CLASS_NAME} {
             default:
                 System.out.println("Invalid Day Number");
         }
-    scanner.close();    
+    scanner.close();
     }
 }

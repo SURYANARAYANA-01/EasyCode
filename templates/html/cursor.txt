@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Cursor</h1>
+    <p class="lead">Change the mouse cursor shown when hovering an element.</p>
+  </header>
+  <main class="demo">
+    <div class="c pointer">pointer</div>
+    <div class="c crosshair">crosshair</div>
+    <div class="c help">help</div>
+    <div class="c not-allowed">not-allowed</div>
+    <div class="c grab">grab</div>
+  </main>
+</body>
+</html>

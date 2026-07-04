@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Typography</h1>
+    <p class="lead">Fonts, sizes, weights, line-height, and letter-spacing.</p>
+  </header>
+  <main class="demo">
+    <h2 class="title">Beautiful Typography</h2>
+    <p class="body">Good type = good UX. Balance size, line-height, and measure (~65 chars per line).</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Display</h1>
+    <p class="lead">block, inline, inline-block, none, flex, grid.</p>
+  </header>
+  <main class="demo">
+    <span class="d-block">block</span>
+    <span class="d-inline">inline1</span>
+    <span class="d-inline">inline2</span>
+    <span class="d-ib">inline-block</span>
+    <span class="d-ib">inline-block</span>
+    <span class="d-none">hidden</span>
+  </main>
+</body>
+</html>

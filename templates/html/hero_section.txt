@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Build faster with EasyCode</h1>
+      <p>Beautiful, ready-to-use templates that teach as you code.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+</body>
+</html>

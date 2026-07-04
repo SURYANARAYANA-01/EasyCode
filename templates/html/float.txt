@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Float</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Float</h1>
+    <p class="lead">Move an element to the left/right; text wraps around it. (Legacy layout tool.)</p>
+  </header>
+  <main class="demo">
+    <div class="float-demo">
+      <img src="https://picsum.photos/120" alt="" class="fl" />
+      <p>Text wraps around the floated image. Float was the classic way to do multi-column layouts before Flexbox and Grid.</p>
+    </div>
+  </main>
+</body>
+</html>

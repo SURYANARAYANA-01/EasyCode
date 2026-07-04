@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG</title>
+
+</head>
+<body>
+  <!-- SVG = Scalable Vector Graphics. Great for icons and shapes. -->
+  <svg width="200" height="200" viewBox="0 0 200 200"
+       xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="80" fill="#3b82f6" />
+    <text x="100" y="108" text-anchor="middle" fill="white"
+          font-family="sans-serif" font-size="24">SVG</text>
+  </svg>
+</body>
+</html>

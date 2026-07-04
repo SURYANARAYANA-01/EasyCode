@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>caret-color</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>caret-color</h1>
+    <p class="lead">The color of the blinking text-input cursor.</p>
+  </header>
+  <main class="demo">
+    <input class="ci" placeholder="Click here — pink caret" />
+  </main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Colors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Colors</h1>
+    <p class="lead">Named, hex, rgb/rgba, hsl/hsla, and modern oklch.</p>
+  </header>
+  <main class="demo">
+    <div class="swatch named">named: tomato</div>
+    <div class="swatch hex">hex: #2563eb</div>
+    <div class="swatch rgb">rgb(16,185,129)</div>
+    <div class="swatch hsl">hsl(280 70% 50%)</div>
+    <div class="swatch rgba">rgba(0,0,0,0.5)</div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>object-position</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>object-position</h1>
+    <p class="lead">Where the image sits inside its object-fit box.</p>
+  </header>
+  <main class="demo">
+    <img class="op-img top"    src="https://picsum.photos/400/300" alt="top" />
+    <img class="op-img center" src="https://picsum.photos/400/300" alt="center" />
+    <img class="op-img right"  src="https://picsum.photos/400/300" alt="right" />
+  </main>
+</body>
+</html>

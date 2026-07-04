@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Variables (Custom Properties)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Variables (Custom Properties)</h1>
+    <p class="lead">Reusable, themable values with --name and var().</p>
+  </header>
+  <main class="demo">
+    <div class="card-v">
+      <h3>Themable Card</h3>
+      <p>Change one variable to restyle everything.</p>
+    </div>
+  </main>
+</body>
+</html>

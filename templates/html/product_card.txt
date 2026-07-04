@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article class="product">
+    <div class="badge">-20%</div>
+    <img src="https://picsum.photos/id/1060/400/400" alt="Product" />
+    <div class="body">
+      <h3>Wireless Headphones</h3>
+      <p class="desc">Crystal-clear sound with 30h battery life.</p>
+      <div class="row">
+        <span class="price">$79 <s>$99</s></span>
+        <button>Add to cart</button>
+      </div>
+    </div>
+  </article>
+</body>
+</html>

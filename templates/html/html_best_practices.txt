@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 1. Always declare the doctype and language -->
+<html lang="en">
+<head>
+  <!-- 2. Charset and viewport come first -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 3. Every page needs a unique, descriptive title -->
+  <title>HTML Best Practices</title>
+
+  <!-- 4. Provide a meta description for SEO -->
+  <meta name="description" content="A concise list of HTML best practices." />
+</head>
+<body>
+  <!-- 5. Use ONE h1 per page -->
+  <h1>HTML Best Practices</h1>
+
+  <!-- 6. Use semantic tags (header, nav, main, article, section, footer) -->
+  <main>
+    <ul>
+      <li>Always use lowercase tag names.</li>
+      <li>Close every tag properly.</li>
+      <li>Quote attribute values.</li>
+      <li>Provide <code>alt</code> text for images.</li>
+      <li>Associate <code>&lt;label&gt;</code> with every form input.</li>
+      <li>Keep content, style and behavior separate (HTML / CSS / JS).</li>
+      <li>Validate your HTML with the W3C validator.</li>
+    </ul>
+  </main>
+</body>
+</html>

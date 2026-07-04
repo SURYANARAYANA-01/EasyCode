@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Address</title>
+
+</head>
+<body>
+  <!-- <address> gives contact info for the nearest article or the document -->
+  <address>
+    Written by <a href="mailto:hello@example.com">Jane Doe</a>.<br />
+    123 Web Street<br />
+    Internet City, 00000
+  </address>
+</body>
+</html>

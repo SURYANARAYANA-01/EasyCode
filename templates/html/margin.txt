@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Margin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Margin</h1>
+    <p class="lead">Margin creates space OUTSIDE the border.</p>
+  </header>
+  <main class="demo">
+    <div class="a">Box A (margin-bottom: 30px)</div>
+    <div class="b">Box B</div>
+    <div class="c">Auto horizontal margin centers block-level elements.</div>
+  </main>
+</body>
+</html>

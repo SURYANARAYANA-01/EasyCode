@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="faq">
+    <h1>Frequently Asked Questions</h1>
+
+    <details>
+      <summary>What is EasyCode Dev?</summary>
+      <p>A learning-first template engine that helps you code faster.</p>
+    </details>
+
+    <details>
+      <summary>Is it free to use?</summary>
+      <p>Yes, all core templates are free. Pro plans unlock more.</p>
+    </details>
+
+    <details>
+      <summary>Can I contribute my own templates?</summary>
+      <p>Absolutely! Open a PR on our GitHub repository.</p>
+    </details>
+  </section>
+</body>
+</html>

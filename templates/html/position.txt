@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Position</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Position</h1>
+    <p class="lead">static (default), relative, absolute, fixed, sticky.</p>
+  </header>
+  <main class="demo">
+    <div class="pos-parent">
+      <div class="rel">relative (offset 10px)</div>
+      <div class="abs">absolute (top-right of parent)</div>
+    </div>
+    <div class="sticky">sticky header — scroll the page</div>
+  </main>
+</body>
+</html>

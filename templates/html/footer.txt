@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer</title>
+
+</head>
+<body>
+  <main><h1>Content</h1></main>
+
+  <!-- <footer> holds author info, copyright, related links -->
+  <footer>
+    <p>&copy; 2026 EasyCode Dev. All rights reserved.</p>
+    <p><a href="#privacy">Privacy</a> | <a href="#terms">Terms</a></p>
+  </footer>
+</body>
+</html>

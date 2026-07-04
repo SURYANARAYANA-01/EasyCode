@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Padding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Padding</h1>
+    <p class="lead">Padding creates space INSIDE the border.</p>
+  </header>
+  <main class="demo">
+    <div class="p1">padding: 8px</div>
+    <div class="p2">padding: 24px</div>
+    <div class="p3">padding: 12px 32px (vertical horizontal)</div>
+  </main>
+</body>
+</html>

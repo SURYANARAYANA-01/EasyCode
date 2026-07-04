@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Awesome Page Title</title>
+
+</head>
+<body>
+  <!-- The <title> tag (in <head>) sets the browser tab text -->
+  <h1>Look at the browser tab &uarr;</h1>
+  <p>That text comes from the &lt;title&gt; element in the &lt;head&gt;.</p>
+</body>
+</html>

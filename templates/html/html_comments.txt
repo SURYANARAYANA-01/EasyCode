@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Comments</title>
+
+</head>
+<body>
+  <!-- This is an HTML comment. It is NOT shown on the page. -->
+
+  <!--
+    Comments can span
+    multiple lines and are useful
+    for notes and TODOs.
+  -->
+
+  <p>View the page source to see the comments above.</p>
+
+  <!-- TODO: replace this section with real content -->
+</body>
+</html>

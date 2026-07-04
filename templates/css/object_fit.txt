@@ -1,0 +1,26 @@
+/* ============================================================
+   Concept: object-fit
+   How a replaced element (img/video) fills its box.
+   ============================================================ */
+
+/* ---------- Base reset & typography ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f8fafc;
+  padding: 2rem;
+}
+.page-header { max-width: 760px; margin: 0 auto 2rem; }
+.page-header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #0f172a; }
+.page-header .lead { color: #475569; }
+.demo { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.box { padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+
+.row2 { display: flex; gap: 1rem; }
+.fit { width: 150px; height: 100px; border: 1px solid #cbd5e1; }
+.fill    { object-fit: fill; }
+.contain { object-fit: contain; }
+.cover   { object-fit: cover; }
+figcaption { text-align: center; font-size: 0.85rem; color: #475569; }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timing Functions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Timing Functions</h1>
+    <p class="lead">ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier.</p>
+  </header>
+  <main class="demo">
+    <div class="bar linear">linear</div>
+    <div class="bar ease">ease</div>
+    <div class="bar ease-in">ease-in</div>
+    <div class="bar ease-out">ease-out</div>
+    <div class="bar cubic">cubic-bezier</div>
+  </main>
+</body>
+</html>

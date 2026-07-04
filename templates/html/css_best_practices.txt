@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Best Practices</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Best Practices</h1>
+    <p class="lead">Clean, maintainable CSS.</p>
+  </header>
+  <main class="demo">
+    <div class="bp">
+      <h3>Do the right thing</h3>
+      <ul>
+        <li>Use design tokens (CSS variables) for color/spacing.</li>
+        <li>Prefer classes over IDs for reusable styles.</li>
+        <li>Keep specificity low. Avoid !important.</li>
+        <li>Mobile-first responsive design.</li>
+        <li>Group related rules and comment your intent.</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

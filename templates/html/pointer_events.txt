@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pointer-events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>pointer-events</h1>
+    <p class="lead">Turn mouse/touch interaction on or off.</p>
+  </header>
+  <main class="demo">
+    <button class="pe-on">Clickable</button>
+    <button class="pe-off">pointer-events: none (unclickable)</button>
+  </main>
+</body>
+</html>

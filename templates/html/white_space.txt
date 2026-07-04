@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White Space</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>White Space</h1>
+    <p class="lead">Controls how whitespace and line breaks are handled.</p>
+  </header>
+  <main class="demo">
+    <div class="ws normal">normal:   collapses    spaces   and   wraps.</div>
+    <div class="ws nowrap">nowrap: never wraps to a new line no matter how long the content is.</div>
+    <div class="ws pre">pre:  keeps   spaces
+and line breaks.</div>
+  </main>
+</body>
+</html>

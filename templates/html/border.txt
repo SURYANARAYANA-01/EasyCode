@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Border</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Border</h1>
+    <p class="lead">Border draws a line around padding. Style + width + color.</p>
+  </header>
+  <main class="demo">
+    <div class="b1">solid</div>
+    <div class="b2">dashed</div>
+    <div class="b3">dotted rounded</div>
+    <div class="b4">double thick</div>
+  </main>
+</body>
+</html>

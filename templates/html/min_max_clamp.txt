@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>min(), max(), clamp()</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>min(), max(), clamp()</h1>
+    <p class="lead">Pick the smallest/largest value, or clamp between a min and max.</p>
+  </header>
+  <main class="demo">
+    <div class="clamp">clamp() — resize the browser and watch me.</div>
+  </main>
+</body>
+</html>

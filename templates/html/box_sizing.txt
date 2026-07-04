@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Sizing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Box Sizing</h1>
+    <p class="lead">border-box makes width/height INCLUDE padding + border.</p>
+  </header>
+  <main class="demo">
+    <div class="content">content-box (200px + padding)</div>
+    <div class="border">border-box (total 200px)</div>
+  </main>
+</body>
+</html>

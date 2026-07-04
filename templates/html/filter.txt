@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>filter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>filter</h1>
+    <p class="lead">Visual effects on an element (blur, brightness, grayscale...).</p>
+  </header>
+  <main class="demo">
+    <div class="row2">
+      <img class="fi orig" src="https://picsum.photos/160" alt="" />
+      <img class="fi blur" src="https://picsum.photos/160" alt="" />
+      <img class="fi gray" src="https://picsum.photos/160" alt="" />
+      <img class="fi sepia" src="https://picsum.photos/160" alt="" />
+      <img class="fi hue" src="https://picsum.photos/160" alt="" />
+    </div>
+  </main>
+</body>
+</html>

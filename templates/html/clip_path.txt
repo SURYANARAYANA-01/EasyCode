@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>clip-path</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>clip-path</h1>
+    <p class="lead">Clip an element to a custom shape.</p>
+  </header>
+  <main class="demo">
+    <div class="row2">
+      <div class="clip circle">circle</div>
+      <div class="clip triangle">triangle</div>
+      <div class="clip hex">hexagon</div>
+    </div>
+  </main>
+</body>
+</html>

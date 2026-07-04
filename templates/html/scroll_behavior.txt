@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scroll-behavior</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>scroll-behavior</h1>
+    <p class="lead">Smooth-scroll when navigating to in-page anchors.</p>
+  </header>
+  <main class="demo">
+    <nav><a href="#s1">1</a> <a href="#s2">2</a> <a href="#s3">3</a></nav>
+    <section id="s1" class="sect">Section 1</section>
+    <section id="s2" class="sect">Section 2</section>
+    <section id="s3" class="sect">Section 3</section>
+  </main>
+</body>
+</html>

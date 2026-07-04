@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clear</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Clear</h1>
+    <p class="lead">Force an element below any floated siblings.</p>
+  </header>
+  <main class="demo">
+    <div class="wrap">
+      <div class="fl-l">float left</div>
+      <div class="fl-r">float right</div>
+      <div class="cleared">cleared: appears below floats</div>
+    </div>
+  </main>
+</body>
+</html>

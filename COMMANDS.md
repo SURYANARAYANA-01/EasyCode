@@ -1,7 +1,7 @@
 ## Commands for CPP
 
-//Abstraction
 //Abstract Class
+//Abstraction
 //Access Specifiers
 //Arithmetic Operators
 //Arithmetic Operators Input
@@ -40,10 +40,10 @@
 //Destructor
 //Do While Loop
 //Else If Ladder
-//Exception Handling
-//Exception Handling Input
 //Encapsulation
 //Encapsulation Input
+//Exception Handling
+//Exception Handling Input
 //For Loop
 //Foreach Loop
 //Function Overloading
@@ -129,43 +129,43 @@
 
 ## Mini Projects
 
-//Banking System
-//Contact Book
-//Library Management System
-//Quiz Application
-//Student Management System
-//Employee Management System
-//Inventory Management System
-//Expense Tracker
-//To-Do List Application
 //Address Book
 //Attendance Management System
-//Result Management System
+//Banking System
+//Bus Reservation System
+//Contact Book
 //Course Management System
-//Notes Manager
-//Password Manager
+//Digital Library
+//E-Commerce System
+//Employee Management System
+//Expense Tracker
+//Gym Management System
 //Hospital Management System
 //Hotel Reservation System
-//Restaurant Management System
-//Gym Management System
-//School Management System
-//Railway Reservation System
-//Bus Reservation System
-//Movie Ticket Booking System
-//Parking Management System
-//Vehicle Rental System
-//E-Commerce System
-//Shopping Cart System
-//Digital Library
-//Online Examination System
-//Voting System
+//Inventory Management System
 //Invoice Generator
+//Library Management System
+//Movie Ticket Booking System
+//Notes Manager
+//Online Examination System
+//Parking Management System
+//Password Manager
+//Quiz Application
+//Railway Reservation System
+//Restaurant Management System
+//Result Management System
+//School Management System
+//Shopping Cart System
+//Student Management System
+//To-Do List Application
+//Vehicle Rental System
+//Voting System
 
 ## Command for Java
 
-//Abstraction
 //Abstract Class
 //Abstract Method
+//Abstraction
 //Access Specifiers
 //Arithmetic Operators
 //Arithmetic Operators Input
@@ -200,10 +200,10 @@
 //Default Constructor
 //Do While Loop
 //Else If Ladder
-//Exception Handling Try Catch
-//Exception Handling Try Catch Input
 //Encapsulation
 //Encapsulation Input
+//Exception Handling Try Catch
+//Exception Handling Try Catch Input
 //For Loop
 //Foreach Loop
 //Function Overloading
@@ -256,11 +256,11 @@
 //Smallest Element In Array Input
 //Static Members
 //String
-//String Input
 //String Comparison
 //String Comparison Input
 //String Concatenation
 //String Concatenation Input
+//String Input
 //String Palindrome
 //String Palindrome Input
 //String Reverse
@@ -278,42 +278,42 @@
 
 ## Mini Projects
 
-//Banking System
-//Contact Book
-//Library Management System
-//Quiz Application
-//Student Management System
-//Employee Management System
-//Inventory Management System
-//Expense Tracker
-//To-Do List Application
 //Address Book
 //Attendance Management System
-//Result Management System
+//Banking System
+//Bus Reservation System
+//Contact Book
 //Course Management System
-//Notes Manager
-//Password Manager
+//Digital Library
+//E-Commerce System
+//Employee Management System
+//Expense Tracker
+//Gym Management System
 //Hospital Management System
 //Hotel Reservation System
-//Restaurant Management System
-//Gym Management System
-//School Management System
-//Railway Reservation System
-//Bus Reservation System
-//Movie Ticket Booking System
-//Parking Management System
-//Vehicle Rental System
-//E-Commerce System
-//Shopping Cart System
-//Digital Library
-//Online Examination System
-//Voting System
+//Inventory Management System
 //Invoice Generator
+//Library Management System
+//Movie Ticket Booking System
+//Notes Manager
+//Online Examination System
+//Parking Management System
+//Password Manager
+//Quiz Application
+//Railway Reservation System
+//Restaurant Management System
+//Result Management System
+//School Management System
+//Shopping Cart System
+//Student Management System
+//To-Do List Application
+//Vehicle Rental System
+//Voting System
 
 ## Command for Python
 
-#Abstraction
 #Abstract Class
+#Abstraction
 #Access Specifiers
 #Arithmetic Operators
 #Arithmetic Operators Input
@@ -341,10 +341,10 @@
 #Call By Value Input
 #Class And Object
 #Class And Object Input
-#Copying Object
-#Copying Object Input
 #Constructor Overloading
 #Continue Statement
+#Copying Object
+#Copying Object Input
 #Data Hiding
 #Data Types
 #Deep Copy
@@ -388,9 +388,9 @@
 #Logical Operators Input
 #Member Functions
 #Method Overriding
-#multiple exception handling
 #Multilevel Inheritance
 #Multilevel Inheritance Input
+#multiple exception handling
 #Nested If
 #Nested If Input
 #Nested Loops
@@ -436,34 +436,280 @@
 
 ## Mini Projects
 
-#Banking System
-#Contact Book
-#Library Management System
-#Quiz Application
-#Student Management System
-#Employee Management System
-#Inventory Management System
-#Expense Tracker
-#To-Do List Application
 #Address Book
 #Attendance Management System
-#Result Management System
+#Banking System
+#Bus Reservation System
+#Contact Book
 #Course Management System
-#Notes Manager
-#Password Manager
+#Digital Library
+#E-Commerce System
+#Employee Management System
+#Expense Tracker
+#Gym Management System
 #Hospital Management System
 #Hotel Reservation System
-#Restaurant Management System
-#Gym Management System
-#School Management System
-#Railway Reservation System
-#Bus Reservation System
-#Movie Ticket Booking System
-#Parking Management System
-#Vehicle Rental System
-#E-Commerce System
-#Shopping Cart System
-#Digital Library
-#Online Examination System
-#Voting System
+#Inventory Management System
 #Invoice Generator
+#Library Management System
+#Movie Ticket Booking System
+#Notes Manager
+#Online Examination System
+#Parking Management System
+#Password Manager
+#Quiz Application
+#Railway Reservation System
+#Restaurant Management System
+#Result Management System
+#School Management System
+#Shopping Cart System
+#Student Management System
+#To-Do List Application
+#Vehicle Rental System
+#Voting System
+
+## Commands for HTML 
+
+<!-- @font-face -->
+<!-- @import Rule -->
+<!-- Accent Color -->
+<!-- Address -->
+<!-- Animation -->
+<!-- Appearance -->
+<!-- Article -->
+<!-- Aside -->
+<!-- Aspect Ratio -->
+<!-- Attribute Selectors -->
+<!-- Audio -->
+<!-- Backdrop Filter -->
+<!-- Background -->
+<!-- Blend Modes -->
+<!-- Blog Card -->
+<!-- Border -->
+<!-- Box Model -->
+<!-- Box Shadow -->
+<!-- Box Sizing -->
+<!-- Breadcrumb Navigation -->
+<!-- Buttons -->
+<!-- calc() -->
+<!-- Canvas -->
+<!-- Card -->
+<!-- Caret Color -->
+<!-- Cascade -->
+<!-- Clear -->
+<!-- Clip Path -->
+<!-- Colors -->
+<!-- Combinators -->
+<!-- Contact Form -->
+<!-- Container Queries -->
+<!-- CSS Best Practices -->
+<!-- CSS Comments -->
+<!-- CSS Functions -->
+<!-- CSS Grid -->
+<!-- CSS Nesting -->
+<!-- CSS Syntax -->
+<!-- CSS Variables -->
+<!-- Cursor -->
+<!-- Data Attributes -->
+<!-- Details & Summary -->
+<!-- Display -->
+<!-- Document Structure -->
+<!-- FAQ Section -->
+<!-- Fieldset & Legend -->
+<!-- Figure & Figcaption -->
+<!-- Filter -->
+<!-- Flexbox -->
+<!-- Float -->
+<!-- Font Properties -->
+<!-- Footer -->
+<!-- Footer Layout -->
+<!-- Forms -->
+<!-- Gradients -->
+<!-- Head Element -->
+<!-- Header -->
+<!-- Headings -->
+<!-- Hero Section -->
+<!-- HTML Best Practices -->
+<!-- HTML Boilerplate -->
+<!-- HTML Comments -->
+<!-- HTML Entities -->
+<!-- Hyperlinks -->
+<!-- Iframe -->
+<!-- Image Gallery -->
+<!-- Images -->
+<!-- Inheritance -->
+<!-- Input Types -->
+<!-- Keyframes -->
+<!-- Labels -->
+<!-- List Properties -->
+<!-- Lists -->
+<!-- Logical Properties -->
+<!-- Login Form -->
+<!-- Main -->
+<!-- Margin -->
+<!-- Mask -->
+<!-- Media Queries -->
+<!-- Meta Tags -->
+<!-- Meter -->
+<!-- Min & Max Dimensions -->
+<!-- min(), max(), clamp() -->
+<!-- Mobile-First Design -->
+<!-- Multi-Column Layout -->
+<!-- Navigation -->
+<!-- Object Fit -->
+<!-- Object Position -->
+<!-- Opacity -->
+<!-- Outline -->
+<!-- Overflow -->
+<!-- Padding -->
+<!-- Paragraphs -->
+<!-- Pointer Events -->
+<!-- Position -->
+<!-- Pricing Card -->
+<!-- Print Styles -->
+<!-- Product Card -->
+<!-- Profile Card -->
+<!-- Progress -->
+<!-- Pseudo Classes -->
+<!-- Pseudo Elements -->
+<!-- Registration Form -->
+<!-- Resize -->
+<!-- Responsive Design -->
+<!-- Responsive Form -->
+<!-- Responsive Navbar -->
+<!-- Responsive Table -->
+<!-- Scroll Behavior -->
+<!-- Scroll Snap -->
+<!-- Scrollbar Styling -->
+<!-- Search Bar -->
+<!-- Section -->
+<!-- Select Dropdown -->
+<!-- Selectors -->
+<!-- Sidebar -->
+<!-- Specificity -->
+<!-- SVG -->
+<!-- Table Properties -->
+<!-- Tables -->
+<!-- Team Section -->
+<!-- Testimonial Section -->
+<!-- Text Formatting -->
+<!-- Text Overflow -->
+<!-- Text Properties -->
+<!-- Text Shadow -->
+<!-- Textarea -->
+<!-- Timing Functions -->
+<!-- Title -->
+<!-- Transform -->
+<!-- Transition -->
+<!-- Typography -->
+<!-- Units -->
+<!-- User Select -->
+<!-- Video -->
+<!-- Visibility -->
+<!-- White Space -->
+<!-- Width & Height -->
+<!-- Writing Modes -->
+<!-- Z-Index -->
+
+## Commands for CSS
+
+/* @font-face */
+/* @import Rule */
+/* Accent Color */
+/* Animation */
+/* Appearance */
+/* Aspect Ratio */
+/* Attribute Selectors */
+/* Backdrop Filter */
+/* Background */
+/* Blend Modes */
+/* Blog Card */
+/* Border */
+/* Box Model */
+/* Box Shadow */
+/* Box Sizing */
+/* Breadcrumb Navigation */
+/* calc() */
+/* Card */
+/* Caret Color */
+/* Cascade */
+/* Clear */
+/* Clip Path */
+/* Colors */
+/* Combinators */
+/* Contact Form */
+/* Container Queries */
+/* CSS Best Practices */
+/* CSS Comments */
+/* CSS Functions */
+/* CSS Grid */
+/* CSS Nesting */
+/* CSS Syntax */
+/* CSS Variables */
+/* Cursor */
+/* Display */
+/* FAQ Section */
+/* Filter */
+/* Flexbox */
+/* Float */
+/* Font Properties */
+/* Footer Layout */
+/* Gradients */
+/* Hero Section */
+/* Image Gallery */
+/* Inheritance */
+/* Keyframes */
+/* List Properties */
+/* Logical Properties */
+/* Login Form */
+/* Margin */
+/* Mask */
+/* Media Queries */
+/* Min & Max Dimensions */
+/* min(), max(), clamp() */
+/* Mobile-First Design */
+/* Multi-Column Layout */
+/* Object Fit */
+/* Object Position */
+/* Opacity */
+/* Outline */
+/* Overflow */
+/* Padding */
+/* Pointer Events */
+/* Position */
+/* Pricing Card */
+/* Print Styles */
+/* Product Card */
+/* Profile Card */
+/* Pseudo Classes */
+/* Pseudo Elements */
+/* Registration Form */
+/* Resize */
+/* Responsive Design */
+/* Responsive Form */
+/* Responsive Navbar */
+/* Responsive Table */
+/* Scroll Behavior */
+/* Scroll Snap */
+/* Scrollbar Styling */
+/* Search Bar */
+/* Selectors */
+/* Sidebar */
+/* Specificity */
+/* Table Properties */
+/* Team Section */
+/* Testimonial Section */
+/* Text Overflow */
+/* Text Properties */
+/* Text Shadow */
+/* Timing Functions */
+/* Transform */
+/* Transition */
+/* Typography */
+/* Units */
+/* User Select */
+/* Visibility */
+/* White Space */
+/* Width & Height */
+/* Writing Modes */
+/* Z-Index */

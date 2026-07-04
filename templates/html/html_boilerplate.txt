@@ -1,0 +1,13 @@
+<!-- The standard starter template for every HTML5 page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Boilerplate</title>
+</head>
+<body>
+  <!-- Page content goes here -->
+  <h1>Hello, HTML5!</h1>
+</body>
+</html>

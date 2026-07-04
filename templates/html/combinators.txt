@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Combinators</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Combinators</h1>
+    <p class="lead">Descendant (space), child (>), adjacent (+), general sibling (~).</p>
+  </header>
+  <main class="demo">
+    <div class="parent">
+      <p>Child paragraph (descendant + child of .parent)</p>
+      <span>Span</span>
+      <p>Sibling paragraph after span.</p>
+      <p>Another sibling paragraph.</p>
+    </div>
+  </main>
+</body>
+</html>

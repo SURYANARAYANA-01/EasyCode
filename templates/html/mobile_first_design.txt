@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile-First Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Mobile-First Design</h1>
+    <p class="lead">Write base styles for mobile, then add min-width media queries.</p>
+  </header>
+  <main class="demo">
+    <div class="mf">I stack on mobile, become a row on tablet+.</div>
+  </main>
+</body>
+</html>

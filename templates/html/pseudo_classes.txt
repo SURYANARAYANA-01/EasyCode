@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo Classes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Pseudo Classes</h1>
+    <p class="lead">:hover, :focus, :active, :first-child, :nth-child(), :not().</p>
+  </header>
+  <main class="demo">
+    <button class="pc">Hover / Focus me</button>
+    <ul class="list">
+      <li>First</li><li>Second</li><li>Third</li><li>Fourth</li>
+    </ul>
+  </main>
+</body>
+</html>

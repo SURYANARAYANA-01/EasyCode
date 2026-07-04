@@ -19,7 +19,7 @@ int main() {
 
     if (!found) {
         cout << "Element Not Found" << endl;
-    } 
-    
+    }
+
     return 0;
 }

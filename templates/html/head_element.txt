@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The <head> holds metadata: it is NOT displayed on the page -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A short description of the page" />
+  <title>Head Element Example</title>
+  <!-- link tags for stylesheets and icons also go here -->
+</head>
+<body>
+  <h1>Open View Source to see the &lt;head&gt;</h1>
+</body>
+</html>

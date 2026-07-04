@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aside</title>
+
+</head>
+<body>
+  <article>
+    <h2>Main Article</h2>
+    <p>The main content of the page goes here...</p>
+
+    <!-- <aside> is content tangentially related to the main content -->
+    <aside>
+      <h3>Did you know?</h3>
+      <p>HTML was invented in 1993 by Tim Berners-Lee.</p>
+    </aside>
+  </article>
+</body>
+</html>

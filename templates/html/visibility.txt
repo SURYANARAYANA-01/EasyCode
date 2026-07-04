@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visibility</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Visibility</h1>
+    <p class="lead">hidden keeps the space; display:none removes it.</p>
+  </header>
+  <main class="demo">
+    <div class="row"><div class="cell">A</div><div class="cell v-hidden">B (visibility:hidden)</div><div class="cell">C</div></div>
+  </main>
+</body>
+</html>

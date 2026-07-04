@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details & Summary</title>
+
+</head>
+<body>
+  <!-- <details> creates a native expand/collapse widget -->
+  <details>
+    <summary>Click to read more</summary>
+    <p>This hidden content is revealed when the user clicks the summary.</p>
+  </details>
+
+  <details open>
+    <summary>Open by default</summary>
+    <p>Add the "open" attribute to expand it initially.</p>
+  </details>
+</body>
+</html>

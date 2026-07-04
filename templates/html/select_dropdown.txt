@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Dropdown</title>
+
+</head>
+<body>
+  <!-- <select> creates a dropdown; <option> defines each item -->
+  <label for="country">Country:</label>
+  <select id="country" name="country">
+    <option value="">-- Choose --</option>
+    <option value="in">India</option>
+    <option value="us" selected>United States</option>
+    <option value="uk">United Kingdom</option>
+  </select>
+
+  <!-- Group options with <optgroup> -->
+  <label for="car">Car:</label>
+  <select id="car" name="car">
+    <optgroup label="German">
+      <option>BMW</option>
+      <option>Audi</option>
+    </optgroup>
+    <optgroup label="Japanese">
+      <option>Toyota</option>
+      <option>Honda</option>
+    </optgroup>
+  </select>
+</body>
+</html>

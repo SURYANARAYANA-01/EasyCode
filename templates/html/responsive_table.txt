@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Users</h1>
+  <!-- Scroll horizontally on small screens without breaking layout -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Alex Park</td><td>alex@example.com</td><td>Admin</td><td>2024-05-11</td></tr>
+        <tr><td>2</td><td>Jane Doe</td><td>jane@example.com</td><td>Editor</td><td>2024-08-02</td></tr>
+        <tr><td>3</td><td>Sam Lee</td><td>sam@example.com</td><td>Viewer</td><td>2025-01-19</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

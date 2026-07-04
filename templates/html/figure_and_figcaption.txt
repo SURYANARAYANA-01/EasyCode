@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figure</title>
+
+</head>
+<body>
+  <!-- <figure> groups media with an optional caption -->
+  <figure>
+    <img src="https://picsum.photos/400/250" alt="Random photo" width="400" />
+    <figcaption>Fig. 1 &mdash; A random placeholder photo.</figcaption>
+  </figure>
+</body>
+</html>

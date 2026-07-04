@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form class="contact">
+    <h1>Contact us</h1>
+    <p class="sub">We'll get back to you within 24 hours.</p>
+
+    <div class="row">
+      <label>Name <input type="text" required /></label>
+      <label>Email <input type="email" required /></label>
+    </div>
+
+    <label>Subject <input type="text" required /></label>
+    <label>Message <textarea rows="5" required></textarea></label>
+
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>

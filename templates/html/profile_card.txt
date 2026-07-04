@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article class="profile">
+    <img class="avatar" src="https://i.pravatar.cc/150?img=32" alt="Jane Doe" />
+    <h2>Jane Doe</h2>
+    <p class="role">Frontend Developer</p>
+    <p class="bio">Loves clean code, dark mode, and building useful things for the web.</p>
+    <div class="socials">
+      <a href="#">Twitter</a> &middot;
+      <a href="#">GitHub</a> &middot;
+      <a href="#">LinkedIn</a>
+    </div>
+  </article>
+</body>
+</html>
