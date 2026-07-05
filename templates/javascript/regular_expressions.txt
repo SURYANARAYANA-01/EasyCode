@@ -1,0 +1,8 @@
+const text = "My email is alice@example.com";
+const emailPattern = /[\w.+-]+@[\w-]+\.[\w.-]+/;
+
+const match = text.match(emailPattern);
+console.log("Match:", match?.[0]);
+
+console.log(/hello/i.test("Hello World")); // true (case-insensitive)
+console.log("2024-01-05".replace(/-/g, "/"));

@@ -1,0 +1,7 @@
+console.log(text.trim());
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text.includes("fun"));
+console.log(text.replace("fun", "awesome"));
+console.log(text.split(" "));
+console.log(text.slice(2, 12));

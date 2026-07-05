@@ -1,0 +1,11 @@
+console.log("Regular log message");
+console.info("Informational message");
+console.warn("Warning message");
+console.error("Error message");
+
+// Multiple values
+console.log("Name:", "Alice", "Age:", 25);
+
+// Formatted output
+const user = { name: "Bob", age: 30 };
+console.table(user);

@@ -1,0 +1,11 @@
+const person = {
+  name: "Alice",
+  age: 25,
+  city: "Paris",
+};
+
+console.log(person.name);
+console.log(person["age"]);
+
+person.job = "Developer";
+console.log(person);

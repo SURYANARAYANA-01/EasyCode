@@ -1,0 +1,7 @@
+const person = {
+  name: prompt("Your name:"),
+  age: Number(prompt("Your age:")),
+  city: prompt("Your city:"),
+};
+
+console.log(person);

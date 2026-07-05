@@ -1,0 +1,10 @@
+// const -> variable that cannot be reassigned
+
+let counter = 0;
+counter++;
+console.log("Counter:", counter);
+
+const PI = 3.14;
+console.log("PI:", PI);
+
+// PI = 3.14159; // Error: Assignment to constant variable

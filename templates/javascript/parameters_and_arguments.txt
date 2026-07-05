@@ -1,0 +1,5 @@
+function introduce(name, age) {
+  console.log(`I'm ${name} and I'm ${age} years old.`);
+}
+
+introduce("Alice", 25);

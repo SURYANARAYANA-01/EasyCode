@@ -1,0 +1,10 @@
+// Use let for values that can change
+
+let name = "Alice";
+let age = 25;
+
+console.log("Name:", name);
+console.log("Age:", age);
+
+age = 26; // variables can be reassigned
+console.log("New age:", age);

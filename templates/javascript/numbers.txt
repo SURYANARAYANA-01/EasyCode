@@ -1,0 +1,7 @@
+const float = 3.14;
+const neg   = -7;
+const big   = 1e6;      // 1,000,000
+
+console.log(int + float);
+console.log(Number.isInteger(int));
+console.log((0.1 + 0.2).toFixed(2)); // "0.30"

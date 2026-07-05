@@ -1,0 +1,5 @@
+const words = input.split(",").map((s) => s.trim());
+
+const unique = new Set(words);
+console.log("Unique words:", [...unique]);
+console.log("Count:", unique.size);

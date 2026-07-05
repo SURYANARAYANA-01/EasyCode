@@ -1,0 +1,4 @@
+console.log("Length:", text.length);
+console.log("Upper:",  text.toUpperCase());
+console.log("Lower:",  text.toLowerCase());
+console.log("Reversed:", text.split("").reverse().join(""));

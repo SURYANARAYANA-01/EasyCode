@@ -1,0 +1,20 @@
+const API = "https://jsonplaceholder.typicode.com/posts";
+
+async function getPosts() {
+  const res = await fetch(API + "?_limit=3");
+  const posts = await res.json();
+  console.log("Posts:", posts);
+}
+
+async function createPost() {
+  const res = await fetch(API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ title: "Hello", body: "World", userId: 1 }),
+  });
+  const created = await res.json();
+  console.log("Created:", created);
+}
+
+getPosts();
+createPost();

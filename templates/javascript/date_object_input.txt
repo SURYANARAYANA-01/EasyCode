@@ -1,0 +1,5 @@
+const month = Number(prompt("Enter month (1-12):"));
+const day   = Number(prompt("Enter day:"));
+
+const date = new Date(year, month - 1, day);
+console.log("Date:", date.toDateString());

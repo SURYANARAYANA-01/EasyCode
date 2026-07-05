@@ -1,0 +1,5 @@
+const items = input.split(",").map((s) => s.trim());
+
+console.log("Items:", items);
+console.log("Count:", items.length);
+console.log("First:", items[0]);

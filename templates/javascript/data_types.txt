@@ -1,0 +1,15 @@
+let str      = "Hello";        // String
+let num      = 42;             // Number
+let bool     = true;           // Boolean
+let nothing  = null;           // Null
+let notSet;                    // Undefined
+let big      = 12345678901234n;// BigInt
+let unique   = Symbol("id");   // Symbol
+
+console.log(typeof str);   // "string"
+console.log(typeof num);   // "number"
+console.log(typeof bool);  // "boolean"
+console.log(typeof nothing); // "object" (historical quirk)
+console.log(typeof notSet);  // "undefined"
+console.log(typeof big);     // "bigint"
+console.log(typeof unique);  // "symbol"

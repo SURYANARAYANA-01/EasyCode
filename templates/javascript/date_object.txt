@@ -1,0 +1,5 @@
+console.log("Now:",       now.toString());
+console.log("Year:",      now.getFullYear());
+console.log("Month:",     now.getMonth() + 1); // 0-indexed
+console.log("Day:",       now.getDate());
+console.log("Time:",      now.toLocaleTimeString());

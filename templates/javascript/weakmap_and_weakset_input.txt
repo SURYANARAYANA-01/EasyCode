@@ -1,0 +1,6 @@
+const key = { id: 1 };
+
+const note = prompt("Enter a private note:");
+wm.set(key, note);
+
+console.log("Stored note:", wm.get(key));

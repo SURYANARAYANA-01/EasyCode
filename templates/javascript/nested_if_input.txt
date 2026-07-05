@@ -1,0 +1,11 @@
+const hasLicense = confirm("Do you have a driving license?");
+
+if (age >= 18) {
+  if (hasLicense) {
+    console.log("You can drive.");
+  } else {
+    console.log("Get a license first.");
+  }
+} else {
+  console.log("You are too young to drive.");
+}

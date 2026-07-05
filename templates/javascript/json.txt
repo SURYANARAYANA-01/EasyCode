@@ -1,0 +1,10 @@
+const user = { name: "Alice", age: 25, admin: true };
+
+// Object -> JSON string
+const jsonStr = JSON.stringify(user);
+console.log("String:", jsonStr);
+
+// JSON string -> Object
+const parsed = JSON.parse(jsonStr);
+console.log("Object:", parsed);
+console.log("Name:", parsed.name);

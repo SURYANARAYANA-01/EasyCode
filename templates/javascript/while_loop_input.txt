@@ -1,0 +1,5 @@
+const limit = Number(prompt("Count up to:"));
+while (count <= limit) {
+  console.log("Count:", count);
+  count++;
+}

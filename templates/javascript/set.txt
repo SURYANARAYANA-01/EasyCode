@@ -1,0 +1,7 @@
+const tags = new Set(["js", "html", "css", "js"]);
+console.log(tags);         // {"js","html","css"}
+console.log("Size:", tags.size);
+
+tags.add("react");
+tags.delete("css");
+console.log([...tags]);

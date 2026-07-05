@@ -1,0 +1,11 @@
+setTimeout(() => {
+  console.log("Runs after 1 second");
+}, 1000);
+
+// setInterval runs a function repeatedly
+let count = 0;
+const id = setInterval(() => {
+  count++;
+  console.log("Tick", count);
+  if (count === 3) clearInterval(id);
+}, 500);

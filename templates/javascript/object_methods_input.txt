@@ -1,0 +1,12 @@
+const car = {
+  brand: prompt("Car brand:"),
+  model: prompt("Car model:"),
+
+  describe() {
+    console.log(`This is a ${this.brand} ${this.model}.`);
+  },
+};
+
+car.describe();
+
+console.log("Keys:", Object.keys(car));

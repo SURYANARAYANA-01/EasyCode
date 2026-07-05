@@ -1,0 +1,8 @@
+const user = {
+  name: "Alice",
+  address: { city: "Paris" },
+};
+
+console.log(user.address?.city);      // "Paris"
+console.log(user.contact?.email);     // undefined (no error)
+console.log(user.getName?.());        // undefined (method not defined)

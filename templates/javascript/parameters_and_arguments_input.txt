@@ -1,0 +1,8 @@
+function introduce(name, age) {
+  console.log(`I'm ${name} and I'm ${age} years old.`);
+}
+
+const name = prompt("Your name:");
+const age = Number(prompt("Your age:"));
+
+introduce(name, age);

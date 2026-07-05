@@ -1,0 +1,6 @@
+class MathHelper {
+  static square(n) { return n * n; }
+}
+
+const n = Number(prompt("Enter a number:"));
+console.log("Square:", MathHelper.square(n));

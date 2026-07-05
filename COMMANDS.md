@@ -713,3 +713,109 @@
 /* Width & Height */
 /* Writing Modes */
 /* Z-Index */
+
+## Commands for JS
+
+// Array Methods
+// Array Methods Input
+// Arrays
+// Arrays Input
+// Arrow Functions
+// Async Functions
+// await Keyword
+// break Statement
+// Callback Functions
+// Classes
+// Classes Input
+// Closures
+// Comments
+// Console Output
+// Constants
+// Constructors
+// Constructors Input
+// continue Statement
+// Data Types
+// Date Object
+// Date Object Input
+// Default Parameters
+// do...while Loop
+// do...while Loop Input
+// else if Statement
+// else if Statement Input
+// Error Handling
+// Error Handling Input
+// Expressions
+// Fetch API
+// for Loop
+// for Loop Input
+// for...in Loop
+// for...of Loop
+// Function Expressions
+// Functions
+// Functions Input
+// Hello World
+// Hoisting
+// if Statement
+// if Statement Input
+// if...else Statement
+// if...else Statement Input
+// Inheritance
+// Inheritance Input
+// JavaScript Best Practices
+// JSON
+// let vs const
+// Map
+// Map Input
+// Math Object
+// Math Object Input
+// Modules
+// Nested if
+// Nested if Input
+// Nullish Coalescing
+// Numbers
+// Numbers Input
+// Object Destructuring
+// Object Destructuring Input
+// Object Methods
+// Object Methods Input
+// Objects
+// Objects Input
+// Operators
+// Optional Chaining
+// Parameters & Arguments
+// Parameters & Arguments Input
+// Promise Methods
+// Promises
+// Recursion
+// Recursion Input
+// Regular Expressions
+// Regular Expressions Input
+// REST API
+// Rest Parameters
+// Return Statement
+// Return Statement Input
+// Scope
+// Set
+// Set Input
+// Spread Operator
+// Static Methods
+// Static Methods Input
+// Strict Mode
+// String Methods
+// String Methods Input
+// Strings
+// Strings Input
+// switch Statement
+// switch Statement Input
+// Template Literals
+// Ternary Operator
+// Ternary Operator Input
+// throw Statement
+// throw Statement Input
+// Timers
+// Type Conversion
+// Variables
+// WeakMap & WeakSet
+// WeakMap & WeakSet Input
+// while Loop
+// while Loop Input

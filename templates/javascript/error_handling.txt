@@ -1,0 +1,8 @@
+try {
+  const value = JSON.parse("not-valid-json");
+  console.log(value);
+} catch (err) {
+  console.error("Something went wrong:", err.message);
+} finally {
+  console.log("Cleanup runs whether or not there was an error.");
+}

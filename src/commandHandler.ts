@@ -10,188 +10,106 @@ import {insertHTML} from "./htmlUpdater";
 import {insertCSS} from "./cssUpdater";
 import {insertJavaScript} from "./jsUpdater";
 
-export async function generateProgram(
-    context: vscode.ExtensionContext
-): Promise<void> {
+export async function generateProgram(context: vscode.ExtensionContext): Promise<void> {
 
-    const editor =
-        vscode.window.activeTextEditor;
+    const editor = vscode.window.activeTextEditor;
 
     if (!editor) {
 
-        vscode.window.showErrorMessage(
-            "No file is open!"
-        );
-
+        vscode.window.showErrorMessage("No file is open!");
         return;
     }
 
-    const languageInfo =
-        detectLanguage(editor);
+    const languageInfo = detectLanguage(editor);
 
     if (!languageInfo) {
 
-        vscode.window.showErrorMessage(
-            "Unsupported file type!"
-        );
-
+        vscode.window.showErrorMessage("Unsupported file type!");
         return;
     }
 
-    const currentLine =
-        editor.selection.active.line;
+    const currentLine = editor.selection.active.line;
 
-    const nextLine =
-        currentLine + 1;
+    const nextLine = currentLine + 1;
 
-    if (
-        nextLine <
-            editor.document.lineCount &&
-        editor.document
+    if (nextLine < editor.document.lineCount && editor.document
             .lineAt(nextLine)
             .text
             .trim() !== ""
     ) {
 
-        vscode.window.showInformationMessage(
-            "Code already generated for this command."
-        );
-
+        vscode.window.showInformationMessage("Code already generated for this command.");
         return;
     }
 
-    const lineText =
-        editor.document
+    const lineText = editor.document
             .lineAt(currentLine)
             .text;
 
-    let command =
-        extractCommand(
+    let command = extractCommand(
             lineText,
             languageInfo
         );
 
     if (!command) {
 
-        vscode.window.showErrorMessage(
-            "No EasyCode Dev command found on this line."
-        );
-
+        vscode.window.showErrorMessage("No EasyCode Dev command found on this line.");
         return;
     }
 
-    let isInputVersion =
-        false;
+    let isInputVersion = false;
 
-    if (
-        command.endsWith(" input")
-    ) {
+    if (command.endsWith(" input")) {
 
         isInputVersion = true;
 
         command = command
-            .substring(
-                0,
-                command.length - 6
-            )
+            .substring(0, command.length - 6)
             .trim();
-
     }
 
     const files = getProjectFiles(editor);
 
-        if (
-    languageInfo.language === "python" ||
-    languageInfo.language === "java" ||
-    languageInfo.language === "cpp"
-) {
+        if (languageInfo.language === "python" || languageInfo.language === "java" || languageInfo.language === "cpp") {
 
-    const program =
-        loadTemplate(
-            context.extensionPath,
-            languageInfo.language,
-            command
-        );
+    const program = loadTemplate(context.extensionPath, languageInfo.language, command);
 
     if (!program) {
 
-        vscode.window.showErrorMessage(
-            `Unknown command: ${command}`
-        );
-
+        vscode.window.showErrorMessage(`Unknown command: ${command}`);
         return;
     }
 
-    const template =
-        loadTemplateCode(
-            context.extensionPath,
-            languageInfo.language,
-            program.id,
-            isInputVersion
-        );
+    const template = loadTemplateCode(context.extensionPath, languageInfo.language, program.id, isInputVersion);
 
-    const fileBaseName =
-        path.basename(
-            editor.document.fileName
-        ).replace(
-            /\.[^/.]+$/,
-            ""
-        );
+    const fileBaseName = path.basename(editor.document.fileName).replace(/\.[^/.]+$/, "");
 
-    const code =
-        (template.code ?? "").replaceAll(
-            "${CLASS_NAME}",
-            fileBaseName
-        );
+    const code = (template.code ?? "").replaceAll("${CLASS_NAME}", fileBaseName);
 
-    const lineRange =
-        editor.document
+    const lineRange = editor.document
             .lineAt(currentLine)
             .range;
 
-    await editor.edit(
-        editBuilder => {
-
-            editBuilder.insert(
-                lineRange.end,
-                "\n\n" + code
-            );
-
+    await editor.edit(editBuilder => {
+        editBuilder.insert(lineRange.end, "\n\n" + code);
         }
     );
 
-    vscode.window.showInformationMessage(
-        "EasyCode Dev generated successfully!"
-    );
-
+    vscode.window.showInformationMessage("EasyCode Dev generated successfully!");
     return;
 }
 
        else if (languageInfo.language === "html") {
 
-        const htmlProgram =
-            loadTemplate(
-                context.extensionPath,
-                "html",
-                command
-            );
+        const htmlProgram = loadTemplate(context.extensionPath, "html", command);
 
         if (!htmlProgram) {
 
-            vscode.window.showErrorMessage(
-                `Unknown command: ${command}`
-            );
-
+            vscode.window.showErrorMessage(`Unknown command: ${command}`);
             return;
         }
 
-        const htmlTemplate =
-            loadTemplateCode(
-                context.extensionPath,
-                "html",
-                htmlProgram.id,
-                isInputVersion
-            );
+        const htmlTemplate = loadTemplateCode(context.extensionPath, "html", htmlProgram.id, isInputVersion);
 
         let cssTemplate = null;
 let jsTemplate = null;
@@ -254,29 +172,20 @@ if (
 
         ensureFile(files.html);
 
-insertHTML(
-    files.html,
-    htmlTemplate.code ?? ""
-);
+await insertHTML(files.html, htmlTemplate.code ?? "");
 
 if (cssTemplate) {
 
     ensureFile(files.css);
 
-    insertCSS(
-        files.css,
-        cssTemplate.code ?? ""
-    );
+    await insertCSS(files.css, cssTemplate.code ?? "");
 }
 
 if (jsTemplate) {
 
     ensureFile(files.javascript);
 
-    insertJavaScript(
-        files.javascript,
-        jsTemplate.code ?? ""
-    );
+    await insertJavaScript(files.javascript, jsTemplate.code ?? "");
 }
 
 vscode.window.showInformationMessage(
@@ -370,24 +279,15 @@ if (
         ensureFile(files.html);
 ensureFile(files.css);
 
-insertHTML(
-    files.html,
-    htmlTemplate.code
-);
+await insertHTML(files.html, htmlTemplate.code);
 
-insertCSS(
-    files.css,
-    cssTemplate.code
-);
+await insertCSS(files.css, cssTemplate.code);
 
 if (jsTemplate) {
 
     ensureFile(files.javascript);
 
-    insertJavaScript(
-        files.javascript,
-        jsTemplate.code
-    );
+    await insertJavaScript(files.javascript, jsTemplate.code);
 }
 
 vscode.window.showInformationMessage(
@@ -397,124 +297,51 @@ vscode.window.showInformationMessage(
 return;
     }
 
-    else if (
-        languageInfo.language === "javascript"
-    ) {
+    else if (languageInfo.language === "javascript") {
 
-        const jsProgram =
-            loadTemplate(
-                context.extensionPath,
-                "javascript",
-                command
-            );
+    const jsProgram = loadTemplate(context.extensionPath, "javascript", command);
 
-        if (!jsProgram) {
+    if (!jsProgram) {
 
-            vscode.window.showErrorMessage(
-                `Unknown command: ${command}`
-            );
+        vscode.window.showErrorMessage(`Unknown command: ${command}`);
+        return;
+    }
 
-            return;
+    const jsTemplate = loadTemplateCode(context.extensionPath, "javascript", jsProgram.id, isInputVersion);
+
+    const htmlTemplate = loadTemplateCode(context.extensionPath, "html", "js");
+    const jsFileName = path.basename(files.javascript);
+
+    const htmlCode = htmlTemplate.code.replaceAll("script.js", jsFileName);
+
+    let cssTemplate = null;
+
+    if (hasTemplate(context.extensionPath, "css", command)) {
+
+        const cssProgram = loadTemplate(context.extensionPath, "css", command);
+
+        if (cssProgram) {
+
+            cssTemplate = loadTemplateCode(context.extensionPath, "css", cssProgram.id);
         }
-
-        const jsTemplate =
-            loadTemplateCode(
-                context.extensionPath,
-                "javascript",
-                jsProgram.id,
-                isInputVersion
-            );
-
-        let htmlTemplate = null;
-let cssTemplate = null;
-
-if (
-    hasTemplate(
-        context.extensionPath,
-        "html",
-        command
-    )
-) {
-
-    const htmlProgram =
-        loadTemplate(
-            context.extensionPath,
-            "html",
-            command
-        );
-
-    if (htmlProgram) {
-
-        htmlTemplate =
-            loadTemplateCode(
-                context.extensionPath,
-                "html",
-                htmlProgram.id
-            );
-
     }
-
-}
-
-if (
-    hasTemplate(
-        context.extensionPath,
-        "css",
-        command
-    )
-) {
-
-    const cssProgram =
-        loadTemplate(
-            context.extensionPath,
-            "css",
-            command
-        );
-
-    if (cssProgram) {
-
-        cssTemplate =
-            loadTemplateCode(
-                context.extensionPath,
-                "css",
-                cssProgram.id
-            );
-
-    }
-
-}
-
-ensureFile(files.javascript);
-
-insertJavaScript(
-    files.javascript,
-    jsTemplate.code
-);
-
-if (htmlTemplate) {
 
     ensureFile(files.html);
 
-    insertHTML(
-        files.html,
-        htmlTemplate.code
-    );
+    await insertHTML(files.html, htmlCode);
 
-}
+    ensureFile(files.javascript);
 
-if (cssTemplate) {
+    await insertJavaScript(files.javascript, jsTemplate.code);
 
-    ensureFile(files.css);
+    if (cssTemplate) {
 
-    insertCSS(
-        files.css,
-        cssTemplate.code
-    );
-}
-vscode.window.showInformationMessage(
-    "EasyCode Dev generated successfully!"
-);
+        ensureFile(files.css);
 
-return;
+        await insertCSS(files.css, cssTemplate.code);
+    }
+
+    vscode.window.showInformationMessage("EasyCode Dev generated successfully!");
+    return;
     }
 }

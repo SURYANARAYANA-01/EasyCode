@@ -1,0 +1,6 @@
+console.log(fruits);
+console.log("First:", fruits[0]);
+console.log("Length:", fruits.length);
+
+fruits.push("date");
+console.log("After push:", fruits);

@@ -1,0 +1,5 @@
+const greeting = "Hello, " + name + "!";
+
+console.log(greeting);
+console.log("Length:", greeting.length);
+console.log("Upper:",  greeting.toUpperCase());

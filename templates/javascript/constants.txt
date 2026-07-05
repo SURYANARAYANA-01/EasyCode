@@ -1,0 +1,7 @@
+const PI = 3.14159;
+const APP_NAME = "EasyCode";
+
+console.log("PI =", PI);
+console.log("App:", APP_NAME);
+
+// PI = 3.14; // This would throw an error

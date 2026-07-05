@@ -1,0 +1,8 @@
+const promise = new Promise((resolve, reject) => {
+  const ok = true;
+  setTimeout(() => (ok ? resolve("Success!") : reject("Failed")), 500);
+});
+
+promise
+  .then((value) => console.log("Result:", value))
+  .catch((err) => console.error("Error:", err));

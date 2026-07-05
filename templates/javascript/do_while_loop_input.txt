@@ -1,0 +1,5 @@
+const limit = Number(prompt("Loop up to:"));
+do {
+  console.log("Value:", i);
+  i++;
+} while (i <= limit);

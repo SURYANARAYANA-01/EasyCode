@@ -1,0 +1,12 @@
+const scores = new Map();
+scores.set("Alice", 95);
+scores.set("Bob", 82);
+scores.set("Carol", 76);
+
+console.log(scores.get("Alice"));
+console.log("Size:", scores.size);
+console.log(scores.has("Bob"));
+
+for (const [name, score] of scores) {
+  console.log(name, "->", score);
+}

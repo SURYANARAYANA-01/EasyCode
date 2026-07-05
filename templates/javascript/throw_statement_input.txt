@@ -1,0 +1,13 @@
+function divide(a, b) {
+  if (b === 0) throw new Error("Cannot divide by zero.");
+  return a / b;
+}
+
+const a = Number(prompt("Numerator:"));
+const b = Number(prompt("Denominator:"));
+
+try {
+  console.log("Result:", divide(a, b));
+} catch (err) {
+  console.error(err.message);
+}

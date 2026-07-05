@@ -1,0 +1,5 @@
+async function getGreeting() {
+  return "Hello, async world!";
+}
+
+getGreeting().then((msg) => console.log(msg));

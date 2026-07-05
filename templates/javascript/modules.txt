@@ -1,0 +1,16 @@
+// This file demonstrates the syntax; run inside a real module setup.
+
+/* ---- utils.js (another file) ----
+export function add(a, b) { return a + b; }
+export const PI = 3.14;
+export default function greet(name) { return "Hi " + name; }
+*/
+
+/* ---- main.js ----
+import greet, { add, PI } from "./utils.js";
+console.log(greet("Alice"));
+console.log(add(2, 3));
+console.log(PI);
+*/
+
+console.log("See comments above for import/export syntax.");

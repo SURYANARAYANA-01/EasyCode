@@ -15,6 +15,7 @@ EasyCode Dev is designed to help beginners learn programming and web development
 - Python Templates
 - HTML Templates
 - CSS Templates
+- JS Templates
 - Input and Non-Input Programs
 - Object-Oriented Programming (OOP) Concepts
 - Arrays, Strings, Functions, Loops, Conditional Statements, Operators, Exception Handling, File Handling, Inheritance, Polymorphism, and more
@@ -57,6 +58,12 @@ EasyCode Dev is designed to help beginners learn programming and web development
 /* Responsive Navbar */
 ```
 
+## JavaScript
+
+```js
+//hello world
+```
+
 ---
 
 # Supported Languages
@@ -66,6 +73,7 @@ EasyCode Dev is designed to help beginners learn programming and web development
 - Python
 - HTML
 - CSS
+- JS
 
 ---
 
@@ -103,6 +111,12 @@ EasyCode Dev is designed to help beginners learn programming and web development
 
 ```css
 /* Responsive Navbar */
+```
+
+## JavaScript
+
+```js
+//hello world
 ```
 
 4. Place the cursor on the command line.
@@ -203,6 +217,7 @@ EasyCode Dev includes **31 real-world console-based mini projects** for C++, Jav
 | Python | `#for loop` |
 | HTML | `<!-- Responsive Navbar -->` |
 | CSS | `/* Responsive Navbar */` |
+| JS | `//hello world` |
 
 For the complete list of supported commands, see the [EasyCode Dev Commands](COMMANDS.md).
 
@@ -211,7 +226,7 @@ For the complete list of supported commands, see the [EasyCode Dev Commands](COM
 # Requirements
 
 - Visual Studio Code
-- A C++, Java, Python, HTML, or CSS source file
+- A C++, Java, Python, HTML, CSS, and JS source file
 
 ---
 
@@ -227,7 +242,6 @@ For the complete list of supported commands, see the [EasyCode Dev Commands](COM
 
 # Planned Language Support
 
-- JavaScript
 - TypeScript
 - C
 - C#

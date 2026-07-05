@@ -1,47 +1,30 @@
-import * as fs from "fs";
+import * as vscode from "vscode";
 
-export function insertJavaScript(
+export async function insertJavaScript(
     jsPath: string,
     code: string
-): void {
+): Promise<void> {
 
-    if (!fs.existsSync(jsPath)) {
+    const document = await vscode.workspace.openTextDocument(jsPath);
 
-        fs.writeFileSync(
-            jsPath,
-            "",
-            "utf8"
-        );
+    const content = document.getText();
 
-    }
-
-    let content = fs.readFileSync(
-        jsPath,
-        "utf8"
-    );
-
-    if (
-        content.includes(
-            code.trim()
-        )
-    ) {
+    if (content.includes(code.trim())) {
         return;
     }
 
-    if (
-        content.trim().length > 0
-    ) {
+    const insertText = content.trim().length > 0 ? "\n\n" + code : code;
 
-        content += "\n\n";
+    const edit = new vscode.WorkspaceEdit();
 
-    }
-
-    content += code;
-
-    fs.writeFileSync(
-        jsPath,
-        content,
-        "utf8"
+    edit.insert(
+        document.uri,
+        document.positionAt(content.length),
+        insertText
     );
+
+    await vscode.workspace.applyEdit(edit);
+
+    await document.save();
 
 }

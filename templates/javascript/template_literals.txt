@@ -1,0 +1,11 @@
+const name = "Alice";
+const age = 25;
+
+const message = `My name is ${name} and I am ${age} years old.`;
+console.log(message);
+
+// Multi-line strings
+const multi = `Line 1
+Line 2
+Line 3`;
+console.log(multi);

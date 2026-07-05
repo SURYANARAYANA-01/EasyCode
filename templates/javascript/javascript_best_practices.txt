@@ -1,0 +1,26 @@
+// 1. Prefer const, then let. Avoid var.
+const MAX_USERS = 100;
+let currentUsers = 0;
+
+// 2. Use meaningful names
+function calculateTotalPrice(items) {
+  return items.reduce((sum, item) => sum + item.price, 0);
+}
+
+// 3. Keep functions small and focused
+// 4. Use strict equality (=== / !==)
+console.log(1 === "1"); // false
+
+// 5. Handle errors, don't ignore them
+try {
+  JSON.parse("bad");
+} catch (err) {
+  console.error("Parse failed:", err.message);
+}
+
+// 6. Use template literals for readability
+const name = "Alice";
+console.log(`Welcome, ${name}!`);
+
+// 7. Comment WHY, not WHAT
+console.log(calculateTotalPrice([{ price: 10 }, { price: 20 }]));

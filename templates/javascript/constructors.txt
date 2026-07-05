@@ -1,0 +1,9 @@
+class Book {
+    constructor(title, author) {
+    this.title  = title;
+    this.author = author;
+  }
+}
+
+const b = new Book("1984", "Orwell");
+console.log(b.title, "-", b.author);

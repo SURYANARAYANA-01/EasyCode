@@ -1,0 +1,5 @@
+const square = (n) => n * n;
+const greet  = (name) => `Hi, ${name}`;
+
+console.log(square(6));
+console.log(greet("Alice"));

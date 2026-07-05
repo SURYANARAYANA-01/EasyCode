@@ -1,0 +1,5 @@
+const b = Number(prompt("Enter second number:"));
+
+console.log("Sum:", a + b);
+console.log("Product:", a * b);
+console.log("a is integer?:", Number.isInteger(a));

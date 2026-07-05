@@ -1,0 +1,9 @@
+const { name, age, city } = user;
+
+console.log(name);
+console.log(age);
+console.log(city);
+
+// With default and rename
+const { name: userName, country = "Unknown" } = user;
+console.log(userName, country);

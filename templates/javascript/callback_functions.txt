@@ -1,0 +1,10 @@
+function processUserInput(name, callback) {
+  callback(name);
+}
+
+processUserInput("Alice", function (name) {
+  console.log("Hello, " + name);
+});
+
+// Common example: array callback
+[1, 2, 3].forEach((n) => console.log("Item:", n));

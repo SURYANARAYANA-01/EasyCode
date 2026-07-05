@@ -1,0 +1,2 @@
+const status = age >= 18 ? "adult" : "minor";
+console.log("You are an " + status);

@@ -1,0 +1,9 @@
+try {
+  const n = Number(prompt("Enter a number:"));
+  if (Number.isNaN(n)) throw new Error("That is not a number!");
+  console.log("Square:", n * n);
+} catch (err) {
+  console.error("Error:", err.message);
+} finally {
+  console.log("Cleanup runs whether or not there was an error.");
+}

@@ -1,0 +1,7 @@
+const a = null;
+const b = 0;
+const c = "";
+
+console.log(a ?? "default"); // "default"
+console.log(b ?? 10);        // 0  (0 is not nullish)
+console.log(c ?? "empty");   // "" (empty string is not nullish)

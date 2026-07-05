@@ -1,0 +1,8 @@
+const price    = 100;
+const quantity = 3;
+const tax      = 0.05;
+
+const total = price * quantity * (1 + tax);
+
+console.log("Total:", total);
+console.log("Is expensive?", total > 200);

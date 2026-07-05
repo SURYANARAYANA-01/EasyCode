@@ -1,0 +1,4 @@
+console.log("Square root:", Math.sqrt(n));
+console.log("Squared:",     Math.pow(n, 2));
+console.log("Rounded:",     Math.round(n));
+console.log("Absolute:",    Math.abs(n));

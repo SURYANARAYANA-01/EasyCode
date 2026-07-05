@@ -1,0 +1,11 @@
+const count = Number(prompt("How many students?"));
+
+for (let i = 0; i < count; i++) {
+  const name  = prompt("Student name:");
+  const score = Number(prompt("Score for " + name + ":"));
+  scores.set(name, score);
+}
+
+for (const [name, score] of scores) {
+  console.log(name, "->", score);
+}

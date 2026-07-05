@@ -1,47 +1,30 @@
-import * as fs from "fs";
+import * as vscode from "vscode";
 
-export function insertCSS(
+export async function insertCSS(
     cssPath: string,
     code: string
-): void {
+): Promise<void> {
 
-    if (!fs.existsSync(cssPath)) {
+    const document = await vscode.workspace.openTextDocument(cssPath);
 
-        fs.writeFileSync(
-            cssPath,
-            "",
-            "utf8"
-        );
+    const content = document.getText();
 
-    }
-
-    let content = fs.readFileSync(
-        cssPath,
-        "utf8"
-    );
-
-    if (
-        content.includes(
-            code.trim()
-        )
-    ) {
+    if (content.includes(code.trim())) {
         return;
     }
 
-    if (
-        content.trim().length > 0
-    ) {
+    const insertText = content.trim().length > 0 ? "\n\n" + code : code;
 
-        content += "\n\n";
+    const edit = new vscode.WorkspaceEdit();
 
-    }
-
-    content += code;
-
-    fs.writeFileSync(
-        cssPath,
-        content,
-        "utf8"
+    edit.insert(
+        document.uri,
+        document.positionAt(content.length),
+        insertText
     );
+
+    await vscode.workspace.applyEdit(edit);
+
+    await document.save();
 
 }

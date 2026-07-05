@@ -1,0 +1,8 @@
+const user = {
+  name: prompt("Name:"),
+  age: Number(prompt("Age:")),
+};
+
+const { name, age } = user;
+
+console.log(`${name} is ${age} years old.`);

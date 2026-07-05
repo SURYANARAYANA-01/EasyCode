@@ -1,0 +1,8 @@
+class MathHelper {
+  static square(n) { return n * n; }
+  static cube(n)   { return n * n * n; }
+}
+
+// Called on the class, not on an instance
+console.log(MathHelper.square(5));
+console.log(MathHelper.cube(3));

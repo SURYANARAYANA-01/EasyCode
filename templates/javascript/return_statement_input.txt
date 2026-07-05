@@ -1,0 +1,8 @@
+function multiply(a, b) {
+  return a * b;
+}
+
+const a = Number(prompt("First number:"));
+const b = Number(prompt("Second number:"));
+
+console.log("Result:", multiply(a, b));

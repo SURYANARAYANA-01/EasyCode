@@ -1,0 +1,14 @@
+let globalVar = "I'm global";
+
+function outer() {
+  let outerVar = "I'm in outer";
+
+  function inner() {
+    let innerVar = "I'm in inner";
+    console.log(globalVar, outerVar, innerVar);
+  }
+
+  inner();
+}
+
+outer();

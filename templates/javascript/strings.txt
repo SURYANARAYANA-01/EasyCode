@@ -1,0 +1,4 @@
+console.log(greeting);
+console.log("Length:", greeting.length);
+console.log("Upper:",  greeting.toUpperCase());
+console.log("First char:", greeting[0]);

@@ -1,39 +1,30 @@
-import * as fs from "fs";
+import * as vscode from "vscode";
 
-export function insertHTML(
+export async function insertHTML(
     htmlPath: string,
     code: string
-): void {
+): Promise<void> {
 
-    if (!fs.existsSync(htmlPath)) {
+    const document = await vscode.workspace.openTextDocument(htmlPath);
 
-        fs.writeFileSync(
-            htmlPath,
-            "",
-            "utf8"
-        );
-
-    }
-
-    let content = fs.readFileSync(
-        htmlPath,
-        "utf8"
-    );
+    const content = document.getText();
 
     if (content.includes(code.trim())) {
         return;
     }
 
-    if (content.trim().length > 0) {
-        content += "\n\n";
-    }
+    const insertText = content.trim().length > 0 ? "\n\n" + code : code;
 
-    content += code;
+    const edit = new vscode.WorkspaceEdit();
 
-    fs.writeFileSync(
-        htmlPath,
-        content,
-        "utf8"
+    edit.insert(
+        document.uri,
+        document.positionAt(content.length),
+        insertText
     );
+
+    await vscode.workspace.applyEdit(edit);
+
+    await document.save();
 
 }

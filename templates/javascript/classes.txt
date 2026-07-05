@@ -1,0 +1,13 @@
+class Person {
+    constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hi, I'm ${this.name}.`);
+  }
+}
+
+const alice = new Person("Alice", 25);
+alice.greet();

@@ -1,0 +1,11 @@
+// when the key object is no longer referenced.
+
+const wm = new WeakMap();
+let user = { name: "Alice" };
+wm.set(user, "some private data");
+console.log(wm.get(user));
+
+const ws = new WeakSet();
+const item = { id: 1 };
+ws.add(item);
+console.log(ws.has(item));

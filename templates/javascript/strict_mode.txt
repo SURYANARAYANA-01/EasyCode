@@ -1,0 +1,10 @@
+// Strict mode catches common mistakes and unsafe actions
+
+let x = 10;         // OK
+// y = 20;          // Error: y is not defined
+
+function greet(name) {
+  return "Hello, " + name;
+}
+
+console.log(greet("Alice"));

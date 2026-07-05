@@ -1,0 +1,9 @@
+const p1 = Promise.resolve(1);
+const p2 = new Promise((r) => setTimeout(() => r(2), 200));
+const p3 = Promise.reject("oops");
+
+Promise.all([p1, p2]).then((vals) => console.log("all:", vals));
+
+Promise.race([p1, p2]).then((val) => console.log("race winner:", val));
+
+Promise.allSettled([p1, p2, p3]).then((results) => console.log("allSettled:", results));
