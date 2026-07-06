@@ -1,0 +1,17 @@
+sessionStorage.setItem("visits", "1");
+
+let visits = Number(sessionStorage.getItem("visits") || 0);
+visits += 1;
+sessionStorage.setItem("visits", String(visits));
+
+sessionStorage.setItem("user", JSON.stringify({ id: 1, name: "Alice" }));
+
+console.log("visits this session:", sessionStorage.getItem("visits"));
+console.log("user:", JSON.parse(sessionStorage.getItem("user")));
+
+const info = document.createElement("p");
+info.textContent = `Visits this tab session: ${sessionStorage.getItem("visits")}`;
+document.body.appendChild(info);
+
+// sessionStorage.removeItem("user");
+// sessionStorage.clear();

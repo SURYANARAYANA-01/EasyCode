@@ -1,0 +1,33 @@
+const info = document.createElement("pre");
+document.body.appendChild(info);
+
+const back = document.createElement("button");
+back.textContent = "Back";
+const forward = document.createElement("button");
+forward.textContent = "Forward";
+const push = document.createElement("button");
+push.textContent = "Push /demo";
+const replace = document.createElement("button");
+replace.textContent = "Replace /now";
+document.body.append(back, forward, push, replace);
+
+const update = () => (info.textContent = "URL: " + window.location.href);
+update();
+
+push.addEventListener("click", () => {
+  history.pushState({ page: "demo" }, "", "?page=demo");
+  update();
+});
+
+replace.addEventListener("click", () => {
+  history.replaceState({ page: "now" }, "", "?page=now");
+  update();
+});
+
+back.addEventListener("click", () => history.back());
+forward.addEventListener("click", () => history.forward());
+
+window.addEventListener("popstate", (e) => {
+  console.log("popstate:", e.state);
+  update();
+});

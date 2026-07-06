@@ -1,0 +1,13 @@
+const box = document.createElement("div");
+box.textContent = "Class demo";
+document.body.appendChild(box);
+
+box.classList.add("active", "primary");
+box.classList.remove("primary");
+box.classList.toggle("hidden");            // adds
+box.classList.toggle("hidden");            // removes
+const isActive = box.classList.contains("active");
+box.classList.replace("active", "highlight");
+
+console.log("was active:", isActive);
+console.log("final classes:", box.className);

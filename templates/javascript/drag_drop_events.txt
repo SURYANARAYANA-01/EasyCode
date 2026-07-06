@@ -1,0 +1,31 @@
+const source = document.createElement("div");
+source.textContent = "Drag me";
+source.draggable = true;
+source.style.cssText = "padding:10px;background:#fc9;display:inline-block;margin:8px;";
+
+const target = document.createElement("div");
+target.textContent = "Drop here";
+target.style.cssText = "padding:30px;border:2px dashed #888;margin:8px;";
+
+document.body.append(source, target);
+
+source.addEventListener("dragstart", (e) => {
+  e.dataTransfer.setData("text/plain", source.textContent);
+  source.style.opacity = "0.5";
+});
+
+source.addEventListener("dragend", () => (source.style.opacity = "1"));
+
+target.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  target.style.background = "#efe";
+});
+
+target.addEventListener("dragleave", () => (target.style.background = ""));
+
+target.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const text = e.dataTransfer.getData("text/plain");
+  target.textContent = "Dropped: " + text;
+  target.style.background = "";
+});

@@ -819,3 +819,53 @@
 // WeakMap & WeakSet Input
 // while Loop
 // while Loop Input
+//DOM Selection
+//DOM Traversing
+//DOM Manipulation
+//Create Elements
+//Remove Elements
+//Replace Elements
+//Clone Elements
+//Modify Attributes
+//Modify Classes
+//Modify Styles
+//Event Listeners
+//Event Propagation
+//Event Delegation
+//Mouse Events
+//Keyboard Events
+//Form Events
+//Input Events
+//Clipboard Events
+//Focus & Blur Events
+//Drag & Drop Events
+//Custom Events
+//Form Validation
+//FormData
+//Prevent Default
+//URL Parameters
+//Browser History API
+//Location Object
+//Navigator Object
+//Screen Object
+//Window Object
+//Document Object
+//Cookies
+//Local Storage
+//Session Storage
+//Geolocation API
+//Clipboard API
+//File Reader API
+//Web Storage API
+//Fetch API Response Rendering
+//REST API Data Rendering
+//Dynamic Table Generation
+//Dynamic List Generation
+//Dynamic Content Rendering
+//Image Preview
+//File Upload Preview
+//Search Filtering
+//Live Search
+//Character Counter
+//Password Strength Checker
+//Infinite Scrolling

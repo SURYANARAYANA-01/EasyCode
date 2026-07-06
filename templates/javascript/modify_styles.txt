@@ -1,0 +1,16 @@
+const box = document.createElement("div");
+box.textContent = "Styled box";
+document.body.appendChild(box);
+
+// Direct style properties
+box.style.padding = "16px";
+box.style.backgroundColor = "lightblue";
+box.style.borderRadius = "8px";
+box.style.fontFamily = "sans-serif";
+
+// Multiple styles via cssText
+box.style.cssText += "; color: navy; font-weight: bold;";
+
+// CSS custom property
+box.style.setProperty("--accent", "tomato");
+console.log("accent var:", box.style.getPropertyValue("--accent"));

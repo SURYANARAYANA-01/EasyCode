@@ -1,0 +1,16 @@
+const fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+const heading = document.createElement("h3");
+heading.textContent = "Fruits";
+document.body.appendChild(heading);
+
+const ul = document.createElement("ul");
+document.body.appendChild(ul);
+
+fruits.forEach((fruit, index) => {
+  const li = document.createElement("li");
+  li.textContent = `${index + 1}. ${fruit}`;
+  ul.appendChild(li);
+});
+
+console.log("List generated with", ul.children.length, "items");

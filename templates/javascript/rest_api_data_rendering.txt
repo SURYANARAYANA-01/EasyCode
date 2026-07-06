@@ -1,0 +1,20 @@
+const list = document.createElement("ul");
+document.body.appendChild(list);
+
+async function loadUsers() {
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const users = await res.json();
+
+    list.innerHTML = "";
+    users.forEach((user) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${user.name}</strong> - ${user.email}`;
+      list.appendChild(li);
+    });
+  } catch (err) {
+    list.textContent = "Error: " + err.message;
+  }
+}
+
+loadUsers();

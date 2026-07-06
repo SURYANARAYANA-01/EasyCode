@@ -1,0 +1,17 @@
+const outer = document.createElement("div");
+outer.textContent = "OUTER ";
+outer.style.padding = "30px";
+outer.style.background = "#eee";
+
+const inner = document.createElement("button");
+inner.textContent = "INNER";
+outer.appendChild(inner);
+document.body.appendChild(outer);
+
+// Bubbling (default)
+outer.addEventListener("click", () => console.log("outer - bubble"));
+inner.addEventListener("click", () => console.log("inner - bubble"));
+
+// Capturing
+outer.addEventListener("click", () => console.log("outer - capture"), true);
+inner.addEventListener("click", () => console.log("inner - capture"), true);

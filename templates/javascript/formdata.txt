@@ -1,0 +1,22 @@
+const form = document.createElement("form");
+form.innerHTML = `
+  <input name="username" placeholder="Username" value="alice">
+  <input name="age" type="number" value="25">
+  <label><input type="checkbox" name="subscribe" checked> Subscribe</label>
+  <button type="submit">Send</button>
+`;
+document.body.appendChild(form);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  // Iterate entries
+  for (const [key, value] of data.entries()) {
+    console.log(key, "=", value);
+  }
+
+  // Convert to plain object
+  const obj = Object.fromEntries(data);
+  console.log("As object:", obj);
+});

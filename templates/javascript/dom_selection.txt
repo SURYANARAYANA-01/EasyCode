@@ -1,0 +1,27 @@
+const app = document.getElementById("app") || document.body;
+
+// Create a demo container
+const container = document.createElement("div");
+container.innerHTML = `
+  <h2 id="title">DOM Selection Demo</h2>
+  <p class="info">First paragraph</p>
+  <p class="info">Second paragraph</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+`;
+app.appendChild(container);
+
+// Different selection methods
+const byId = document.getElementById("title");
+const byClass = document.getElementsByClassName("info");
+const byTag = document.getElementsByTagName("li");
+const firstInfo = document.querySelector(".info");
+const allInfos = document.querySelectorAll(".info");
+
+console.log("getElementById:", byId.textContent);
+console.log("getElementsByClassName count:", byClass.length);
+console.log("getElementsByTagName count:", byTag.length);
+console.log("querySelector:", firstInfo.textContent);
+console.log("querySelectorAll count:", allInfos.length);

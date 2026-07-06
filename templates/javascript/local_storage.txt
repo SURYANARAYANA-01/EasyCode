@@ -1,0 +1,24 @@
+// Save primitive
+localStorage.setItem("username", "alice");
+
+// Save object (must be JSON)
+const settings = { theme: "dark", fontSize: 16 };
+localStorage.setItem("settings", JSON.stringify(settings));
+
+// Read values
+const name = localStorage.getItem("username");
+const saved = JSON.parse(localStorage.getItem("settings"));
+
+console.log("username:", name);
+console.log("settings:", saved);
+console.log("items count:", localStorage.length);
+
+// Iterate all keys
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  console.log(key, "=>", localStorage.getItem(key));
+}
+
+// Remove specific / clear all
+// localStorage.removeItem("username");
+// localStorage.clear();

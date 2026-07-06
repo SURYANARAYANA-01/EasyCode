@@ -1,0 +1,25 @@
+function setCookie(name, value, days = 7) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+}
+
+function getCookie(name) {
+  return document.cookie
+    .split("; ")
+    .map((c) => c.split("="))
+    .reduce((acc, [k, v]) => (decodeURIComponent(k) === name ? decodeURIComponent(v) : acc), null);
+}
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+}
+
+setCookie("username", "alice", 1);
+setCookie("theme", "dark");
+
+console.log("username:", getCookie("username"));
+console.log("theme:", getCookie("theme"));
+console.log("all cookies:", document.cookie);
+
+deleteCookie("theme");
+console.log("after delete:", document.cookie);

@@ -1,0 +1,18 @@
+const list = document.createElement("ul");
+document.body.appendChild(list);
+
+const template = document.createElement("li");
+template.textContent = "Cloned item";
+template.className = "item";
+list.appendChild(template);
+
+// Shallow clone (no children)
+const shallow = template.cloneNode(false);
+shallow.textContent = "Shallow copy";
+list.appendChild(shallow);
+
+// Deep clone (with children)
+const deep = template.cloneNode(true);
+list.appendChild(deep);
+
+console.log("Total items:", list.children.length);

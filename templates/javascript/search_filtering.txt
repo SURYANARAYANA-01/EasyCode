@@ -1,0 +1,26 @@
+const fruits = ["Apple", "Apricot", "Banana", "Blueberry", "Cherry", "Grape", "Mango", "Orange"];
+
+const input = document.createElement("input");
+input.type = "search";
+input.placeholder = "Filter fruits...";
+document.body.appendChild(input);
+
+const ul = document.createElement("ul");
+document.body.appendChild(ul);
+
+function render(items) {
+  ul.innerHTML = "";
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+}
+
+render(fruits);
+
+input.addEventListener("input", () => {
+  const query = input.value.trim().toLowerCase();
+  const filtered = fruits.filter((f) => f.toLowerCase().includes(query));
+  render(filtered);
+});

@@ -1,0 +1,22 @@
+const container = document.createElement("div");
+container.textContent = "Loading...";
+document.body.appendChild(container);
+
+async function loadPost() {
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const post = await res.json();
+
+    container.innerHTML = "";
+    const title = document.createElement("h2");
+    title.textContent = post.title;
+    const body = document.createElement("p");
+    body.textContent = post.body;
+    container.append(title, body);
+  } catch (err) {
+    container.textContent = "Failed to load: " + err.message;
+  }
+}
+
+loadPost();

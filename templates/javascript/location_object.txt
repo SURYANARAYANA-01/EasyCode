@@ -1,0 +1,29 @@
+const loc = window.location;
+
+console.log("href:", loc.href);
+console.log("protocol:", loc.protocol);
+console.log("host:", loc.host);
+console.log("hostname:", loc.hostname);
+console.log("port:", loc.port);
+console.log("pathname:", loc.pathname);
+console.log("search:", loc.search);
+console.log("hash:", loc.hash);
+console.log("origin:", loc.origin);
+
+const output = document.createElement("pre");
+output.textContent = JSON.stringify(
+  {
+    href: loc.href,
+    host: loc.host,
+    pathname: loc.pathname,
+    search: loc.search,
+  },
+  null,
+  2
+);
+document.body.appendChild(output);
+
+// Navigation helpers (uncomment to try)
+// loc.assign("https://example.com");
+// loc.replace("https://example.com");
+// loc.reload();

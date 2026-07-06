@@ -5,10 +5,11 @@ import { detectLanguage } from "./languageDetector";
 import { extractCommand } from "./commentParser";
 import {loadTemplate, hasTemplate} from "./templateLoader";
 import { loadTemplateCode } from "./templateGenerator";
-import {getProjectFiles, ensureFile} from "./fileManager";
+import {getProjectFiles, ensureFile, writeFile} from "./fileManager";
 import {insertHTML} from "./htmlUpdater";
 import {insertCSS} from "./cssUpdater";
 import {insertJavaScript} from "./jsUpdater";
+import { domCommands } from "./domCommands";
 
 export async function generateProgram(context: vscode.ExtensionContext): Promise<void> {
 
@@ -108,6 +109,7 @@ export async function generateProgram(context: vscode.ExtensionContext): Promise
             vscode.window.showErrorMessage(`Unknown command: ${command}`);
             return;
         }
+        
 
         const htmlTemplate = loadTemplateCode(context.extensionPath, "html", htmlProgram.id, isInputVersion);
 
@@ -215,20 +217,9 @@ return;
             return;
         }
 
-        const cssTemplate =
-            loadTemplateCode(
-                context.extensionPath,
-                "css",
-                cssProgram.id,
-                isInputVersion
-            );
+        const cssTemplate = loadTemplateCode(context.extensionPath, "css", cssProgram.id, isInputVersion);
 
-        const htmlProgram =
-            loadTemplate(
-                context.extensionPath,
-                "html",
-                command
-            );
+        const htmlProgram = loadTemplate(context.extensionPath, "html", command);
 
         if (!htmlProgram) {
 
@@ -279,7 +270,7 @@ if (
         ensureFile(files.html);
 ensureFile(files.css);
 
-await insertHTML(files.html, htmlTemplate.code);
+writeFile(files.html, htmlTemplate.code);
 
 await insertCSS(files.css, cssTemplate.code);
 
@@ -308,8 +299,10 @@ return;
     }
 
     const jsTemplate = loadTemplateCode(context.extensionPath, "javascript", jsProgram.id, isInputVersion);
+    
+    const commonHtmlId = domCommands.includes(command) ? "dom" : "js";
 
-    const htmlTemplate = loadTemplateCode(context.extensionPath, "html", "js");
+    const htmlTemplate = loadTemplateCode(context.extensionPath, "html", commonHtmlId);
     const jsFileName = path.basename(files.javascript);
 
     const htmlCode = htmlTemplate.code.replaceAll("script.js", jsFileName);
@@ -328,16 +321,13 @@ return;
 
     ensureFile(files.html);
 
-    await insertHTML(files.html, htmlCode);
-
+    writeFile(files.html, htmlCode);
     ensureFile(files.javascript);
-
     await insertJavaScript(files.javascript, jsTemplate.code);
 
     if (cssTemplate) {
 
         ensureFile(files.css);
-
         await insertCSS(files.css, cssTemplate.code);
     }
 

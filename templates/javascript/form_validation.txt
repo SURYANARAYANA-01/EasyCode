@@ -1,0 +1,27 @@
+const form = document.createElement("form");
+form.noValidate = true;
+form.innerHTML = `
+  <label>Email: <input name="email" type="email" required></label>
+  <label>Password: <input name="password" type="password" minlength="6" required></label>
+  <button type="submit">Sign up</button>
+  <p class="msg"></p>
+`;
+document.body.appendChild(form);
+
+const msg = form.querySelector(".msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = form.email.value.trim();
+  const pass = form.password.value;
+
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    msg.textContent = "Please enter a valid email.";
+    return;
+  }
+  if (pass.length < 6) {
+    msg.textContent = "Password must be at least 6 characters.";
+    return;
+  }
+  msg.textContent = "Form is valid!";
+});

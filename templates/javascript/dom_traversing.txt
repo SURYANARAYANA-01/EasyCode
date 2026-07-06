@@ -1,0 +1,21 @@
+const root = document.body;
+
+const wrapper = document.createElement("div");
+wrapper.id = "wrapper";
+wrapper.innerHTML = `
+  <ul id="list">
+    <li>Alpha</li>
+    <li id="middle">Beta</li>
+    <li>Gamma</li>
+  </ul>
+`;
+root.appendChild(wrapper);
+
+const middle = document.getElementById("middle");
+
+console.log("parentElement:", middle.parentElement.id);
+console.log("previousElementSibling:", middle.previousElementSibling.textContent);
+console.log("nextElementSibling:", middle.nextElementSibling.textContent);
+console.log("firstElementChild of list:", middle.parentElement.firstElementChild.textContent);
+console.log("lastElementChild of list:", middle.parentElement.lastElementChild.textContent);
+console.log("children count:", middle.parentElement.children.length);

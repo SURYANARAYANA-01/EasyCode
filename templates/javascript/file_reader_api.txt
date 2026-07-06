@@ -1,0 +1,33 @@
+const input = document.createElement("input");
+input.type = "file";
+input.accept = "text/*,image/*";
+document.body.appendChild(input);
+
+const output = document.createElement("pre");
+document.body.appendChild(output);
+
+input.addEventListener("change", () => {
+  const file = input.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    if (file.type.startsWith("image/")) {
+      const img = document.createElement("img");
+      img.src = reader.result;
+      img.style.maxWidth = "200px";
+      output.replaceChildren(img);
+    } else {
+      output.textContent = String(reader.result).slice(0, 500);
+    }
+  };
+
+  reader.onerror = () => (output.textContent = "Error reading file");
+
+  if (file.type.startsWith("image/")) {
+    reader.readAsDataURL(file);
+  } else {
+    reader.readAsText(file);
+  }
+});

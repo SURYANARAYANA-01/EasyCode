@@ -1,0 +1,19 @@
+const box = document.createElement("div");
+box.textContent = "Interact with me";
+box.style.cssText = "width:200px;height:120px;background:#cde;display:grid;place-items:center;";
+document.body.appendChild(box);
+
+const log = document.createElement("pre");
+document.body.appendChild(log);
+
+const write = (msg) => (log.textContent = msg);
+
+box.addEventListener("click", () => write("click"));
+box.addEventListener("dblclick", () => write("double click"));
+box.addEventListener("mouseenter", () => write("mouse entered"));
+box.addEventListener("mouseleave", () => write("mouse left"));
+box.addEventListener("mousemove", (e) => write(`move: ${e.offsetX}, ${e.offsetY}`));
+box.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  write("right click");
+});

@@ -1,0 +1,17 @@
+const input = document.createElement("input");
+input.type = "file";
+input.multiple = true;
+document.body.appendChild(input);
+
+const list = document.createElement("ul");
+document.body.appendChild(list);
+
+input.addEventListener("change", () => {
+  list.innerHTML = "";
+  Array.from(input.files).forEach((file) => {
+    const li = document.createElement("li");
+    const sizeKb = (file.size / 1024).toFixed(1);
+    li.textContent = `${file.name} - ${file.type || "unknown"} - ${sizeKb} KB`;
+    list.appendChild(li);
+  });
+});

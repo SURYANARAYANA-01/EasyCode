@@ -1,0 +1,23 @@
+const products = [
+  { name: "Notebook", price: 5.99, inStock: true },
+  { name: "Pen", price: 1.5, inStock: false },
+  { name: "Backpack", price: 29.99, inStock: true },
+];
+
+const container = document.createElement("div");
+container.style.display = "grid";
+container.style.gap = "10px";
+document.body.appendChild(container);
+
+function renderCard(product) {
+  const card = document.createElement("article");
+  card.style.cssText = "border:1px solid #ccc;padding:10px;border-radius:6px;";
+  card.innerHTML = `
+    <h4>${product.name}</h4>
+    <p>Price: $${product.price.toFixed(2)}</p>
+    <p>Status: ${product.inStock ? "In stock" : "Out of stock"}</p>
+  `;
+  return card;
+}
+
+products.forEach((p) => container.appendChild(renderCard(p)));

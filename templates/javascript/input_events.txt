@@ -1,0 +1,11 @@
+const input = document.createElement("input");
+input.type = "text";
+input.placeholder = "Type your name";
+document.body.appendChild(input);
+
+const preview = document.createElement("p");
+document.body.appendChild(preview);
+
+input.addEventListener("input", (e) => {
+  preview.textContent = "Hello, " + (e.target.value || "stranger") + "!";
+});

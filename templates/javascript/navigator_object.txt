@@ -1,0 +1,18 @@
+const nav = window.navigator;
+
+const details = {
+  userAgent: nav.userAgent,
+  language: nav.language,
+  languages: nav.languages,
+  platform: nav.platform,
+  onLine: nav.onLine,
+  cookieEnabled: nav.cookieEnabled,
+  hardwareConcurrency: nav.hardwareConcurrency,
+  maxTouchPoints: nav.maxTouchPoints,
+};
+
+console.log(details);
+
+const pre = document.createElement("pre");
+pre.textContent = JSON.stringify(details, null, 2);
+document.body.appendChild(pre);

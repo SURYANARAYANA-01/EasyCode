@@ -1,0 +1,17 @@
+const s = window.screen;
+
+const info = {
+  width: s.width,
+  height: s.height,
+  availWidth: s.availWidth,
+  availHeight: s.availHeight,
+  colorDepth: s.colorDepth,
+  pixelDepth: s.pixelDepth,
+  orientation: s.orientation ? s.orientation.type : "n/a",
+};
+
+console.log(info);
+
+const pre = document.createElement("pre");
+pre.textContent = JSON.stringify(info, null, 2);
+document.body.appendChild(pre);

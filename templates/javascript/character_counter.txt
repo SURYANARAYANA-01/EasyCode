@@ -1,0 +1,18 @@
+const MAX = 100;
+
+const textarea = document.createElement("textarea");
+textarea.rows = 4;
+textarea.cols = 40;
+textarea.maxLength = MAX;
+textarea.placeholder = "Type a message...";
+document.body.appendChild(textarea);
+
+const counter = document.createElement("p");
+counter.textContent = `0 / ${MAX}`;
+document.body.appendChild(counter);
+
+textarea.addEventListener("input", () => {
+  const length = textarea.value.length;
+  counter.textContent = `${length} / ${MAX}`;
+  counter.style.color = length >= MAX ? "red" : "";
+});

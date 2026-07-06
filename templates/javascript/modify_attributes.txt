@@ -1,0 +1,17 @@
+const link = document.createElement("a");
+link.textContent = "Visit example";
+document.body.appendChild(link);
+
+// setAttribute
+link.setAttribute("href", "https://example.com");
+link.setAttribute("target", "_blank");
+link.setAttribute("data-role", "external");
+
+// getAttribute
+console.log("href:", link.getAttribute("href"));
+console.log("data-role:", link.dataset.role);
+
+// hasAttribute / removeAttribute
+console.log("has target:", link.hasAttribute("target"));
+link.removeAttribute("target");
+console.log("has target after remove:", link.hasAttribute("target"));

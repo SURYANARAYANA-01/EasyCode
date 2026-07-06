@@ -1,0 +1,16 @@
+console.log("title:", document.title);
+console.log("URL:", document.URL);
+console.log("domain:", document.domain);
+console.log("readyState:", document.readyState);
+console.log("characterSet:", document.characterSet);
+console.log("contentType:", document.contentType);
+console.log("lastModified:", document.lastModified);
+
+// Change document title
+document.title = "Document Object Demo";
+
+const info = document.createElement("pre");
+info.textContent = `title: ${document.title}
+readyState: ${document.readyState}
+body children: ${document.body.children.length}`;
+document.body.appendChild(info);

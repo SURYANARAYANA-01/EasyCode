@@ -1,0 +1,26 @@
+const input = document.createElement("input");
+input.value = "Text to copy";
+const copyBtn = document.createElement("button");
+copyBtn.textContent = "Copy";
+const pasteBtn = document.createElement("button");
+pasteBtn.textContent = "Read Clipboard";
+const status = document.createElement("p");
+document.body.append(input, copyBtn, pasteBtn, status);
+
+copyBtn.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(input.value);
+    status.textContent = "Copied: " + input.value;
+  } catch (err) {
+    status.textContent = "Copy failed: " + err.message;
+  }
+});
+
+pasteBtn.addEventListener("click", async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    status.textContent = "Read: " + text;
+  } catch (err) {
+    status.textContent = "Read failed: " + err.message;
+  }
+});

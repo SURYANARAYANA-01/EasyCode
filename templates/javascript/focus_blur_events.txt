@@ -1,0 +1,17 @@
+const input = document.createElement("input");
+input.placeholder = "Click inside me";
+document.body.appendChild(input);
+
+const status = document.createElement("p");
+status.textContent = "Not focused";
+document.body.appendChild(status);
+
+input.addEventListener("focus", () => {
+  status.textContent = "Focused";
+  input.style.outline = "2px solid dodgerblue";
+});
+
+input.addEventListener("blur", () => {
+  status.textContent = "Blurred (value: " + input.value + ")";
+  input.style.outline = "";
+});

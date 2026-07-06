@@ -1,0 +1,16 @@
+const currentParams = new URLSearchParams(window.location.search);
+console.log("All params:");
+currentParams.forEach((value, key) => console.log(" ", key, "=", value));
+
+// Read specific parameter
+const page = currentParams.get("page") || "1";
+console.log("page:", page);
+
+// Build a new URL with parameters
+const params = new URLSearchParams();
+params.set("search", "javascript");
+params.set("sort", "recent");
+params.append("tag", "beginner");
+
+const newUrl = `${window.location.pathname}?${params.toString()}`;
+console.log("Built URL:", newUrl);

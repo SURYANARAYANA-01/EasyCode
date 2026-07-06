@@ -1,0 +1,18 @@
+const button = document.createElement("button");
+button.textContent = "Click me";
+document.body.appendChild(button);
+
+const output = document.createElement("p");
+document.body.appendChild(output);
+
+let count = 0;
+function handleClick() {
+  count++;
+  output.textContent = "Clicks: " + count;
+  if (count >= 3) {
+    button.removeEventListener("click", handleClick);
+    output.textContent += " (listener removed)";
+  }
+}
+
+button.addEventListener("click", handleClick);

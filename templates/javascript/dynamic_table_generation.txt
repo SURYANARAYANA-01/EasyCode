@@ -1,0 +1,37 @@
+const data = [
+  { id: 1, name: "Alice", role: "Admin" },
+  { id: 2, name: "Bob", role: "User" },
+  { id: 3, name: "Carol", role: "Editor" },
+];
+
+const table = document.createElement("table");
+table.border = "1";
+table.style.borderCollapse = "collapse";
+
+// Header
+const thead = document.createElement("thead");
+const headRow = document.createElement("tr");
+Object.keys(data[0]).forEach((key) => {
+  const th = document.createElement("th");
+  th.textContent = key.toUpperCase();
+  th.style.padding = "6px 10px";
+  headRow.appendChild(th);
+});
+thead.appendChild(headRow);
+table.appendChild(thead);
+
+// Body
+const tbody = document.createElement("tbody");
+data.forEach((row) => {
+  const tr = document.createElement("tr");
+  Object.values(row).forEach((val) => {
+    const td = document.createElement("td");
+    td.textContent = val;
+    td.style.padding = "6px 10px";
+    tr.appendChild(td);
+  });
+  tbody.appendChild(tr);
+});
+table.appendChild(tbody);
+
+document.body.appendChild(table);

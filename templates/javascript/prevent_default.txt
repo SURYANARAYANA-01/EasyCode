@@ -1,0 +1,18 @@
+const link = document.createElement("a");
+link.href = "https://example.com";
+link.textContent = "This link will NOT navigate";
+document.body.appendChild(link);
+
+link.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("Default navigation prevented. Href was:", link.href);
+});
+
+const form = document.createElement("form");
+form.innerHTML = `<input name="q" value="hello"><button>Submit</button>`;
+document.body.appendChild(form);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("Default submit prevented. Value:", form.q.value);
+});

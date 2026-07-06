@@ -1,0 +1,15 @@
+const area = document.createElement("textarea");
+area.value = "Try copy, cut, or paste inside this box.";
+area.rows = 4;
+area.cols = 40;
+document.body.appendChild(area);
+
+const log = document.createElement("p");
+document.body.appendChild(log);
+
+area.addEventListener("copy", () => (log.textContent = "Copied!"));
+area.addEventListener("cut", () => (log.textContent = "Cut!"));
+area.addEventListener("paste", (e) => {
+  const text = (e.clipboardData || window.clipboardData).getData("text");
+  log.textContent = "Pasted: " + text;
+});

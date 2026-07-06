@@ -1,0 +1,23 @@
+const host = document.body;
+
+const box = document.createElement("div");
+box.id = "box";
+host.appendChild(box);
+
+// textContent
+box.textContent = "Hello DOM";
+
+// innerHTML
+box.innerHTML = "<strong>Hello DOM</strong>";
+
+// Append new child
+const note = document.createElement("p");
+note.textContent = "This paragraph was added dynamically.";
+box.appendChild(note);
+
+// Insert before
+const heading = document.createElement("h3");
+heading.textContent = "Manipulation Demo";
+box.insertBefore(heading, box.firstChild);
+
+console.log("Final HTML:", box.innerHTML);

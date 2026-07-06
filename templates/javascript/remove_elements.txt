@@ -1,0 +1,19 @@
+const container = document.createElement("div");
+document.body.appendChild(container);
+
+for (let i = 1; i <= 3; i++) {
+  const item = document.createElement("p");
+  item.textContent = "Item " + i;
+  item.id = "item-" + i;
+  container.appendChild(item);
+}
+
+// Modern way: element.remove()
+const first = document.getElementById("item-1");
+first.remove();
+
+// Classic way: parent.removeChild()
+const second = document.getElementById("item-2");
+second.parentNode.removeChild(second);
+
+console.log("Remaining children:", container.children.length);

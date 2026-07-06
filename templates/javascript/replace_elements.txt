@@ -1,0 +1,14 @@
+const wrap = document.createElement("div");
+document.body.appendChild(wrap);
+
+const oldNode = document.createElement("p");
+oldNode.textContent = "Old paragraph";
+wrap.appendChild(oldNode);
+
+const newNode = document.createElement("h3");
+newNode.textContent = "New heading";
+
+// Modern replaceWith
+oldNode.replaceWith(newNode);
+
+console.log("After replace:", wrap.firstElementChild.tagName);

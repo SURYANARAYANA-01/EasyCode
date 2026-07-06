@@ -1,0 +1,14 @@
+const box = document.createElement("div");
+box.textContent = "Waiting for greeting...";
+document.body.appendChild(box);
+
+// Listen for a custom event
+box.addEventListener("greet", (event) => {
+  box.textContent = `Hello, ${event.detail.name}!`;
+});
+
+// Dispatch the custom event with data
+const greetEvent = new CustomEvent("greet", {
+  detail: { name: "Developer" },
+});
+box.dispatchEvent(greetEvent);

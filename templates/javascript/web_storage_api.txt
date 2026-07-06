@@ -1,0 +1,25 @@
+const storage = {
+  save(key, value, session = false) {
+    const store = session ? sessionStorage : localStorage;
+    store.setItem(key, JSON.stringify(value));
+  },
+  load(key, session = false) {
+    const store = session ? sessionStorage : localStorage;
+    const raw = store.getItem(key);
+    return raw ? JSON.parse(raw) : null;
+  },
+  remove(key, session = false) {
+    (session ? sessionStorage : localStorage).removeItem(key);
+  },
+};
+
+storage.save("profile", { name: "Alice", age: 25 });
+storage.save("token", "abc123", true);
+
+console.log("profile:", storage.load("profile"));
+console.log("token:", storage.load("token", true));
+
+// React to storage changes from other tabs
+window.addEventListener("storage", (e) => {
+  console.log("Storage changed:", e.key, "->", e.newValue);
+});

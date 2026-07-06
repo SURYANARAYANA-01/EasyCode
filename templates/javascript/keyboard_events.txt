@@ -1,0 +1,19 @@
+const input = document.createElement("input");
+input.placeholder = "Type here...";
+document.body.appendChild(input);
+
+const log = document.createElement("pre");
+document.body.appendChild(log);
+
+input.addEventListener("keydown", (e) => {
+  log.textContent = `keydown - key: ${e.key}, code: ${e.code}, ctrl: ${e.ctrlKey}, shift: ${e.shiftKey}`;
+});
+
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    console.log("Submitted:", input.value);
+    input.value = "";
+  }
+});
+
+input.focus();
