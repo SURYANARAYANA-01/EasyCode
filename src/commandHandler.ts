@@ -290,48 +290,76 @@ return;
 
     else if (languageInfo.language === "javascript") {
 
-    const jsProgram = loadTemplate(context.extensionPath, "javascript", command);
+        const jsProgram = loadTemplate(context.extensionPath, "javascript", command);
 
-    if (!jsProgram) {
+        if (!jsProgram) {
 
-        vscode.window.showErrorMessage(`Unknown command: ${command}`);
-        return;
-    }
+            vscode.window.showErrorMessage(`Unknown command: ${command}`);
+            return;
 
-    const jsTemplate = loadTemplateCode(context.extensionPath, "javascript", jsProgram.id, isInputVersion);
-    
-    const commonHtmlId = domCommands.includes(command) ? "dom" : "js";
-
-    const htmlTemplate = loadTemplateCode(context.extensionPath, "html", commonHtmlId);
-    const jsFileName = path.basename(files.javascript);
-
-    const htmlCode = htmlTemplate.code.replaceAll("script.js", jsFileName);
-
-    let cssTemplate = null;
-
-    if (hasTemplate(context.extensionPath, "css", command)) {
-
-        const cssProgram = loadTemplate(context.extensionPath, "css", command);
-
-        if (cssProgram) {
-
-            cssTemplate = loadTemplateCode(context.extensionPath, "css", cssProgram.id);
         }
-    }
 
-    ensureFile(files.html);
+        const jsTemplate = loadTemplateCode(context.extensionPath, "javascript", jsProgram.id, isInputVersion);
 
-    writeFile(files.html, htmlCode);
-    ensureFile(files.javascript);
-    await insertJavaScript(files.javascript, jsTemplate.code);
+        let htmlTemplate;
 
-    if (cssTemplate) {
+        if (hasTemplate(context.extensionPath, "html", command)) {
 
-        ensureFile(files.css);
-        await insertCSS(files.css, cssTemplate.code);
-    }
+            const htmlProgram = loadTemplate(context.extensionPath, "html", command);
 
-    vscode.window.showInformationMessage("EasyCode Dev generated successfully!");
-    return;
+            if (!htmlProgram) {
+
+                vscode.window.showErrorMessage("Matching HTML template not found.");
+                return;
+
+            }
+
+            htmlTemplate = loadTemplateCode(context.extensionPath, "html", htmlProgram.id);
+
+        } else {
+
+            const commonHtmlId = domCommands.includes(command) ? "dom" : "js";
+
+            htmlTemplate = loadTemplateCode(context.extensionPath, "html", commonHtmlId);
+
+        }
+
+        const jsFileName = path.basename(files.javascript);
+
+        const htmlCode = htmlTemplate.code.replaceAll("script.js", jsFileName);
+
+        let cssTemplate = null;
+
+        if (hasTemplate(context.extensionPath, "css", command)) {
+
+            const cssProgram = loadTemplate(context.extensionPath, "css", command);
+
+            if (cssProgram) {
+
+                cssTemplate = loadTemplateCode(context.extensionPath, "css", cssProgram.id);
+
+            }
+
+        }
+
+        ensureFile(files.html);
+
+        writeFile(files.html, htmlCode);
+
+        ensureFile(files.javascript);
+
+        await insertJavaScript(files.javascript, jsTemplate.code);
+
+        if (cssTemplate) {
+
+            ensureFile(files.css);
+
+            await insertCSS(files.css, cssTemplate.code);
+
+        }
+
+        vscode.window.showInformationMessage("EasyCode Dev generated successfully!");
+
+        return;
     }
 }

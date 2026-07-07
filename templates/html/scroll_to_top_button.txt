@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll to Top Button</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="content">
+    <h1>Scroll to Top Button</h1>
+    <p>Scroll down and use the button that appears in the bottom-right.</p>
+    <section class="filler"></section>
+    <section class="filler"></section>
+    <section class="filler"></section>
+    <section class="filler"></section>
+  </main>
+  <button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Scroll to top">&#8679;</button>
+  <script src="script.js"></script>
+</body>
+</html>

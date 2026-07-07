@@ -1,0 +1,12 @@
+const progressBar = document.getElementById("progressBar");
+
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = `${percent}%`;
+}
+
+window.addEventListener("scroll", updateProgress);
+window.addEventListener("resize", updateProgress);
+updateProgress();

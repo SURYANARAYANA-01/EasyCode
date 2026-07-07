@@ -1,0 +1,28 @@
+const stats = document.querySelectorAll(".stat-value");
+
+function animate(el, duration = 1800) {
+  const target = Number(el.dataset.target);
+  const start = performance.now();
+
+  function frame(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    el.textContent = Math.floor(progress * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+stats.forEach((stat) => observer.observe(stat));

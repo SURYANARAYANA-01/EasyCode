@@ -1,0 +1,29 @@
+const log = document.getElementById("log");
+const shortcuts = new Map();
+
+function register(combo, action) {
+  shortcuts.set(combo.toLowerCase(), action);
+}
+
+function comboFromEvent(e) {
+  const parts = [];
+  if (e.ctrlKey || e.metaKey) parts.push("ctrl");
+  if (e.altKey) parts.push("alt");
+  if (e.shiftKey) parts.push("shift");
+  parts.push(e.key.toLowerCase());
+  return parts.join("+");
+}
+
+register("ctrl+s", () => (log.textContent = "Saved!"));
+register("ctrl+d", () => document.body.classList.toggle("light"));
+register("?", () => (log.textContent = "Help: try Ctrl+S, Ctrl+D, or Esc."));
+register("escape", () => (log.textContent = "Log cleared."));
+
+document.addEventListener("keydown", (e) => {
+  const combo = comboFromEvent(e);
+  const action = shortcuts.get(combo);
+  if (action) {
+    e.preventDefault();
+    action();
+  }
+});

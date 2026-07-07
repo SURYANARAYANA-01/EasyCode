@@ -1,0 +1,13 @@
+const buttons = document.querySelectorAll(".theme-btn");
+const body = document.body;
+
+const savedTheme = localStorage.getItem("appTheme") || "light";
+body.setAttribute("data-theme", savedTheme);
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const theme = btn.dataset.theme;
+    body.setAttribute("data-theme", theme);
+    localStorage.setItem("appTheme", theme);
+  });
+});

@@ -1,0 +1,19 @@
+const counter = document.querySelector(".counter");
+const startBtn = document.getElementById("startBtn");
+
+function animateCounter(el, duration = 2000) {
+  const target = Number(el.dataset.target);
+  const start = performance.now();
+
+  function frame(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const value = Math.floor(progress * target);
+    el.textContent = value.toLocaleString();
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+}
+
+startBtn.addEventListener("click", () => animateCounter(counter));
+animateCounter(counter);

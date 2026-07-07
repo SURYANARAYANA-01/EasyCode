@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Statistics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Our Impact</h1>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value" data-target="1200">0</span>
+        <span class="stat-label">Users</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" data-target="350">0</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" data-target="98">0</span>
+        <span class="stat-label">Satisfaction %</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" data-target="24">0</span>
+        <span class="stat-label">Countries</span>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

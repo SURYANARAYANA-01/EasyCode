@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature Pad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Signature Pad</h1>
+    <p>Sign below using your mouse or finger.</p>
+    <canvas id="signaturePad" width="500" height="200"></canvas>
+    <div class="actions">
+      <button id="clearBtn" type="button" class="secondary">Clear</button>
+      <a id="downloadLink" class="primary" download="signature.png">Download</a>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

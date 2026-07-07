@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Mode Toggle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Dark Mode Toggle</h1>
+    <p>Click the button to switch between light and dark themes.</p>
+    <button id="themeToggle" class="toggle-btn" type="button">Toggle Dark Mode</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

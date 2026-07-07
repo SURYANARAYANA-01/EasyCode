@@ -1,0 +1,17 @@
+const output = document.getElementById("typewriter");
+const restartBtn = document.getElementById("restartBtn");
+const message = "The quick brown fox jumps over the lazy dog.";
+const speed = 60;
+
+function typeMessage(text) {
+  output.textContent = "";
+  let i = 0;
+  const timer = setInterval(() => {
+    output.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(timer);
+  }, speed);
+}
+
+restartBtn.addEventListener("click", () => typeMessage(message));
+typeMessage(message);

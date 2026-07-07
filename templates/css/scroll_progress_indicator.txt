@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 0%;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.filler {
+  height: 80vh;
+  margin: 2rem 0;
+  border-radius: 12px;
+  background: #e0e7ff;
+}
+
+.filler.alt {
+  background: #fce7f3;
+}

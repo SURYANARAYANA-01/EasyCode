@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Progress Indicator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="progressBar" class="progress-bar"></div>
+  <main class="content">
+    <h1>Scroll Progress Indicator</h1>
+    <p>Scroll down to watch the top bar fill up.</p>
+    <section class="filler"></section>
+    <section class="filler alt"></section>
+    <section class="filler"></section>
+    <section class="filler alt"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

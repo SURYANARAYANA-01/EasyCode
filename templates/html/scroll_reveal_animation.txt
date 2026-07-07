@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Reveal Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Scroll Reveal Animation</h1>
+    <p>Scroll down to reveal each card with a smooth animation.</p>
+    <section class="card reveal">Card One</section>
+    <section class="card reveal">Card Two</section>
+    <section class="card reveal">Card Three</section>
+    <section class="card reveal">Card Four</section>
+    <section class="card reveal">Card Five</section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

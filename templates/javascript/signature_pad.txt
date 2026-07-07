@@ -1,0 +1,53 @@
+const canvas = document.getElementById("signaturePad");
+const ctx = canvas.getContext("2d");
+const clearBtn = document.getElementById("clearBtn");
+const downloadLink = document.getElementById("downloadLink");
+
+let drawing = false;
+
+ctx.lineWidth = 2;
+ctx.lineCap = "round";
+ctx.strokeStyle = "#0f172a";
+
+function getPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const point = e.touches ? e.touches[0] : e;
+  return {
+    x: (point.clientX - rect.left) * scaleX,
+    y: (point.clientY - rect.top) * scaleY,
+  };
+}
+
+function start(e) {
+  e.preventDefault();
+  drawing = true;
+  const { x, y } = getPos(e);
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+}
+
+function draw(e) {
+  if (!drawing) return;
+  e.preventDefault();
+  const { x, y } = getPos(e);
+  ctx.lineTo(x, y);
+  ctx.stroke();
+}
+
+function stop() {
+  drawing = false;
+}
+
+["mousedown", "touchstart"].forEach((ev) => canvas.addEventListener(ev, start));
+["mousemove", "touchmove"].forEach((ev) => canvas.addEventListener(ev, draw));
+["mouseup", "mouseleave", "touchend"].forEach((ev) => canvas.addEventListener(ev, stop));
+
+clearBtn.addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+downloadLink.addEventListener("click", () => {
+  downloadLink.href = canvas.toDataURL("image/png");
+});

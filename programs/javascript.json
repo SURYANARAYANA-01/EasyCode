@@ -119,6 +119,18 @@
     { "id": "live_search", "trigger": "live search" },
     { "id": "character_counter", "trigger": "character counter" },
     { "id": "password_strength_checker", "trigger": "password strength checker" },
-    { "id": "infinite_scrolling", "trigger": "infinite scrolling" }
+    { "id": "infinite_scrolling", "trigger": "infinite scrolling" },
+    {"id": "dark_mode_toggle", "trigger": "dark mode toggle"},
+    {"id": "theme_switcher", "trigger": "theme switcher"},
+    {"id": "scroll_progress_indicator", "trigger": "scroll progress indicator"},
+    {"id": "scroll_to_top_button", "trigger": "scroll to top button"},
+    {"id": "keyboard_shortcut_manager", "trigger": "keyboard shortcut manager"},
+    {"id": "drawing_canvas", "trigger": "drawing canvas"},
+    {"id": "signature_pad", "trigger": "signature pad"},
+    {"id": "typing_effect", "trigger": "typing effect"},
+    {"id": "typewriter_animation", "trigger": "typewriter animation"},
+    {"id": "counter_animation", "trigger": "counter animation"},
+    {"id": "animated_statistics", "trigger": "animated statistics"},
+    {"id": "scroll_reveal_animation", "trigger": "scroll reveal animation"}
   ]
 }

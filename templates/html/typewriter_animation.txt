@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typewriter Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <p id="typewriter" class="typewriter"></p>
+    <button id="restartBtn" type="button">Restart</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

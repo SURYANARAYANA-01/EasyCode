@@ -99,6 +99,18 @@
     {"id": "css_nesting", "trigger": "css nesting"},
     {"id": "at_import_rule", "trigger": "@import rule"},
     {"id": "at_font_face", "trigger": "@font-face"},
-    {"id": "css_best_practices", "trigger": "css best practices"}
+    {"id": "css_best_practices", "trigger": "css best practices"},
+    {"id": "dark_mode_toggle", "trigger": "dark mode toggle"},
+    {"id": "theme_switcher", "trigger": "theme switcher"},
+    {"id": "scroll_progress_indicator", "trigger": "scroll progress indicator"},
+    {"id": "scroll_to_top_button", "trigger": "scroll to top button"},
+    {"id": "keyboard_shortcut_manager", "trigger": "keyboard shortcut manager"},
+    {"id": "drawing_canvas", "trigger": "drawing canvas"},
+    {"id": "signature_pad", "trigger": "signature pad"},
+    {"id": "typing_effect", "trigger": "typing effect"},
+    {"id": "typewriter_animation", "trigger": "typewriter animation"},
+    {"id": "counter_animation", "trigger": "counter animation"},
+    {"id": "animated_statistics", "trigger": "animated statistics"},
+    {"id": "scroll_reveal_animation", "trigger": "scroll reveal animation"}
   ]
 }

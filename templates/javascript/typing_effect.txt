@@ -1,0 +1,28 @@
+const target = document.getElementById("typed");
+const words = ["Developer", "Designer", "Creator", "Learner"];
+const typingSpeed = 120;
+const erasingSpeed = 60;
+const pauseTime = 1200;
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function loop() {
+  const current = words[wordIndex];
+  target.textContent = current.substring(0, charIndex);
+
+  if (!isDeleting && charIndex < current.length) {
+    charIndex++;
+    setTimeout(loop, typingSpeed);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(loop, erasingSpeed);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(loop, pauseTime);
+  }
+}
+
+loop();

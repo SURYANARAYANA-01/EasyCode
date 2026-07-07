@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Shortcut Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Keyboard Shortcut Manager</h1>
+    <ul class="shortcuts">
+      <li><kbd>Ctrl</kbd> + <kbd>S</kbd> &mdash; Save</li>
+      <li><kbd>Ctrl</kbd> + <kbd>D</kbd> &mdash; Toggle dark mode</li>
+      <li><kbd>?</kbd> &mdash; Show help</li>
+      <li><kbd>Esc</kbd> &mdash; Clear log</li>
+    </ul>
+    <div id="log" class="log" aria-live="polite">Press a shortcut to see it here.</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

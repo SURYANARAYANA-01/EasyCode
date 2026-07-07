@@ -819,53 +819,65 @@
 // WeakMap & WeakSet Input
 // while Loop
 // while Loop Input
+//Animated Statistics
+//Browser History API
+//Character Counter
+//Clipboard API
+//Clipboard Events
+//Clone Elements
+//Cookies
+//Counter Animation
+//Create Elements
+//Custom Events
+//Dark Mode Toggle
+//Document Object
+//DOM Manipulation
 //DOM Selection
 //DOM Traversing
-//DOM Manipulation
-//Create Elements
-//Remove Elements
-//Replace Elements
-//Clone Elements
+//Drag & Drop Events
+//Drawing Canvas
+//Dynamic Content Rendering
+//Dynamic List Generation
+//Dynamic Table Generation
+//Event Delegation
+//Event Listeners
+//Event Propagation
+//Fetch API Response Rendering
+//File Reader API
+//File Upload Preview
+//Focus & Blur Events
+//Form Events
+//Form Validation
+//FormData
+//Geolocation API
+//Image Preview
+//Infinite Scrolling
+//Input Events
+//Keyboard Events
+//Keyboard Shortcut Manager
+//Live Search
+//Local Storage
+//Location Object
 //Modify Attributes
 //Modify Classes
 //Modify Styles
-//Event Listeners
-//Event Propagation
-//Event Delegation
 //Mouse Events
-//Keyboard Events
-//Form Events
-//Input Events
-//Clipboard Events
-//Focus & Blur Events
-//Drag & Drop Events
-//Custom Events
-//Form Validation
-//FormData
-//Prevent Default
-//URL Parameters
-//Browser History API
-//Location Object
 //Navigator Object
-//Screen Object
-//Window Object
-//Document Object
-//Cookies
-//Local Storage
-//Session Storage
-//Geolocation API
-//Clipboard API
-//File Reader API
-//Web Storage API
-//Fetch API Response Rendering
-//REST API Data Rendering
-//Dynamic Table Generation
-//Dynamic List Generation
-//Dynamic Content Rendering
-//Image Preview
-//File Upload Preview
-//Search Filtering
-//Live Search
-//Character Counter
 //Password Strength Checker
-//Infinite Scrolling
+//Prevent Default
+//Remove Elements
+//Replace Elements
+//REST API Data Rendering
+//Screen Object
+//Scroll Progress Indicator
+//Scroll Reveal Animation
+//Scroll to Top Button
+//Search Filtering
+//Session Storage
+//Signature Pad
+//Theme Switcher
+//Typewriter Animation
+//Typing Effect
+//URL Parameters
+//Web Storage API
+//Window Object
