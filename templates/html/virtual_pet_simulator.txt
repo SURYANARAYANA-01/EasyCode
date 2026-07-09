@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Virtual Pet</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="pet-app">
+  <h1>My Virtual Pet</h1>
+  <div class="pet" id="petEmoji">🐶</div>
+  <p id="mood" class="mood">Happy</p>
+  <div class="bars">
+    <div><label>Hunger</label><progress id="hunger" max="100" value="80"></progress></div>
+    <div><label>Happiness</label><progress id="happiness" max="100" value="80"></progress></div>
+    <div><label>Energy</label><progress id="energy" max="100" value="80"></progress></div>
+  </div>
+  <div class="actions">
+    <button data-act="feed">🍖 Feed</button>
+    <button data-act="play">⚽ Play</button>
+    <button data-act="sleep">💤 Sleep</button>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

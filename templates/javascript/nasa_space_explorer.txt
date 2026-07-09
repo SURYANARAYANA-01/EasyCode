@@ -1,0 +1,29 @@
+const form = document.getElementById("dateForm");
+const dateInput = document.getElementById("date");
+const status = document.getElementById("status");
+const apod = document.getElementById("apod");
+
+async function load(date) {
+  status.textContent = "Loading...";
+  apod.classList.add("hidden");
+  try {
+    const url = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY${date ? `&date=${date}` : ""}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Failed to load");
+    const d = await res.json();
+    document.getElementById("title").textContent = d.title;
+    document.getElementById("date-shown").textContent = d.date;
+    const media = document.getElementById("media");
+    if (d.media_type === "image") { media.src = d.url; media.style.display = "block"; }
+    else { media.style.display = "none"; }
+    document.getElementById("explanation").textContent = d.explanation;
+    apod.classList.remove("hidden");
+    status.textContent = "";
+  } catch (e) { status.textContent = e.message; }
+}
+
+const today = new Date().toISOString().slice(0,10);
+dateInput.max = today;
+dateInput.value = localStorage.getItem("apod_date") || today;
+form.addEventListener("submit", (e) => { e.preventDefault(); localStorage.setItem("apod_date", dateInput.value); load(dateInput.value); });
+load(dateInput.value);

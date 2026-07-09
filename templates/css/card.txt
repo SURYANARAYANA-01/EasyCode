@@ -1,15 +1,32 @@
 /* ---------- Base reset & typography ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   line-height: 1.5;
   color: #1f2937;
   background: #f8fafc;
   padding: 2rem;
 }
-img { max-width: 100%; display: block; }
-a { color: #2563eb; text-decoration: none; }
-a:hover { text-decoration: underline; }
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* ---------- Card ---------- */
 .card {
@@ -17,11 +34,27 @@ a:hover { text-decoration: underline; }
   background: #fff;
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-.card img  { width: 100%; height: 200px; object-fit: cover; }
-.card-body { padding: 1.25rem; }
-.card-body h2 { margin-bottom: 0.5rem; font-size: 1.25rem; }
-.card-link { font-weight: 600; }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 1.25rem;
+}
+.card-body h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.card-link {
+  font-weight: 600;
+}

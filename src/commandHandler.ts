@@ -352,11 +352,10 @@ return;
 
         if (cssTemplate) {
 
-            ensureFile(files.css);
+    ensureFile(files.css);
 
-            await insertCSS(files.css, cssTemplate.code);
-
-        }
+    writeFile(files.css, cssTemplate.code ?? "");
+}
 
         vscode.window.showInformationMessage("EasyCode Dev generated successfully!");
 

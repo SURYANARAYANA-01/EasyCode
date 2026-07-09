@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Movie Explorer</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="movie-app">
+  <h1>Movie & TV Explorer</h1>
+  <form id="searchForm" class="search-form">
+    <input id="query" type="text" placeholder="Search movies or shows..." required />
+    <button type="submit">Search</button>
+  </form>
+  <p id="status" class="status"></p>
+  <section id="results" class="grid"></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

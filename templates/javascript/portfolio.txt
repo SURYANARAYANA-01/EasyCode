@@ -1,0 +1,28 @@
+const projects = [
+  { name: "Weather App", desc: "Real-time weather using Open-Meteo API." },
+  { name: "Task Manager", desc: "Kanban-style task tracker with drag & drop." },
+  { name: "Chat Bot", desc: "AI-powered conversational interface." },
+  { name: "Crypto Tracker", desc: "Live cryptocurrency prices dashboard." }
+];
+
+const grid = document.getElementById("projectsGrid");
+grid.innerHTML = projects.map(p => `
+  <article class="project"><h3>${p.name}</h3><p>${p.desc}</p></article>`).join("");
+
+const form = document.getElementById("contactForm");
+const status = document.getElementById("formStatus");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const data = {
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    message: document.getElementById("message").value.trim(),
+    sentAt: new Date().toISOString()
+  };
+  const saved = JSON.parse(localStorage.getItem("contact_messages") || "[]");
+  saved.push(data);
+  localStorage.setItem("contact_messages", JSON.stringify(saved));
+  status.textContent = "✓ Message sent! I'll get back to you soon.";
+  status.style.color = "#10b981";
+  form.reset();
+});

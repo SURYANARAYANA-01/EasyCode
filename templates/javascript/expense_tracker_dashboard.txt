@@ -1,0 +1,41 @@
+const form = document.getElementById("txnForm");
+const list = document.getElementById("txns");
+const KEY = "expense_txns";
+
+const load = () => JSON.parse(localStorage.getItem(KEY) || "[]");
+const save = (d) => localStorage.setItem(KEY, JSON.stringify(d));
+const fmt = (n) => `${n < 0 ? "-" : ""}$${Math.abs(n).toFixed(2)}`;
+
+function render() {
+  const txns = load();
+  const income = txns.filter(t => t.amount > 0).reduce((s,t) => s + t.amount, 0);
+  const expense = txns.filter(t => t.amount < 0).reduce((s,t) => s + t.amount, 0);
+  document.getElementById("income").textContent = fmt(income);
+  document.getElementById("expense").textContent = fmt(expense);
+  document.getElementById("balance").textContent = fmt(income + expense);
+  list.innerHTML = txns.map((t, i) => `
+    <li class="${t.amount >= 0 ? 'plus' : 'minus'}">
+      <span>${t.desc}</span>
+      <span>${fmt(t.amount)} <button data-i="${i}">✕</button></span>
+    </li>`).join("");
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const desc = document.getElementById("desc").value.trim();
+  const amount = Number(document.getElementById("amount").value);
+  if (!desc || !amount) return;
+  const txns = load();
+  txns.unshift({ desc, amount });
+  save(txns);
+  form.reset();
+  render();
+});
+
+list.addEventListener("click", (e) => {
+  const i = e.target.dataset.i;
+  if (i === undefined) return;
+  const t = load(); t.splice(i, 1); save(t); render();
+});
+
+render();

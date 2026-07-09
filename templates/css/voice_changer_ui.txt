@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #4568dc, #b06ab3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #fff;
+}
+.vc-app {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 1.5rem;
+}
+.controls button,
+.vc-app > button {
+  padding: 0.75rem 1.5rem;
+  background: #ec4899;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+.controls button.recording {
+  background: #ef4444;
+}
+.status {
+  margin: 1rem 0;
+}
+.effects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+.effects label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.effects input {
+  flex: 1;
+}
+audio {
+  width: 100%;
+  margin: 1rem 0;
+}

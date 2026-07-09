@@ -1,0 +1,52 @@
+const tank = document.getElementById("tank");
+const countEl = document.getElementById("count");
+const FISH_EMOJIS = ["🐟","🐠","🐡","🦈","🐙","🦑"];
+const KEY = "aquarium_fish";
+
+let fishes = JSON.parse(localStorage.getItem(KEY) || "[]");
+
+function createFish(f) {
+  const el = document.createElement("div");
+  el.className = "fish";
+  el.textContent = f.emoji;
+  el.style.left = f.x + "%";
+  el.style.top = f.y + "%";
+  el.dataset.dx = f.dx;
+  tank.appendChild(el);
+}
+
+function render() {
+  tank.innerHTML = "";
+  fishes.forEach(createFish);
+  countEl.textContent = `${fishes.length} fish`;
+  localStorage.setItem(KEY, JSON.stringify(fishes));
+}
+
+document.getElementById("addBtn").onclick = () => {
+  fishes.push({
+    emoji: FISH_EMOJIS[Math.floor(Math.random()*FISH_EMOJIS.length)],
+    x: Math.random() * 90,
+    y: Math.random() * 85,
+    dx: Math.random() > 0.5 ? 1 : -1
+  });
+  render();
+};
+
+document.getElementById("clearBtn").onclick = () => { fishes = []; render(); };
+
+function animate() {
+  const els = tank.querySelectorAll(".fish");
+  els.forEach((el, i) => {
+    const f = fishes[i];
+    if (!f) return;
+    f.x += f.dx * 0.3;
+    if (f.x < 0 || f.x > 95) { f.dx *= -1; }
+    el.style.left = f.x + "%";
+    el.style.transform = `scaleX(${f.dx > 0 ? 1 : -1})`;
+  });
+  requestAnimationFrame(animate);
+}
+
+if (!fishes.length) for (let i = 0; i < 4; i++) document.getElementById("addBtn").click();
+else render();
+animate();

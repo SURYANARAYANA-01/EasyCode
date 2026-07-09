@@ -1,0 +1,35 @@
+const btn = document.getElementById("startBtn");
+const speedEl = document.getElementById("speed");
+const status = document.getElementById("status");
+const historyEl = document.getElementById("history");
+const KEY = "speedtest_last";
+
+async function runTest() {
+  btn.disabled = true;
+  status.textContent = "Testing download speed...";
+  speedEl.textContent = "--";
+  try {
+    const url = "https://speed.cloudflare.com/__down?bytes=10000000&cachebust=" + Date.now();
+    const start = performance.now();
+    const res = await fetch(url, { cache: "no-store" });
+    const blob = await res.blob();
+    const elapsed = (performance.now() - start) / 1000;
+    const mbps = ((blob.size * 8) / (1024 * 1024)) / elapsed;
+    speedEl.textContent = mbps.toFixed(2);
+    status.textContent = `Downloaded ${(blob.size/1024/1024).toFixed(1)} MB in ${elapsed.toFixed(2)}s`;
+    localStorage.setItem(KEY, mbps.toFixed(2));
+    showHistory();
+  } catch (e) {
+    status.textContent = "Test failed: " + e.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function showHistory() {
+  const last = localStorage.getItem(KEY);
+  if (last) historyEl.textContent = `Last result: ${last} Mbps`;
+}
+
+btn.onclick = runTest;
+showHistory();

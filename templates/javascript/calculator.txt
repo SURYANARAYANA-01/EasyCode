@@ -1,0 +1,51 @@
+const display = document.getElementById("display");
+let current = "0", stored = null, op = null, resetNext = false;
+
+function updateDisplay() { display.textContent = current; }
+
+function inputNum(n) {
+  if (resetNext) { current = "0"; resetNext = false; }
+  if (n === "." && current.includes(".")) return;
+  current = current === "0" && n !== "." ? n : current + n;
+  updateDisplay();
+}
+
+function calc(a, b, op) {
+  switch(op) { case "+": return a+b; case "-": return a-b; case "*": return a*b;
+    case "/": return b === 0 ? "Error" : a/b; }
+}
+
+function setOp(newOp) {
+  if (op && !resetNext) {
+    stored = calc(Number(stored), Number(current), op);
+    current = String(stored);
+    updateDisplay();
+  } else {
+    stored = current;
+  }
+  op = newOp;
+  resetNext = true;
+}
+
+function equals() {
+  if (op === null) return;
+  current = String(calc(Number(stored), Number(current), op));
+  op = null; stored = null; resetNext = true;
+  updateDisplay();
+}
+
+document.querySelectorAll(".keys button").forEach(btn => btn.onclick = () => {
+  if (btn.dataset.num) inputNum(btn.dataset.num);
+  else if (btn.dataset.op) setOp(btn.dataset.op);
+  else if (btn.dataset.action === "equals") equals();
+  else if (btn.dataset.action === "clear") { current = "0"; stored = null; op = null; updateDisplay(); }
+  else if (btn.dataset.action === "sign") { current = String(-Number(current)); updateDisplay(); }
+  else if (btn.dataset.action === "percent") { current = String(Number(current)/100); updateDisplay(); }
+});
+
+document.addEventListener("keydown", (e) => {
+  if ("0123456789.".includes(e.key)) inputNum(e.key);
+  else if ("+-*/".includes(e.key)) setOp(e.key);
+  else if (e.key === "Enter" || e.key === "=") equals();
+  else if (e.key === "Escape") { current = "0"; stored = null; op = null; updateDisplay(); }
+});

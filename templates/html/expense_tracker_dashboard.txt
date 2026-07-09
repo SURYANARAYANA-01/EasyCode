@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="expense-app">
+  <h1>Expense Tracker</h1>
+  <section class="stats">
+    <div class="stat income"><span>Income</span><strong id="income">$0</strong></div>
+    <div class="stat expense"><span>Expenses</span><strong id="expense">$0</strong></div>
+    <div class="stat balance"><span>Balance</span><strong id="balance">$0</strong></div>
+  </section>
+  <form id="txnForm" class="txn-form">
+    <input id="desc" type="text" placeholder="Description" required />
+    <input id="amount" type="number" step="0.01" placeholder="Amount (+/-)" required />
+    <button type="submit">Add</button>
+  </form>
+  <ul id="txns" class="txns"></ul>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

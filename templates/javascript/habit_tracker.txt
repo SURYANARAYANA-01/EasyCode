@@ -1,0 +1,64 @@
+const form = document.getElementById("addForm");
+const input = document.getElementById("habitInput");
+const list = document.getElementById("habits");
+const KEY = "habits_v1";
+
+const today = () => new Date().toISOString().slice(0,10);
+const load = () => JSON.parse(localStorage.getItem(KEY) || "[]");
+const save = (h) => localStorage.setItem(KEY, JSON.stringify(h));
+
+function streak(dates) {
+  const set = new Set(dates);
+  let count = 0;
+  let d = new Date();
+  while (set.has(d.toISOString().slice(0,10))) {
+    count++;
+    d.setDate(d.getDate() - 1);
+  }
+  return count;
+}
+
+function render() {
+  const habits = load();
+  list.innerHTML = habits.length ? habits.map((h, i) => {
+    const doneToday = h.dates.includes(today());
+    return `<li class="habit">
+      <div>
+        <div class="name">${h.name}</div>
+        <div class="streak">🔥 ${streak(h.dates)} day streak</div>
+      </div>
+      <div class="habit-actions">
+        <button class="done-btn" data-i="${i}">${doneToday ? "✓ Done" : "Mark Done"}</button>
+        <button class="del-btn" data-del="${i}">Delete</button>
+      </div>
+    </li>`;
+  }).join("") : "<p>No habits yet. Add one above!</p>";
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = input.value.trim();
+  if (!name) return;
+  const habits = load();
+  habits.push({ name, dates: [] });
+  save(habits);
+  input.value = "";
+  render();
+});
+
+list.addEventListener("click", (e) => {
+  const habits = load();
+  const i = e.target.dataset.i;
+  const del = e.target.dataset.del;
+  if (i !== undefined) {
+    const t = today();
+    const idx = habits[i].dates.indexOf(t);
+    if (idx > -1) habits[i].dates.splice(idx, 1);
+    else habits[i].dates.push(t);
+    save(habits); render();
+  } else if (del !== undefined) {
+    habits.splice(del, 1); save(habits); render();
+  }
+});
+
+render();

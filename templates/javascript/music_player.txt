@@ -1,0 +1,45 @@
+const tracks = [
+  { title: "SoundHelix Song 1", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+  { title: "SoundHelix Song 2", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+  { title: "SoundHelix Song 3", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" }
+];
+
+const audio = document.getElementById("audio");
+const title = document.getElementById("title");
+const artist = document.getElementById("artist");
+const playBtn = document.getElementById("play");
+const progress = document.getElementById("progress");
+const current = document.getElementById("current");
+const duration = document.getElementById("duration");
+const volume = document.getElementById("volume");
+let idx = Number(localStorage.getItem("music_idx") || 0);
+
+const fmt = (s) => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,"0")}`;
+
+function load(i) {
+  idx = (i + tracks.length) % tracks.length;
+  const t = tracks[idx];
+  audio.src = t.src;
+  title.textContent = t.title;
+  artist.textContent = t.artist;
+  localStorage.setItem("music_idx", idx);
+}
+
+function toggle() {
+  if (audio.paused) { audio.play(); playBtn.textContent = "⏸"; }
+  else { audio.pause(); playBtn.textContent = "▶"; }
+}
+
+playBtn.onclick = toggle;
+document.getElementById("prev").onclick = () => { load(idx - 1); audio.play(); playBtn.textContent = "⏸"; };
+document.getElementById("next").onclick = () => { load(idx + 1); audio.play(); playBtn.textContent = "⏸"; };
+audio.addEventListener("timeupdate", () => {
+  progress.value = (audio.currentTime / audio.duration) * 100 || 0;
+  current.textContent = fmt(audio.currentTime || 0);
+});
+audio.addEventListener("loadedmetadata", () => duration.textContent = fmt(audio.duration || 0));
+audio.addEventListener("ended", () => { load(idx + 1); audio.play(); });
+progress.addEventListener("input", () => audio.currentTime = (progress.value / 100) * audio.duration);
+volume.addEventListener("input", () => audio.volume = volume.value);
+audio.volume = volume.value;
+load(idx);

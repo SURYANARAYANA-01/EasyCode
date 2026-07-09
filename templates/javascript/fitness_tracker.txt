@@ -1,0 +1,39 @@
+const form = document.getElementById("workoutForm");
+const log = document.getElementById("log");
+const KEY = "fitness_log";
+
+const load = () => JSON.parse(localStorage.getItem(KEY) || "[]");
+const save = (d) => localStorage.setItem(KEY, JSON.stringify(d));
+
+function render() {
+  const workouts = load();
+  document.getElementById("totalCount").textContent = workouts.length;
+  document.getElementById("totalMinutes").textContent = workouts.reduce((s, w) => s + w.minutes, 0);
+  document.getElementById("totalCalories").textContent = workouts.reduce((s, w) => s + w.calories, 0);
+  log.innerHTML = workouts.map((w, i) => `
+    <li>
+      <span><strong>${w.type}</strong> — ${w.minutes} min • ${w.calories} kcal • ${w.date}</span>
+      <button data-i="${i}">✕</button>
+    </li>`).join("");
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const type = document.getElementById("type").value.trim();
+  const minutes = Number(document.getElementById("minutes").value);
+  const calories = Number(document.getElementById("calories").value);
+  if (!type || minutes < 1) return;
+  const workouts = load();
+  workouts.unshift({ type, minutes, calories, date: new Date().toLocaleDateString() });
+  save(workouts);
+  form.reset();
+  render();
+});
+
+log.addEventListener("click", (e) => {
+  const i = e.target.dataset.i;
+  if (i === undefined) return;
+  const w = load(); w.splice(i, 1); save(w); render();
+});
+
+render();

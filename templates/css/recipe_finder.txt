@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #fefce8;
+  color: #111;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+.recipe-app {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ca8a04;
+}
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+.search-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.search-form button {
+  padding: 0.75rem 1.25rem;
+  background: #ca8a04;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.status {
+  text-align: center;
+  margin: 1rem 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.card h3 {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10;
+}
+.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#detail img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#detail h2 {
+  margin-bottom: 0.5rem;
+  color: #ca8a04;
+}
+#detail ul {
+  margin: 1rem 0 1rem 1.25rem;
+}
+#detail p {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}

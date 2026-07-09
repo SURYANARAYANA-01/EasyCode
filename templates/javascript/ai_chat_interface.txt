@@ -1,0 +1,55 @@
+const form = document.getElementById("chatForm");
+const input = document.getElementById("userInput");
+const messages = document.getElementById("messages");
+const clearBtn = document.getElementById("clearBtn");
+const STORAGE_KEY = "ai_chat_history";
+
+const replies = [
+  "That's interesting! Tell me more.",
+  "I understand. How does that make you feel?",
+  "Great question! Let me think about it.",
+  "Thanks for sharing that with me.",
+  "Could you elaborate a little more?",
+  "I'm here to help. What's next?"
+];
+
+const loadHistory = () => JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+const saveHistory = (h) => localStorage.setItem(STORAGE_KEY, JSON.stringify(h));
+
+function render(history) {
+  messages.innerHTML = "";
+  history.forEach(({ role, text }) => {
+    const div = document.createElement("div");
+    div.className = `msg ${role}`;
+    div.textContent = text;
+    messages.appendChild(div);
+  });
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function botReply(userText) {
+  const reply = replies[Math.floor(Math.random() * replies.length)];
+  return `${reply} (You said: "${userText}")`;
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+  const history = loadHistory();
+  history.push({ role: "user", text });
+  input.value = "";
+  render(history);
+  setTimeout(() => {
+    history.push({ role: "bot", text: botReply(text) });
+    saveHistory(history);
+    render(history);
+  }, 600);
+});
+
+clearBtn.addEventListener("click", () => {
+  localStorage.removeItem(STORAGE_KEY);
+  render([]);
+});
+
+render(loadHistory());

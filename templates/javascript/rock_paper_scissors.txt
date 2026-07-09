@@ -1,0 +1,36 @@
+const choices = ["rock","paper","scissors"];
+const beats = { rock: "scissors", paper: "rock", scissors: "paper" };
+const KEY = "rps_score";
+let state = JSON.parse(localStorage.getItem(KEY) || '{"user":0,"cpu":0}');
+
+const userEl = document.getElementById("userScore");
+const cpuEl = document.getElementById("cpuScore");
+const resultEl = document.getElementById("result");
+
+function updateScores() {
+  userEl.textContent = state.user;
+  cpuEl.textContent = state.cpu;
+  localStorage.setItem(KEY, JSON.stringify(state));
+}
+
+document.querySelectorAll("[data-choice]").forEach(btn =>
+  btn.addEventListener("click", () => play(btn.dataset.choice))
+);
+
+function play(user) {
+  const cpu = choices[Math.floor(Math.random()*3)];
+  let msg;
+  if (user === cpu) msg = `Tie! Both chose ${user}.`;
+  else if (beats[user] === cpu) { state.user++; msg = `You win! ${user} beats ${cpu}.`; }
+  else { state.cpu++; msg = `You lose! ${cpu} beats ${user}.`; }
+  resultEl.textContent = msg;
+  updateScores();
+}
+
+document.getElementById("resetBtn").onclick = () => {
+  state = { user: 0, cpu: 0 };
+  resultEl.textContent = "Choose your move!";
+  updateScores();
+};
+
+updateScores();

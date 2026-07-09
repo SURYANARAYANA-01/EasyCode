@@ -1,0 +1,47 @@
+const form = document.getElementById("ghForm");
+const input = document.getElementById("userInput");
+const status = document.getElementById("status");
+const profile = document.getElementById("profile");
+const reposList = document.getElementById("repos-list");
+
+async function analyze(user) {
+  status.textContent = "Loading...";
+  profile.classList.add("hidden");
+  reposList.innerHTML = "";
+  try {
+    const [uRes, rRes] = await Promise.all([
+      fetch(`https://api.github.com/users/${user}`),
+      fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=6`)
+    ]);
+    if (!uRes.ok) throw new Error("User not found");
+    const u = await uRes.json();
+    const repos = await rRes.json();
+    document.getElementById("avatar").src = u.avatar_url;
+    document.getElementById("name").textContent = u.name || u.login;
+    document.getElementById("bio").textContent = u.bio || "No bio available";
+    document.getElementById("repos").textContent = u.public_repos;
+    document.getElementById("followers").textContent = u.followers;
+    document.getElementById("following").textContent = u.following;
+    profile.classList.remove("hidden");
+    reposList.innerHTML = repos.map(r => `
+      <div class="repo">
+        <a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a>
+        <p>${r.description || "No description"}</p>
+        <p>⭐ ${r.stargazers_count} • ${r.language || "N/A"}</p>
+      </div>`).join("");
+    status.textContent = "";
+    localStorage.setItem("gh_user", user);
+  } catch (e) {
+    status.textContent = e.message;
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const u = input.value.trim();
+  if (u) analyze(u);
+});
+
+const saved = localStorage.getItem("gh_user") || "octocat";
+input.value = saved;
+analyze(saved);

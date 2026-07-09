@@ -1,0 +1,153 @@
+const KEY = "ttt_scores";
+
+const scores = JSON.parse(localStorage.getItem(KEY) || '{"X":0,"O":0,"D":0}');
+
+const PLAYER = "X";
+const COMPUTER = "O";
+
+const board = document.getElementById("board");
+const status = document.getElementById("status");
+
+const WINS = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ];
+
+let cells;
+let turn;
+let over;
+
+function newGame() {
+    cells = Array(9).fill("");
+    turn = PLAYER;
+    over = false;
+    status.textContent = "Your Turn";
+    render();
+}
+
+function updateScores() {
+
+    document.getElementById("scoreX").textContent = scores.X;
+    document.getElementById("scoreO").textContent = scores.O;
+    document.getElementById("scoreD").textContent = scores.D;
+
+    localStorage.setItem(KEY, JSON.stringify(scores));
+}
+
+function render() {
+
+    board.innerHTML = cells.map((cell, index) => `
+        <button class="cell ${cell.toLowerCase()}" data-i="${index}" ${cell || over || turn === COMPUTER ? "disabled" : ""}>
+            ${cell}
+        </button>
+    `).join("");
+
+    board.querySelectorAll(".cell").forEach(button => {
+
+        button.onclick = () => playerMove(
+            Number(button.dataset.i)
+        );
+    });
+}
+
+function winner() {
+
+    for (const [a, b, c] of WINS) {
+
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+            return cells[a];
+        }
+    }
+
+    if (cells.every(cell => cell !== "")) {
+        return "D";
+    }
+
+    return null;
+}
+
+function finishGame(result) {
+
+    over = true;
+
+    if (result === "D") {
+        status.textContent = "It's a Draw!";
+        scores.D++;
+    } else {
+        status.textContent = result === PLAYER ? "You Win!" : "Computer Wins!";
+        scores[result]++;
+    }
+
+    updateScores();
+    render();
+}
+
+function makeMove(index, symbol) {
+
+    cells[index] = symbol;
+    const result = winner();
+
+    if (result) {
+        finishGame(result);
+        return;
+    }
+
+    turn = symbol === PLAYER ? COMPUTER : PLAYER;
+
+    status.textContent = turn === PLAYER ? "Your Turn" : "Computer Thinking...";
+    render();
+
+    if (turn === COMPUTER) {
+        setTimeout(computerMove, 500);
+    }
+}
+
+function playerMove(index) {
+
+    if (over || turn !== PLAYER || cells[index]) {
+        return;
+    }
+
+    makeMove(index, PLAYER);
+}
+
+function findBestMove(symbol) {
+
+    for (const [a, b, c] of WINS) {
+
+        const line = [ cells[a], cells[b], cells[c]];
+        const count = line.filter(x => x === symbol).length;
+        const empty = line.indexOf("");
+
+        if (count === 2 && empty !== -1) {
+            return [a, b, c][empty];
+        }
+    }
+    return -1;
+}
+
+function computerMove() {
+
+    if (over) return;
+    let move = findBestMove(COMPUTER);
+
+    if (move === -1) {
+        move = findBestMove(PLAYER);
+    }
+
+    if (move === -1) {
+
+        const empty = cells
+            .map((cell, index) => cell === "" ? index : -1)
+            .filter(index => index !== -1);
+
+        move = empty[Math.floor(Math.random() * empty.length)
+            ];
+    }
+
+    makeMove(move, COMPUTER);
+}
+
+document.getElementById("resetBtn").onclick = () => {
+    newGame();
+};
+
+updateScores();
+newGame();

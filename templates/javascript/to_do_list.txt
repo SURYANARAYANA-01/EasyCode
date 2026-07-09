@@ -1,0 +1,51 @@
+const form = document.getElementById("addForm");
+const input = document.getElementById("taskInput");
+const list = document.getElementById("tasks");
+const empty = document.getElementById("empty");
+const filterBtns = document.querySelectorAll(".filters button");
+const KEY = "todo_v1";
+let filter = "all";
+
+const load = () => JSON.parse(localStorage.getItem(KEY) || "[]");
+const save = (t) => localStorage.setItem(KEY, JSON.stringify(t));
+
+function render() {
+  const tasks = load();
+  const filtered = tasks.filter(t =>
+    filter === "all" ? true : filter === "done" ? t.done : !t.done);
+  list.innerHTML = filtered.map((t, i) => {
+    const idx = tasks.indexOf(t);
+    return `<li class="task ${t.done ? 'done' : ''}">
+      <input type="checkbox" data-i="${idx}" ${t.done ? 'checked' : ''}>
+      <span>${t.text}</span>
+      <button data-del="${idx}">✕</button>
+    </li>`;
+  }).join("");
+  empty.classList.toggle("hide", filtered.length > 0);
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+  const t = load(); t.push({ text, done: false }); save(t);
+  input.value = ""; render();
+});
+
+list.addEventListener("click", (e) => {
+  const tasks = load();
+  if (e.target.matches("input[type=checkbox]")) {
+    tasks[e.target.dataset.i].done = e.target.checked;
+    save(tasks); render();
+  } else if (e.target.dataset.del !== undefined) {
+    tasks.splice(e.target.dataset.del, 1); save(tasks); render();
+  }
+});
+
+filterBtns.forEach(b => b.onclick = () => {
+  filterBtns.forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  filter = b.dataset.filter; render();
+});
+
+render();

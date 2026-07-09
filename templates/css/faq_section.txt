@@ -1,26 +1,62 @@
 /* ---------- Base reset & typography ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   line-height: 1.5;
   color: #1f2937;
   background: #f8fafc;
   padding: 2rem;
 }
-img { max-width: 100%; display: block; }
-a { color: #2563eb; text-decoration: none; }
-a:hover { text-decoration: underline; }
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* ---------- FAQ ---------- */
-.faq { max-width: 640px; margin: 0 auto; }
-.faq h1 { text-align: center; margin-bottom: 1.5rem; }
+.faq {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.faq h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 .faq details {
-  background: #fff; border-radius: 0.5rem;
-  padding: 1rem 1.25rem; margin-bottom: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
-.faq summary { font-weight: 600; list-style: none; }
-.faq summary::after { content: "+"; float: right; }
-.faq details[open] summary::after { content: "\2013"; }
-.faq p { margin-top: 0.75rem; color: #4b5563; }
+.faq summary {
+  font-weight: 600;
+  list-style: none;
+}
+.faq summary::after {
+  content: "+";
+  float: right;
+}
+.faq details[open] summary::after {
+  content: "\2013";
+}
+.faq p {
+  margin-top: 0.75rem;
+  color: #4b5563;
+}

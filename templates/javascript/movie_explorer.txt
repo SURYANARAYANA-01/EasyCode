@@ -1,0 +1,36 @@
+const form = document.getElementById("searchForm");
+const query = document.getElementById("query");
+const results = document.getElementById("results");
+const status = document.getElementById("status");
+const STORAGE_KEY = "movie_last_query";
+
+async function search(q) {
+  status.textContent = "Loading...";
+  results.innerHTML = "";
+  try {
+    const res = await fetch(`https://api.tvmaze.com/search/shows?q=${encodeURIComponent(q)}`);
+    if (!res.ok) throw new Error("Failed to fetch");
+    const data = await res.json();
+    if (!data.length) { status.textContent = "No results found."; return; }
+    status.textContent = `${data.length} result(s)`;
+    results.innerHTML = data.map(({ show }) => `
+      <article class="card">
+        <img src="${show.image?.medium || 'https://via.placeholder.com/210x295?text=No+Image'}" alt="${show.name}" />
+        <div class="card-body">
+          <h3>${show.name}</h3>
+          <p>${show.premiered?.slice(0,4) || "N/A"} • ${show.rating?.average ?? "N/A"}⭐</p>
+        </div>
+      </article>`).join("");
+  } catch (err) {
+    status.textContent = "Error: " + err.message;
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = query.value.trim();
+  if (q) { localStorage.setItem(STORAGE_KEY, q); search(q); }
+});
+
+const saved = localStorage.getItem(STORAGE_KEY);
+if (saved) { query.value = saved; search(saved); } else { search("breaking bad"); }

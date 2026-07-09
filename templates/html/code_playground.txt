@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Code Playground</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="playground">
+  <header class="pg-header">
+    <h1>Code Playground</h1>
+    <button id="runBtn">▶ Run</button>
+  </header>
+  <div class="editors">
+    <div class="editor"><label>HTML</label><textarea id="htmlCode" spellcheck="false"></textarea></div>
+    <div class="editor"><label>CSS</label><textarea id="cssCode" spellcheck="false"></textarea></div>
+    <div class="editor"><label>JS</label><textarea id="jsCode" spellcheck="false"></textarea></div>
+  </div>
+  <iframe id="preview" title="Preview"></iframe>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

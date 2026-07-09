@@ -247,6 +247,7 @@ For the complete list of supported commands, see the [EasyCode Dev Commands](COM
 - C#
 - React
 - Node.js
+- Express.js
 
 ---
 

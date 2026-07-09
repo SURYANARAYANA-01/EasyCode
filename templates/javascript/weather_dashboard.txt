@@ -1,0 +1,53 @@
+const form = document.getElementById("searchForm");
+const cityInput = document.getElementById("cityInput");
+const status = document.getElementById("status");
+const card = document.getElementById("weatherCard");
+const STORAGE_KEY = "last_city";
+
+async function geocode(city) {
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Geocoding failed");
+  const data = await res.json();
+  if (!data.results?.length) throw new Error("City not found");
+  return data.results[0];
+}
+
+async function getWeather(lat, lon) {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=relative_humidity_2m`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Weather fetch failed");
+  return res.json();
+}
+
+function render(place, weather) {
+  document.getElementById("cityName").textContent = `${place.name}, ${place.country}`;
+  document.getElementById("temperature").textContent = `${Math.round(weather.current_weather.temperature)}°C`;
+  document.getElementById("condition").textContent = `Wind ${weather.current_weather.windspeed} km/h`;
+  document.getElementById("humidity").textContent = `${weather.hourly.relative_humidity_2m?.[0] ?? "--"}%`;
+  document.getElementById("wind").textContent = `${weather.current_weather.windspeed} km/h`;
+  card.classList.remove("hidden");
+}
+
+async function searchCity(city) {
+  status.textContent = "Loading...";
+  card.classList.add("hidden");
+  try {
+    const place = await geocode(city);
+    const weather = await getWeather(place.latitude, place.longitude);
+    render(place, weather);
+    localStorage.setItem(STORAGE_KEY, city);
+    status.textContent = "";
+  } catch (err) {
+    status.textContent = err.message;
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const city = cityInput.value.trim();
+  if (city) searchCity(city);
+});
+
+const saved = localStorage.getItem(STORAGE_KEY);
+if (saved) { cityInput.value = saved; searchCity(saved); }

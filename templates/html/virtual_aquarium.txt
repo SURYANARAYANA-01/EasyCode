@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Virtual Aquarium</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="aquarium">
+  <h1>Virtual Aquarium</h1>
+  <div class="tank" id="tank"></div>
+  <div class="controls">
+    <button id="addBtn">🐟 Add Fish</button>
+    <button id="clearBtn">Clear Tank</button>
+    <span id="count">0 fish</span>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

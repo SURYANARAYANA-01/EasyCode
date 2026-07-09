@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NASA Space Explorer</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="nasa-app">
+  <h1>NASA Astronomy Picture of the Day</h1>
+  <form id="dateForm" class="controls">
+    <input id="date" type="date" />
+    <button type="submit">Load</button>
+  </form>
+  <p id="status" class="status"></p>
+  <article id="apod" class="apod hidden">
+    <h2 id="title"></h2>
+    <p id="date-shown"></p>
+    <img id="media" alt="" />
+    <p id="explanation"></p>
+  </article>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

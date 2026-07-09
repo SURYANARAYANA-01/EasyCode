@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #111827;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.game {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 0.5rem;
+  color: #22c55e;
+}
+p {
+  margin: 0.5rem 0;
+}
+canvas {
+  background: #0f172a;
+  border: 3px solid #22c55e;
+  border-radius: 8px;
+  max-width: 100%;
+}
+.hint {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}

@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: #111827;
+}
+
+.expense-app {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat span {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.stat strong {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.income {
+  background: #d1fae5;
+}
+
+.expense {
+  background: #fee2e2;
+}
+
+.balance {
+  background: #dbeafe;
+}
+
+.txn-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.txn-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.txn-form button {
+  padding: 0.6rem 1rem;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.txns {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.txns li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #6b7280;
+}
+
+.txns li.plus {
+  border-color: #10b981;
+}
+
+.txns li.minus {
+  border-color: #ef4444;
+}
+
+.txns button {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1.1rem;
+}

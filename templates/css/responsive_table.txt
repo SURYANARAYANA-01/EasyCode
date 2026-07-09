@@ -1,19 +1,58 @@
 /* ---------- Base reset & typography ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   line-height: 1.5;
   color: #1f2937;
   background: #f8fafc;
   padding: 2rem;
 }
-img { max-width: 100%; display: block; }
-a { color: #2563eb; text-decoration: none; }
-a:hover { text-decoration: underline; }
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* ---------- Responsive Table ---------- */
-.table-wrap { overflow-x: auto; background: #fff; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-table { width: 100%; border-collapse: collapse; min-width: 520px; }
-th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
-th { background: #f8fafc; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #475569; }
-tbody tr:hover { background: #f9fafb; }
+.table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+th,
+td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+th {
+  background: #f8fafc;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #475569;
+}
+tbody tr:hover {
+  background: #f9fafb;
+}

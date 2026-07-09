@@ -1,0 +1,48 @@
+const EMOJIS = ["🍎","🍌","🍇","🍓","🍑","🍍","🥝","🍒"];
+const grid = document.getElementById("grid");
+const movesEl = document.getElementById("moves");
+const bestEl = document.getElementById("best");
+const KEY = "memory_best";
+let deck, flipped, moves, matched, lock;
+
+function init() {
+  deck = [...EMOJIS, ...EMOJIS].sort(() => Math.random() - 0.5);
+  flipped = []; moves = 0; matched = 0; lock = false;
+  movesEl.textContent = moves;
+  bestEl.textContent = localStorage.getItem(KEY) || "-";
+  render();
+}
+
+function render() {
+  grid.innerHTML = deck.map((e, i) => `
+    <button class="card" data-i="${i}">${e}</button>`).join("");
+  grid.querySelectorAll(".card").forEach(c => c.onclick = () => flip(Number(c.dataset.i), c));
+}
+
+function flip(i, el) {
+  if (lock || el.classList.contains("flipped") || el.classList.contains("matched")) return;
+  el.classList.add("flipped");
+  flipped.push({ i, el });
+  if (flipped.length === 2) {
+    moves++; movesEl.textContent = moves;
+    lock = true;
+    if (deck[flipped[0].i] === deck[flipped[1].i]) {
+      flipped.forEach(f => f.el.classList.add("matched"));
+      matched++;
+      flipped = []; lock = false;
+      if (matched === EMOJIS.length) {
+        const prev = Number(localStorage.getItem(KEY) || Infinity);
+        if (moves < prev) localStorage.setItem(KEY, moves);
+        setTimeout(() => alert(`You won in ${moves} moves!`), 300);
+      }
+    } else {
+      setTimeout(() => {
+        flipped.forEach(f => f.el.classList.remove("flipped"));
+        flipped = []; lock = false;
+      }, 800);
+    }
+  }
+}
+
+document.getElementById("resetBtn").onclick = init;
+init();

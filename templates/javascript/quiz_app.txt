@@ -1,0 +1,49 @@
+const questions = [
+  { q: "What does HTML stand for?", options: ["Hyper Text Markup Language","Home Tool Markup Language","Hyperlink Text Machine Learning","High Text Multi Layer"], a: 0 },
+  { q: "Which is a JavaScript framework?", options: ["Django","Laravel","React","Rails"], a: 2 },
+  { q: "CSS is used for?", options: ["Structure","Styling","Logic","Storage"], a: 1 },
+  { q: "What year was JavaScript created?", options: ["1990","1995","2000","2005"], a: 1 },
+  { q: "Which is NOT a JS data type?", options: ["Number","String","Boolean","Character"], a: 3 }
+];
+const KEY = "quiz_best";
+let idx = 0, score = 0;
+const qBox = document.getElementById("question-box");
+const rBox = document.getElementById("result-box");
+const progress = document.getElementById("progress");
+
+function render() {
+  if (idx >= questions.length) return finish();
+  const q = questions[idx];
+  progress.textContent = `Question ${idx + 1} of ${questions.length} • Score: ${score}`;
+  qBox.innerHTML = `
+    <h2>${q.q}</h2>
+    <div class="options">${q.options.map((o, i) => `<button class="option" data-i="${i}">${o}</button>`).join("")}</div>`;
+  qBox.querySelectorAll(".option").forEach(btn => btn.onclick = () => choose(Number(btn.dataset.i)));
+}
+
+function choose(i) {
+  const q = questions[idx];
+  const buttons = qBox.querySelectorAll(".option");
+  buttons.forEach(b => b.disabled = true);
+  buttons[q.a].classList.add("correct");
+  if (i === q.a) score++;
+  else buttons[i].classList.add("wrong");
+  setTimeout(() => { idx++; render(); }, 900);
+}
+
+function finish() {
+  qBox.classList.add("hidden");
+  rBox.classList.remove("hidden");
+  document.getElementById("finalScore").textContent = `${score} / ${questions.length}`;
+  const best = Math.max(score, Number(localStorage.getItem(KEY) || 0));
+  localStorage.setItem(KEY, best);
+  document.getElementById("bestScore").textContent = `${best} / ${questions.length}`;
+}
+
+document.getElementById("restartBtn").onclick = () => {
+  idx = 0; score = 0;
+  qBox.classList.remove("hidden"); rBox.classList.add("hidden");
+  render();
+};
+
+render();

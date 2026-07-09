@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crypto Tracker</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="crypto-app">
+  <h1>Cryptocurrency Tracker</h1>
+  <div class="toolbar">
+    <input id="search" type="text" placeholder="Filter coins..." />
+    <button id="refresh">Refresh</button>
+  </div>
+  <p id="status" class="status"></p>
+  <table class="crypto-table">
+    <thead><tr><th>#</th><th>Coin</th><th>Price (USD)</th><th>24h %</th><th>Market Cap</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

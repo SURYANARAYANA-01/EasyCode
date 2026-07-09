@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recipe Finder</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="recipe-app">
+  <h1>Recipe Finder</h1>
+  <form id="searchForm" class="search-form">
+    <input id="q" type="text" placeholder="Search recipes (e.g. chicken)..." required />
+    <button type="submit">Search</button>
+  </form>
+  <p id="status" class="status"></p>
+  <section id="results" class="grid"></section>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeBtn" class="close">✕</button>
+      <div id="detail"></div>
+    </div>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

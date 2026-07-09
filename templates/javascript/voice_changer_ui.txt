@@ -1,0 +1,54 @@
+const recordBtn = document.getElementById("recordBtn");
+const playBtn = document.getElementById("playBtn");
+const status = document.getElementById("status");
+const audioEl = document.getElementById("audio");
+const pitch = document.getElementById("pitch");
+const rate = document.getElementById("rate");
+const pitchVal = document.getElementById("pitchVal");
+const rateVal = document.getElementById("rateVal");
+let recorder, chunks = [], audioBuffer;
+
+pitch.oninput = () => pitchVal.textContent = pitch.value;
+rate.oninput = () => rateVal.textContent = rate.value;
+
+recordBtn.onclick = async () => {
+  if (recorder && recorder.state === "recording") {
+    recorder.stop();
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    recorder = new MediaRecorder(stream);
+    chunks = [];
+    recorder.ondataavailable = e => chunks.push(e.data);
+    recorder.onstop = async () => {
+      const blob = new Blob(chunks, { type: "audio/webm" });
+      audioEl.src = URL.createObjectURL(blob);
+      const buf = await blob.arrayBuffer();
+      const ctx = new AudioContext();
+      audioBuffer = await ctx.decodeAudioData(buf);
+      playBtn.disabled = false;
+      status.textContent = "Recording ready. Play with effects!";
+      recordBtn.textContent = "🎤 Start Recording";
+      recordBtn.classList.remove("recording");
+      stream.getTracks().forEach(t => t.stop());
+    };
+    recorder.start();
+    recordBtn.textContent = "⏹ Stop";
+    recordBtn.classList.add("recording");
+    status.textContent = "Recording...";
+  } catch (e) {
+    status.textContent = "Microphone access denied: " + e.message;
+  }
+};
+
+playBtn.onclick = () => {
+  if (!audioBuffer) return;
+  const ctx = new AudioContext();
+  const src = ctx.createBufferSource();
+  src.buffer = audioBuffer;
+  src.playbackRate.value = Number(rate.value) * Number(pitch.value);
+  src.connect(ctx.destination);
+  src.start();
+  status.textContent = "Playing with effect...";
+};

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitness Tracker</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="fit-app">
+  <h1>Fitness Tracker</h1>
+  <section class="summary">
+    <div class="card"><span>Workouts</span><strong id="totalCount">0</strong></div>
+    <div class="card"><span>Total Minutes</span><strong id="totalMinutes">0</strong></div>
+    <div class="card"><span>Calories</span><strong id="totalCalories">0</strong></div>
+  </section>
+  <form id="workoutForm" class="workout-form">
+    <input id="type" type="text" placeholder="Exercise (e.g. Running)" required />
+    <input id="minutes" type="number" min="1" placeholder="Minutes" required />
+    <input id="calories" type="number" min="0" placeholder="Calories" required />
+    <button type="submit">Add Workout</button>
+  </form>
+  <ul id="log" class="log"></ul>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

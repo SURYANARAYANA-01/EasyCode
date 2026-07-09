@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #000
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200")
+    center/cover fixed;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+.nasa-app {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.controls input,
+.controls button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+.controls button {
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.status {
+  text-align: center;
+  min-height: 1.5rem;
+}
+.hidden {
+  display: none;
+}
+.apod img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+.apod h2 {
+  margin-bottom: 0.25rem;
+}
+.apod p {
+  line-height: 1.6;
+  color: #ddd;
+}

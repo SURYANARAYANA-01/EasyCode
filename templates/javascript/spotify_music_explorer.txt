@@ -1,0 +1,31 @@
+const form = document.getElementById("searchForm");
+const q = document.getElementById("q");
+const results = document.getElementById("results");
+const status = document.getElementById("status");
+
+async function search(term) {
+  status.textContent = "Loading...";
+  results.innerHTML = "";
+  try {
+    const res = await fetch(`https://itunes.apple.com/search?media=music&limit=24&term=${encodeURIComponent(term)}`);
+    if (!res.ok) throw new Error("Request failed");
+    const data = await res.json();
+    if (!data.results.length) { status.textContent = "No results found."; return; }
+    status.textContent = "";
+    results.innerHTML = data.results.map(t => `
+      <div class="card">
+        <img src="${t.artworkUrl100.replace('100x100','300x300')}" alt="${t.trackName}" />
+        <h3>${t.trackName || "Untitled"}</h3>
+        <p>${t.artistName}</p>
+        ${t.previewUrl ? `<audio controls src="${t.previewUrl}"></audio>` : ""}
+      </div>`).join("");
+    localStorage.setItem("music_q", term);
+  } catch (e) {
+    status.textContent = e.message;
+  }
+}
+
+form.addEventListener("submit", (e) => { e.preventDefault(); if (q.value.trim()) search(q.value.trim()); });
+const saved = localStorage.getItem("music_q") || "coldplay";
+q.value = saved;
+search(saved);

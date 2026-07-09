@@ -881,3 +881,36 @@
 //URL Parameters
 //Web Storage API
 //Window Object
+
+## Mini Projects
+
+//AI Chat Interface
+//Calculator
+//Calendar & Event Planner
+//Code Playground
+//Cryptocurrency Tracker
+//Emoji Mixer
+//Expense Tracker Dashboard
+//Fitness Tracker
+//GitHub Profile Analyzer
+//Habit Tracker
+//Internet Speed Test
+//Memory Card Game
+//Movie Explorer
+//Music Player
+//NASA Space Explorer
+//Notes App
+//Pokemon Explorer
+//Portfolio
+//Quiz App
+//Recipe Finder
+//Rock Paper Scissors
+//Snake Game
+//Spotify Music Explorer
+//Tic-Tac-Toe
+//To-Do List
+//Video Player
+//Virtual Aquarium
+//Virtual Pet Simulator
+//Voice Changer UI
+//Weather Dashboard

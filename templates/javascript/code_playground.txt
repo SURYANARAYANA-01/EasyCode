@@ -1,0 +1,27 @@
+const htmlCode = document.getElementById("htmlCode");
+const cssCode = document.getElementById("cssCode");
+const jsCode = document.getElementById("jsCode");
+const preview = document.getElementById("preview");
+const runBtn = document.getElementById("runBtn");
+const KEY = "playground_state";
+
+const defaults = {
+  html: `<h1>Hello Playground!</h1>\n<button id="me">Click me</button>`,
+  css: `body { font-family: system-ui; padding: 2rem; }\nbutton { padding: .5rem 1rem; }`,
+  js: `document.getElementById("me").onclick = () => alert("Hi!");`
+};
+
+const saved = JSON.parse(localStorage.getItem(KEY) || "null") || defaults;
+htmlCode.value = saved.html;
+cssCode.value = saved.css;
+jsCode.value = saved.js;
+
+function run() {
+  const doc = `<!DOCTYPE html><html><head><style>${cssCode.value}</style></head><body>${htmlCode.value}<script>${jsCode.value}<\/script></body></html>`;
+  preview.srcdoc = doc;
+  localStorage.setItem(KEY, JSON.stringify({ html: htmlCode.value, css: cssCode.value, js: jsCode.value }));
+}
+
+runBtn.onclick = run;
+[htmlCode, cssCode, jsCode].forEach(t => t.addEventListener("input", () => clearTimeout(window._t) || (window._t = setTimeout(run, 500))));
+run();

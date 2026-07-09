@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calendar & Event Planner</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="cal-app">
+  <header class="cal-header">
+    <button id="prevBtn">‹</button>
+    <h2 id="monthLabel"></h2>
+    <button id="nextBtn">›</button>
+  </header>
+  <div class="weekdays">
+    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+  </div>
+  <div id="days" class="days"></div>
+  <section id="eventPanel" class="event-panel">
+    <h3 id="dateLabel">Select a date</h3>
+    <form id="eventForm" class="event-form">
+      <input id="eventTitle" type="text" placeholder="New event title..." required />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="eventList" class="event-list"></ul>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

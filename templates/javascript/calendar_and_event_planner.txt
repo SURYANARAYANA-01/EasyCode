@@ -1,0 +1,127 @@
+const KEY = "calendar_events";
+
+const monthLabel = document.getElementById("monthLabel");
+const daysEl = document.getElementById("days");
+const dateLabel = document.getElementById("dateLabel");
+const eventList = document.getElementById("eventList");
+const eventForm = document.getElementById("eventForm");
+const eventTitle = document.getElementById("eventTitle");
+const addBtn = eventForm.querySelector("button");
+
+const MONTHS = [
+  "January", "February", "March", "April",
+  "May", "June", "July", "August",
+  "September", "October", "November", "December"
+];
+
+let view = new Date();
+
+function formatDate(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+let selected = formatDate(new Date());
+
+const load = () => JSON.parse(localStorage.getItem(KEY) || "{}");
+const save = events => localStorage.setItem(KEY, JSON.stringify(events));
+
+function render() {
+  monthLabel.textContent = `${MONTHS[view.getMonth()]} ${view.getFullYear()}`;
+
+  const first = new Date(view.getFullYear(), view.getMonth(), 1);
+  const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+  const today = formatDate(new Date());
+  const events = load();
+
+  let html = "";
+
+  for (let i = 0; i < first.getDay(); i++) html += "<span></span>";
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const iso = `${view.getFullYear()}-${String(view.getMonth() + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+    const cls = [
+      iso === today ? "today" : "",
+      iso === selected ? "selected" : "",
+      Array.isArray(events[iso]) && events[iso].length > 0 ? "has-event" : ""
+    ].join(" ");
+
+    html += `<button class="${cls}" data-date="${iso}">${day}</button>`;
+  }
+
+  daysEl.innerHTML = html;
+  daysEl.querySelectorAll("button").forEach(button => {
+    button.onclick = () => {
+      selected = button.dataset.date;
+      render();
+      renderEvents();
+    };
+  });
+
+  renderEvents();
+}
+
+function renderEvents() {
+  dateLabel.textContent = `Events on ${selected}`;
+
+  const events = load();
+  const list = events[selected] || [];
+
+  eventList.innerHTML = list
+    .map((event, index) => `<li>${event}<button data-i="${index}">✕</button></li>`)
+    .join("");
+
+  const today = formatDate(new Date());
+  const isPast = selected < today;
+
+  eventTitle.disabled = isPast;
+  addBtn.disabled = isPast;
+  eventTitle.placeholder = isPast ? "Cannot add events to past dates" : "Add an event";
+}
+
+eventForm.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const title = eventTitle.value.trim();
+
+  if (!title) return;
+
+  const today = formatDate(new Date());
+
+  if (selected < today) {
+    alert("You cannot add events to a past date.");
+    return;
+  }
+
+  const events = load();
+
+  events[selected] = events[selected] || [];
+  events[selected].push(title);
+  save(events);
+  eventTitle.value = "";
+  render();
+});
+
+eventList.addEventListener("click", e => {
+  if (e.target.dataset.i === undefined) return;
+
+  const events = load();
+
+  events[selected].splice(Number(e.target.dataset.i), 1);
+
+  if (!events[selected].length) delete events[selected];
+  save(events);
+  render();
+});
+
+document.getElementById("prevBtn").onclick = () => {
+  view.setMonth(view.getMonth() - 1);
+  render();
+};
+
+document.getElementById("nextBtn").onclick = () => {
+  view.setMonth(view.getMonth() + 1);
+  render();
+};
+
+render();

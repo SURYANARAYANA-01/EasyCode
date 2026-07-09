@@ -1,0 +1,50 @@
+const KEY = "notes_v1";
+const list = document.getElementById("noteList");
+const search = document.getElementById("searchInput");
+const title = document.getElementById("titleInput");
+const body = document.getElementById("bodyInput");
+let notes = JSON.parse(localStorage.getItem(KEY) || "[]");
+let activeId = notes[0]?.id || null;
+
+const save = () => localStorage.setItem(KEY, JSON.stringify(notes));
+
+function render() {
+  const q = search.value.toLowerCase();
+  const filtered = notes.filter(n => n.title.toLowerCase().includes(q) || n.body.toLowerCase().includes(q));
+  list.innerHTML = filtered.map(n => `
+    <li class="${n.id === activeId ? 'active' : ''}" data-id="${n.id}">
+      <strong>${n.title || "Untitled"}</strong>
+      <small>${new Date(n.updated).toLocaleString()}</small>
+    </li>`).join("");
+  const active = notes.find(n => n.id === activeId);
+  title.value = active?.title || "";
+  body.value = active?.body || "";
+}
+
+document.getElementById("newBtn").onclick = () => {
+  const n = { id: Date.now().toString(), title: "New Note", body: "", updated: Date.now() };
+  notes.unshift(n); activeId = n.id; save(); render();
+};
+
+document.getElementById("saveBtn").onclick = () => {
+  const n = notes.find(n => n.id === activeId);
+  if (!n) return;
+  n.title = title.value; n.body = body.value; n.updated = Date.now();
+  notes.sort((a,b) => b.updated - a.updated);
+  save(); render();
+};
+
+document.getElementById("deleteBtn").onclick = () => {
+  if (!activeId || !confirm("Delete this note?")) return;
+  notes = notes.filter(n => n.id !== activeId);
+  activeId = notes[0]?.id || null;
+  save(); render();
+};
+
+list.addEventListener("click", (e) => {
+  const li = e.target.closest("li"); if (!li) return;
+  activeId = li.dataset.id; render();
+});
+
+search.addEventListener("input", render);
+render();

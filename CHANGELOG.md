@@ -2,6 +2,26 @@
 
 All notable changes to EasyCode Dev will be documented in this file.
 
+## [1.2.0] - 2026-07-09
+
+### Added
+
+* Complete beginner-friendly HTML templates.
+* Complete beginner-friendly CSS templates.
+* Complete beginner-friendly JavaScript templates.
+* 30 interactive front-end mini projects built with HTML, CSS, and JavaScript.
+* Responsive UI templates for modern web development.
+* DOM manipulation examples and concepts.
+* Event handling examples using JavaScript.
+* Form validation templates.
+* Local Storage based projects and examples.
+* Fetch API examples for working with external APIs.
+* Real-world API integration projects (Weather, Movies, Pokémon, Cryptocurrency, Recipe Finder, GitHub Profile, NASA, and more).
+* HTML, CSS, and JavaScript template synchronization for automatic multi-file project generation.
+* Automatic creation and updating of `index.html`, `style.css`, and JavaScript files.
+* Beginner-friendly web development examples covering layouts, forms, navigation, animations, responsive design, and interactive UI components.
+* Comment-based code generation support for HTML, CSS, and JavaScript using Ctrl + Enter.
+
 ## [1.1.0] - 2026-06-30
 
 ### Added
@@ -39,8 +59,9 @@ All notable changes to EasyCode Dev will be documented in this file.
 
 ## Planned Language Support
 
-* JavaScript
 * TypeScript
 * C
 * C#
-* HTML & CSS templates
+* React
+* Node.js
+* Express.js

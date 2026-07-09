@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz App</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="quiz-app">
+  <h1>Quiz App</h1>
+  <div id="progress" class="progress"></div>
+  <section id="question-box" class="question-box"></section>
+  <section id="result-box" class="result-box hidden">
+    <h2>Quiz Complete!</h2>
+    <p>Your score: <strong id="finalScore"></strong></p>
+    <p>Best score: <strong id="bestScore"></strong></p>
+    <button id="restartBtn">Play Again</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

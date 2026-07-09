@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pokémon Explorer</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<main class="poke-app">
+  <h1>Pokémon Explorer</h1>
+  <form id="searchForm" class="search-form">
+    <input id="pokeInput" type="text" placeholder="Enter Pokémon name or ID..." required />
+    <button type="submit">Search</button>
+  </form>
+  <p id="status" class="status"></p>
+  <section id="card" class="poke-card hidden">
+    <img id="pokeImg" alt="Pokemon" />
+    <h2 id="pokeName"></h2>
+    <p id="pokeId"></p>
+    <div id="types" class="types"></div>
+    <div class="stats" id="stats"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

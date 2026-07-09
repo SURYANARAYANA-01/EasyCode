@@ -1,0 +1,51 @@
+const form = document.getElementById("searchForm");
+const q = document.getElementById("q");
+const results = document.getElementById("results");
+const status = document.getElementById("status");
+const modal = document.getElementById("modal");
+const detail = document.getElementById("detail");
+
+async function search(term) {
+  status.textContent = "Loading...";
+  results.innerHTML = "";
+  try {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(term)}`);
+    const data = await res.json();
+    if (!data.meals) { status.textContent = "No recipes found."; return; }
+    status.textContent = "";
+    results.innerHTML = data.meals.map(m => `
+      <article class="card" data-id="${m.idMeal}">
+        <img src="${m.strMealThumb}" alt="${m.strMeal}" />
+        <h3>${m.strMeal}</h3>
+      </article>`).join("");
+    results.querySelectorAll(".card").forEach(c => c.onclick = () => showDetail(c.dataset.id));
+    localStorage.setItem("recipe_q", term);
+  } catch (e) { status.textContent = "Error: " + e.message; }
+}
+
+async function showDetail(id) {
+  const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+  const { meals } = await res.json();
+  const m = meals[0];
+  const ingredients = [];
+  for (let i = 1; i <= 20; i++) {
+    const ing = m[`strIngredient${i}`], measure = m[`strMeasure${i}`];
+    if (ing && ing.trim()) ingredients.push(`${measure || ""} ${ing}`.trim());
+  }
+  detail.innerHTML = `
+    <img src="${m.strMealThumb}" alt="${m.strMeal}" />
+    <h2>${m.strMeal}</h2>
+    <p><strong>Category:</strong> ${m.strCategory} • <strong>Area:</strong> ${m.strArea}</p>
+    <h3>Ingredients</h3>
+    <ul>${ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
+    <h3>Instructions</h3>
+    <p>${m.strInstructions}</p>`;
+  modal.classList.remove("hidden");
+}
+
+document.getElementById("closeBtn").onclick = () => modal.classList.add("hidden");
+modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.add("hidden"); });
+
+form.addEventListener("submit", (e) => { e.preventDefault(); if (q.value.trim()) search(q.value.trim()); });
+const saved = localStorage.getItem("recipe_q") || "chicken";
+q.value = saved; search(saved);

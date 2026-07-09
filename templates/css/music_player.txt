@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #232526, #414345);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #fff;
+}
+.player {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.cover {
+  font-size: 5rem;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+h2 {
+  margin-bottom: 0.25rem;
+}
+p {
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+input[type="range"] {
+  width: 100%;
+  margin: 0.5rem 0;
+  accent-color: #f5576c;
+}
+.times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.controls button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+#play {
+  width: 64px;
+  height: 64px;
+  background: #f5576c;
+  color: #fff;
+  font-size: 1.4rem;
+}

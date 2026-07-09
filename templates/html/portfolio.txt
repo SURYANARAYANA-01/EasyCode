@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <div class="logo">EasyCode.dev</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Hi, I'm EasyCode Dev 👋</h1>
+    <p>Full-stack developer building modern web experiences.</p>
+    <a href="#projects" class="btn">View my work</a>
+  </section>
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I'm a passionate developer with a love for clean code and beautiful design.</p>
+  </section>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div id="projectsGrid" class="grid"></div>
+  </section>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your name" required />
+      <input type="email" id="email" placeholder="Your email" required />
+      <textarea id="message" placeholder="Your message" required rows="4"></textarea>
+      <button type="submit">Send</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+</main>
+<footer>© 2026 EasyCode Dev — Built with ❤</footer>
+<script src="script.js"></script>
+</body>
+</html>
