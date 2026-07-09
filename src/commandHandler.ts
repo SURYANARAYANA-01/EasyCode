@@ -180,14 +180,14 @@ if (cssTemplate) {
 
     ensureFile(files.css);
 
-    await insertCSS(files.css, cssTemplate.code ?? "");
+    writeFile(files.css, cssTemplate.code ?? "");
 }
 
 if (jsTemplate) {
 
     ensureFile(files.javascript);
 
-    await insertJavaScript(files.javascript, jsTemplate.code ?? "");
+    writeFile(files.javascript, jsTemplate.code ?? "");
 }
 
 vscode.window.showInformationMessage(
